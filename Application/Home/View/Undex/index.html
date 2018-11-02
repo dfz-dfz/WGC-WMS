@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>公司案例列表</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/gz/css/aui.css" />
+</head>
+<body>
+
+
+    <div class="aui-content aui-margin-b-15">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-header">
+                公司案例
+            </li>
+		
+		<foreach name="lists" item="v">
+			     	
+			 <a href="{:U('Undex/content',array('id'=>$v['id']))}"> 
+		             
+				<li class="aui-list-item">
+				  <tr>
+				   <td>{$v['id']}</td>
+					<div class="aui-media-list-item-inner">
+						<div class="aui-list-item-media">
+						    <td><img src="__ROOT__{$v['pic']}"></td>
+						</div>
+						
+						<div class="aui-list-item-inner">
+							 
+							<div class="aui-list-item-text">
+							  
+								<div class="aui-list-item-title">案例标题</div>
+								      <td>{$v['title']}</td>
+								<div class="aui-list-item-right"></div>
+							</div>
+							<div class="aui-list-item-text">
+								     <td>{$v['content']|htmlspecialchars_decode}</td>
+							</div>
+							<div class="aui-info aui-margin-t-5" style="padding:0">
+								<div class="aui-info-item"></div>
+								<td>{$v['times'|date='Y-m-d H:i:s',###]}</td>					
+							</div>
+						</div>
+					
+					  </tr>
+					</div>
+					
+				</li>
+			 </a>
+		</foreach>	
+		     
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/gz/js/api.js" ></script>
+</html>

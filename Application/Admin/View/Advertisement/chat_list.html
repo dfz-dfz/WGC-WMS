@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/tongxi/css/api.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/tongxi/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/tongxi/css/index.css" />
+    <style type="text/css">
+        
+        html,body {width: 100%;height: 100%;background-color: #f5f5f5;}
+        .aui-bar-nav .aui-title {left: 3rem;text-align: left;}
+        .aui-bar,.aui-bar-nav {top:auto;}
+        /*头部*/
+        /*中间消息*/
+        .aui-chat {margin: 2.25rem 0 5rem;}
+        .aui-header {position: fixed; left: 0;top: 0;}
+        /*底部*/
+        .aui-dibu {background: #fff;border-top: 1px solid #ccc;text-align: left;position: fixed;left: 0;bottom: 0;}
+        .aui-dibu a {text-align: center;display: inline-block;margin-left: 0.5rem; width: 8%;vertical-align: middle;}
+        .aui-dibu .aui-iconfont {color: #000;line-height:1rem;font-size: 0.5rem;}
+        .aui-content-padded em {margin-right: 0.5rem;}
+        .aui-dibu .input {width: auto;height: auto;position: absolute;left: 2.5rem;right: 3rem;top: 0;bottom: 0.4rem;display: inline-block;background: #fff;border-bottom: 1px solid #ccc;}
+        .aui-dibu a:nth-of-type(2) {position: absolute;right: 2.4rem;top: 0.4rem;}
+        .aui-dibu a:nth-of-type(3) {position: absolute;right: 0.5rem;top: 0.4rem;}
+		.rongcloud-rong-footer {background: #fff;display: none;height: 114px;position: fixed; bottom: 0px;
+		left: 0px; right: 0px; border-radius: 0px 0px 5px 5px; padding: 0; margin: 0; font-size: 14px;
+       font-weight: 400;}
+
+    </style>
+</head>
+<body>
+  
+    <header class="aui-bar aui-bar-nav aui-header">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left" onclick="goBack()"></span>
+        </a>
+        <div class="aui-title">客服</div>
+        <a class="aui-pull-right aui-btn">
+            <span class="aui-iconfont aui-icon-my"></span>
+        </a>
+    </header>
+    <section class="aui-chat">
+        <div class="aui-chat-header">2016年7月13日</div>
+        <div class="aui-chat-item aui-chat-left">
+            <div class="aui-chat-media">
+                <img src="__PUBLIC__/admin/tongxi/image/demo2.png" />
+            </div>
+            <div class="aui-chat-inner">
+                <div class="aui-chat-name">AUI <span class="aui-label aui-label-warning">2.0</span></div>
+                <div class="aui-chat-content">
+                    <div class="aui-chat-arrow"></div>
+                    Hello AUI 2.0!
+                </div>
+                <div class="aui-chat-status aui-chat-status-refresh">
+                    <i class="aui-iconfont aui-icon-correct aui-text-success"></i>
+                </div>
+            </div>
+        </div>
+        <div class="aui-chat-item aui-chat-right">
+            <div class="aui-chat-media">
+                <img src="__PUBLIC__/admin/tongxi/image/liulangnan.png" />
+            </div>
+            <div class="aui-chat-inner">
+                <div class="aui-chat-name">流浪男</div>
+                <div class="aui-chat-content">
+                    <div class="aui-chat-arrow"></div>
+                    你好！
+                </div>
+                <div class="aui-chat-status">
+                    <i class="aui-iconfont aui-icon-info aui-text-danger"></i>
+                </div>
+            </div>
+        </div>
+        <div class="aui-chat-item aui-chat-left">
+            <div class="aui-chat-media">
+                <img src="__PUBLIC__/admin/tongxi/image/demo2.png" />
+            </div>
+            <div class="aui-chat-inner">
+                <div class="aui-chat-name">AUI <span class="aui-label aui-label-warning">2.0</span></div>
+                <div class="aui-chat-content">
+                    <div class="aui-chat-arrow"></div>
+                    <img src="__PUBLIC__/admin/tongxi/image/l1.png" />
+                </div>
+            </div>
+        </div>
+        <div class="aui-chat-item aui-chat-right">
+            <div class="aui-chat-media">
+                <img src="__PUBLIC__/admin/tongxi/image/liulangnan.png" />
+            </div>
+            <div class="aui-chat-inner">
+                <div class="aui-chat-name">流浪男</div>
+                <div class="aui-chat-content">
+                    <div class="aui-chat-arrow"></div>
+                    以前拍摄的牛背山星空
+                </div>
+            </div>
+        </div>
+        <div class="aui-chat-item aui-chat-left">
+            <div class="aui-chat-media">
+                <img src="__PUBLIC__/admin/tongxi/image/demo2.png" />
+            </div>
+            <div class="aui-chat-inner">
+                <div class="aui-chat-name">AUI <span class="aui-label aui-label-warning">2.0</span></div>
+                <div class="aui-chat-content">
+                    <div class="aui-chat-arrow"></div>
+                    <img src="__PUBLIC__/admin/tongxi/image/l2.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+	    <div id="footer" class="rongcloud-rong-footer" style="display: block">
+        <div class="rongcloud-footer-con">
+            <div class="rongcloud-text-layout">
+                <div id="funcPanel" class="rongcloud-funcPanel rongcloud-robotMode">
+                    <div class="rongcloud-mode1" ng-show="_inputPanelState==0">
+                        <div class="rongcloud-MessageForm-tool" id="expressionWrap">
+                            <i class="rongcloud-sprite rongcloud-iconfont-smile" ng-click="showemoji=!showemoji"></i>
+                            <div class="rongcloud-expressionWrap ng-hide" ng-show="showemoji">
+                                <i class="rongcloud-arrow"></i><!-- ngRepeat: item in emojiList -->
+                            </div>
+                        </div>
+                        <div class="rongcloud-MessageForm-tool">
+                            <i class="rongcloud-sprite rongcloud-iconfont-upload" id="upload-file" style="position: relative; z-index: 1;"></i>
+                        </div>
+                    </div>
+                    <div class="rongcloud-mode2 ng-hide" ng-show="_inputPanelState==2">
+                        <a ng-click="switchPerson()" id="chatSwitch" class="rongcloud-chatSwitch">转人工服务</a>
+                    </div>
+                    <div id="html5_1busjomsoedf1c7ptq91bjsgpb_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 0px; left: 28px; width: 24px; height: 20px; overflow: hidden; z-index: 0;">
+                        <input id="html5_1busjomsoedf1c7ptq91bjsgpb" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" accept="image/jpeg,image/gif,image/png,image/bmp">
+                    </div>
+                </div>
+                <pre id="inputMsg" class="rongcloud-text rongcloud-grey ng-pristine ng-valid ng-isolate-scope ng-touched" contenteditable="" contenteditable-dire="" ng-focus="showemoji=fase" style="color: rgb(169, 169, 169); background-color: rgba(0, 0, 0, 0);" ctrl-enter-keys="" fun="send()" ctrlenter="false" placeholder="请输入文字..." ondrop="return false" ng-model="conversation.messageContent">请输入文字...</pre>
+            </div>
+            <div class="rongcloud-powBox">
+                <button type="button" style="background-color: #0099ff" class="rongcloud-rong-btn rongcloud-rong-send-btn" id="rong-sendBtn" ng-click="send()">发送</button>
+            </div>
+        </div>
+    </div> 
+    <!-- <footer class="aui-bar aui-bar-nav aui-dibu"> 
+        <a class="aui-iconfont " >
+            <img src="__PUBLIC__/admin/tongxi/image/sound.png" alt="" />
+        </a>
+		<form action="{:U('Advertisement/chat_list')}" method="post">
+          <input type="text" name="username" id="username" class="input"/>
+		</form>
+        <a href="javascript:;" class="aui-iconfont">
+            <img src="__PUBLIC__/admin/tongxi/image/face.png" alt="" />
+        </a>
+        <a href="javascript:;" class="aui-iconfont ">
+            <img src="__PUBLIC__/admin/tongxi/image/more.png" alt="" />
+        </a>
+    </footer>
+	-->
+</body>
+<script type="text/javascript" src="__PUBLIC__/admin/tongxi/script/api.js"></script>
+<script type="text/javascript">
+    
+    apiready = function(){
+        
+       
+    };
+
+    function goBack() {
+        api.openWin({
+	        name: 'message',
+	        url: 'message_list.html'
+        });
+    }
+</script>
+</html>

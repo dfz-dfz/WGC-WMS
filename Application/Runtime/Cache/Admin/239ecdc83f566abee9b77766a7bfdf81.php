@@ -1,0 +1,23 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>通讯</title>
+		<script src="/Public/JS/jquery-1.7.2.js"></script>
+    </head>
+    <body>
+        <div style='width:100%;height:100%;'>
+		<form action='/index.php/Admin/Instantmsg/userone' method='get' id='mobileform' target="chat">
+			<span>账户手机：</span><textarea name='mobile' rows="10" cols="30" name='mobile'></textarea>
+			<button id='fasong'>发送消息</button>
+		</form>
+		</div>
+<script >
+	$(document).ready(function(){
+		$("#fasong").bind("click", function(){
+		  $('#mobileform').submit();
+		});
+	});	
+</script>
+    </body>
+</html>

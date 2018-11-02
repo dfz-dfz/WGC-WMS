@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,aItemress=no">
+    <title>分享页</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/aui/css/aui.css">
+</head>
+<body>
+   
+    <section class="aui-content">
+        <div class="aui-card-list">
+            <div class="aui-card-list-header">
+                {$name}分享
+            </div>
+            <div class="aui-card-list-content">
+                <img src="__PUBLIC__/admin/aui/image/l2.png">
+            </div>
+            <div class="aui-card-list-footer">
+                {$nowdate}
+            </div>
+        </div>
+    </section>
+
+<script type="text/javascript" src="__PUBLIC__/admin/aui/script/api.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+
+</script>
+</body>
+</html>

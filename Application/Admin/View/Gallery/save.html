@@ -1,0 +1,81 @@
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="/favicon.ico" >
+<LINK rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="__PUBLIC__/HUI/lib/html5.js"></script>
+<script type="text/javascript" src="__PUBLIC__/HUI/lib/respond.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/HUI/lib/PIE_IE678.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/HUI/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/HUI/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/HUI/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/HUI/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/HUI/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/HUI/static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<!--/meta 作为公共模版分离出去-->
+<title>修改图片名称</title>
+	<link href="__PUBLIC__/HUI/lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="page-container">
+	<form class="form form-horizontal" action="__URL__/saveForm" method="post" id="form-article-add">
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>图片名称：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" id="name" placeholder="图片名称" name="name">
+			</div>
+		</div>
+		
+		<input type="hidden" name="id" value="{$id}" />
+		<input type="hidden" name="pid" value="{$pid}" />
+		<span id="file"></span>
+			<div class="row cl">
+				<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+					<button onClick="article_save_submit();" class="btn btn-primary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 
+					保存
+					</button>
+				</div>
+			</div>
+	</form>
+</div>
+</div>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="__PUBLIC__/HUI/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/HUI/lib/layer/2.1/layer.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/HUI/lib/icheck/jquery.icheck.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/HUI/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/HUI/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/HUI/lib/jquery.validation/1.14.0/messages_zh.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/HUI/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/HUI/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/HUI/static/h-ui.admin/js/comment.js"></script>
+<!--/_footer /作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC__/HUI/lib/webuploader/0.1.5/webuploader.min.js"></script> 
+<script type="text/javascript">
+function article_save_submit(){
+	var name = $("#name").val();
+	if(name == ''){
+		alert('请输入图片名称！');
+		$("#name").focus();
+		return false;
+	}
+	document.getElementById("form-article-add").submit();
+}
+</script>
+</body>
+</html>

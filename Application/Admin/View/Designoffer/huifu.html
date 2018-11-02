@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>详情</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/apicloud/api.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/apicloud/aui.css"/>
+  <style>
+        .aui-content{width:60%;margin:0 auto}
+        .aui-media-list{width:100%;margin:0 auto}
+        .lia{width: 100%;margin:0 auto;font-size: 0.75rem;font-family: 圆幼;padding-top:0.55rem;padding-right:0.55rem;padding-left:0.65rem;border-bottom: 1px solid #E3E5E5;background:#fff;color:#4D4D4D}     
+        .lia1{width:100%;font-size: 0.75rem;font-family: 圆幼;padding-top:0.45rem;padding-right:0.55rem;padding-left:1.0rem;border-bottom: 1px solid #FAFAFA;background:#fff;color:#4D4D4D} 
+        .lia2{width:100%;font-size: 0.75rem;font-family: 圆幼;padding-top:0.45rem;border-bottom: 1px solid #FAFAFA;background:#fff;color:#4D4D4D} 
+         #ul{width:100%;}   
+    </style>
+</head>
+<body>
+    <div class="aui-content aui-margin-b-15" id='lists'>
+       <ul class="aui-list aui-margin-b-15" style="">
+        <li class="aui-list-item-middle lia" >
+             <div class="aui-list-item-text">
+                <div class="aui-list-item-title aui-font-size-14" >发 布 人：<font id="name">{$info.name}</font><span id='time' style="font-size: 0.65rem;color:#999;margin-left:4.50rem "></span></div>
+                
+            </div>
+         </li>
+		 <li class="aui-list-item-middle lia" >
+             <div class="aui-list-item-text">
+                <div class="aui-list-item-title aui-font-size-14" >接 收 人：<font id="name">{$info.allname}</font><span id='time' style="font-size: 0.65rem;color:#999;margin-left:4.50rem "></span></div>
+                
+            </div>
+         </li>
+          <li class="aui-list-item-middle lia" >
+             地址： <span style="" id="shop_address">{$info.address}</span>
+		  </li>
+         <li class="aui-list-item-middle lia" >
+             联系电话： <span style="" id="shop_call">{$info.tel}</span>
+		</li>
+		<li class="aui-list-item-middle lia" >
+             预算： <span style="" id="shop_address">{$info.budget}</span>
+		  </li>
+		  <li class="aui-list-item-middle lia" >
+             装修时间： <span style="" id="shop_address">{$info.jobtime}</span>
+		  </li>
+		  <li class="aui-list-item-middle lia" >
+             面积： <span style="" id="shop_address">{$info.jobsize}</span>
+		  </li>
+		<li class="aui-list-item-middle lia" >
+             预算时间： <span style="" id="shop_address">{$info.fortime}</span>
+		 </li>
+		 
+
+         <li class="aui-list-item" id="lists1">  
+            <p id="message-content" style="width:100%;height:auto;overflow: hidden;margin:5px auto;padding-left: 0.35rem">
+			<?php
+				foreach($info['img'] as $k=>$r){
+					echo '<img class="imagemsg" style="width:3.8rem;float:left;margin:0.15rem;height:3.8rem;" onclick="showpic(this)"id="" src="http://jingyi.59jiaju.com/'.$r.'" /></p>';
+				}
+			?>
+         </li>
+         <li style="background:#fff;height:0.25rem;margin-bottom:0.55rem"></li>
+       </ul>
+  </div>  
+   <div class="aui-content" id='lists'>
+		<ul class="aui-list aui-media-list" >
+			<li class="aui-list-header">回话列表<a class="aui-pull-right" onclick='huifuall({$info.id},{$userid})' >回复</a></li>
+		</ul>
+		<?php 
+			foreach($info['mans'] as $kk=>$m){
+				
+					$str = '';
+					$str .= '<ul class="aui-list aui-media-list">';
+					$str .= '<li class="aui-list-item aui-list-item-middle"style="width:100%;overflow:hidden">';
+					$str .= '<div class="aui-media-list-item-inner">';
+					$str .= '<div class="aui-list-item-media" style="float:left;overflow:hidden">';
+					$str .= '<img src="http://jingyi.59jiaju.com/'.$m['userphoto'].'" style="width:40px;height:40px" class="aui-img-round aui-list-img-sm">';
+					$str .= ' 			 </div>';
+					$str .= '		   <div class="aui-list-item-inner aui-list-item-arrow">';
+					$str .= '				 <div class="aui-list-item-text">';
+					$str .= '				   <div class="aui-list-item-title aui-font-size-14">'.$m['name'].'</div>';
+					$str .= ' 				<div class="aui-list-item-right">'.$m['zhiwei'].'</div>';
+					$str .= '				   </div>';
+					$str .= '			   </div>';
+					$str .= '			</div>';
+					$str .= '	  </li>';
+					$str .= '   </ul>';
+					$str .= '	   <ul class="aui-list aui-form-list">';
+					$str .= '		   <li class="aui-list-item">';
+					$str .= '			<div class="aui-list-item-inner">';
+					$str .= '				<div class="aui-list-item-label">时间</div>';
+					$str .= '				<div class="aui-list-item-input">'.date('Y-m-d H:i:s',$m['addtime']).'</div>';
+					$str .= '			</div>';
+					$str .= '		</li>';
+					$str .= '		   <li class="aui-list-item">';
+					$str .= '			<div class="aui-list-item-inner">';
+					$str .= '				<div class="aui-list-item-label">地点</div>';
+					$str .= '				<div class="aui-list-item-input">'.$m['address'].'</div>';
+					$str .= '			</div>';
+					$str .= '		</li>';
+					$str .= '		<li class="aui-list-item">';
+					$str .= '			<div class="aui-list-item-inner">';
+					$str .= '				<div class="aui-list-item-label">说明</div>';
+					$str .= '				<div class="aui-list-item-input">'.$m['ps'].'</div>';
+					$str .= '			</div>';
+					$str .= '		</li>';
+					$str .= '	 </ul> ';
+					if($user_id != $m['send_uid']){
+						$str .= '		<div class="aui-content-padded aui-margin-b-15"><a style="color:#000;font-size:0.65rem"class="aui-pull-left" ></a><a class="aui-pull-right"  onclick="addhuifu('.$info['id'].','.$m['send_uid'].','.$m['id'].');">回复</a></div>';
+						//$str .= '		<div style="width:100%;height:40px;"><a style="color:#234;font-size:0.65rem" class="aui-pull-left" onclick="dierhuihe('.$info['id'].',1,'.$m['user_id'].','.$m['id'].',1)" >第二回合回复</a><a class="aui-pull-right"  onclick="dierhuihe('.$info['id'].',0,'.$m['user_id'].','.$m['id'].',2);">回复</a></div>';
+					}
+					echo $str;	
+			}
+		?>
+    </div>  
+</body>
+<script type="text/javascript" src="__PUBLIC__/admin/apicloud/api.js"></script>
+<!--Zepto.js,类似Jquery-->
+<script type="text/javascript" src="__PUBLIC__/admin/apicloud/zepto.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/apicloud/winu-base.js" ></script>
+<script type="text/javascript">
+    var id,winName,user_id,send_uid,weitype;
+    apiready = function(){
+        id=api.pageParam.id;
+        send_uid=api.pageParam.send_uid;
+        winName=api.winName;
+        user_id = _getStorage('userinfo').user_id;
+        weitype=api.pageParam.weitype;
+        if(weitype==2){
+            $("#number_none").css('display','none');
+            $("#worker_none").css('display','none');
+        }else if(weitype==3 || weitype==4){
+           $("#number_none").css('display','none');
+        }
+        detail();
+		
+    };
+    // 下拉刷新
+    _setRefreshHeaderInfo(function() {
+        window.location.reload(); //页面刷新
+    });
+    
+        //浏览图片
+    function showpic(obj){
+        var photoBrowser = api.require('photoBrowser');
+        var src = obj.id;
+        photoBrowser.open({
+            images: [
+                src,
+            ],
+            placeholderImg: 'widget://image/loading_more.gif',
+            bgColor: '#000'
+        }, function(ret, err) {
+            if (ret) {
+              
+            } else {
+                _toast("打开图片失败");
+            }
+        });
+    }
+    
+    //关闭回复
+    function closeWin(){
+        _toast('操作成功！');
+        _closeToWin(api.winName);
+        setTimeout(function(){
+            window.location.reload();//页面刷新
+        },500);
+        
+    }
+	//回复所有人
+	function huifuall(id,userid){
+		var url='__MODULE__/Designoffer/addhuifu/id/'+id+'/rev_uid/'+userid+"";
+		//alert(url);
+		window.location.href = url;
+	}
+	//回复
+	function addhuifu(id,rev_uid,pid){
+		var url='__MODULE__/Designoffer/addhuifu/id/'+id+'/rev_uid/'+rev_uid+'/pid/'+pid+'';
+		//alert(url);
+		window.location.href = url;
+	}
+	
+
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>维修第二个回复----发布人回复</title>
+    <!--AUI样式框架-->
+   <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/apicloud/aui.min.css" />
+  <!--拓展AUI字体图标-->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/apicloud/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/apicloud/api.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/apicloud/aui.1.0.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/apicloud/aui.css" />
+    
+    <style>
+      .aui-content{width:60%;margin:0 auto;margin-top: 2.0rem}
+      .aui-input-row{
+        width:100%;
+      }
+      .contentText{min-height:30px;overflow: hidden;width:100%;}
+      .winu-display-block{margin:5px;float:left;font-size:0.85rem;background:#005DE6;width:80px;height:30px;line-height:30px;border-radius: 5px;padding:0 5px;color:#FFFFFF}
+    </style>
+</head>
+<body>
+  <div class="aui-content">
+		<form action="__MODULE__/Homedecoration/huifudata" method="post" id='huifuform' >
+		<input type='hidden' name='jzid' value='{$jzid}' />
+		<input type='hidden' name='pid' value='{$pid}' />
+		<input type='hidden' name='userid' value='{$userid}' /> 
+        <div class="aui-form">
+              <div class="aui-input-row" id="wrap1">
+                <i class="aui-input-addon  aui-iconfont" style="font-size: 0.8rem">回复时间</i>
+                <input type="text" class="aui-input" id="times" placeholder="时间" value='{$time}' readonly="readonly">
+             </div>
+            <div class="aui-input-row" id="wrap1">
+               <i class="aui-input-addon  aui-iconfont aui-icon">回复内容:</i>
+                <div class="aui-list-item-input">
+                    <textarea placeholder="回复内容" id="ps" name="content" ></textarea>
+                </div>
+               
+            </div>
+			<div class="aui-content-padded" style="width:75%;margin:0 auto;padding-top:1.0rem;padding-buttom:1.0rem" onclick="fabu()">
+                <div class="aui-btn aui-btn-danger aui-btn-block" >确定发布</div>
+            </div>
+        </div>
+        </form>
+    </div>
+
+</body>
+<script type="text/javascript" src="__PUBLIC__/admin/apicloud/api.js"></script>
+<!--Zepto.js,类似Jquery-->
+<script type="text/javascript" src="__PUBLIC__/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/admin/apicloud/winu-base.js" ></script>
+<!--表单验证-->
+<script type="text/javascript" src="__PUBLIC__/admin/apicloud/availdate-v1.0.2.js"></script>
+<script type="text/javascript">
+  // 压缩对象
+  function fabu(){
+	$('#huifuform').submit();
+  }
+</script>
+</html>

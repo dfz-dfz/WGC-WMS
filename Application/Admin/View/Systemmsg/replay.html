@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="http://www.webkfa.com/" />
+<title>web开发-webkfa.com</title>
+<style type="text/css">
+*{
+margin:0;padding:0;
+-webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+-webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+-webkit-tap-highlight-color: rgba(210,210,210,0.35); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+-webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+body{font-family:"微软雅黑";font-size:12px;}
+ul,li{list-style:none;}
+.ylcon{width:100%;min-width:320px;}
+.tit{height:26px;line-height:26px;padding:0px 15px;position:relative;font-size:15px;color:#aaa;border-bottom:1px solid rgba(0, 0, 0, 0.15);}
+
+.story{border-bottom:1px dashed #cecece;padding:0 15px 3px;position:relative;}
+.story_t{font-size:1.2em;color:rgba(0,0,0,1);padding-top:5px;padding-bottom:2px;}
+.story_m{color:rgba(110,110,110,1);line-height:21px;word-break:break-all;word-wrap:break-word;overflow:hidden;font-size:1.2em;padding:2px 0;}
+.story_time{color:rgba(154,154,154,1);padding:2px 0;}
+.story_hf{background:rgb(245,245,245);font-size:1.2em;border:1px solid rgba(204,204,204,0.2);border-radius:2px;color:rgba(110,110,110,1);padding:4px;margin-bottom:5px;}
+.opbtn{position:absolute;top: 0;right: 0;}
+.test_box {    
+		width: 70%;    
+		min-height: 300px;    
+		max-height: 500px;    
+		_height: 120px;    
+		margin-left: auto;    
+		margin-right: auto; 
+		margin-top: 20px; 
+		padding: 3px;    
+		outline: 0;    
+		border: 1px solid #a0b3d6;    
+		font-size: 12px;    
+		word-wrap: break-word;    
+		overflow-x: hidden;    
+		overflow-y: auto;    
+		_overflow-y: visible;
+	}
+#huifureplay{
+	width:70%;
+	margin-left: auto;    
+	margin-right: auto; 
+	min-height: 30px;    
+	max-height: 40px;
+}
+</style>
+<script type="text/javascript" src="__PUBLIC__/JS/jquery-1.7.2.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/HUI/lib/layer/2.1/layer.js"></script> 
+</head>
+<body>
+<div class="ylcon">
+<p class="tit">
+回复列表
+</p>
+<div id="messDivId">
+<div class="story">
+	<?php
+		$str = '';
+		foreach($list as $key=>$row){
+			if($row['userid'] == $send_uid){
+				$str .= '<p class="story_m">';
+				$str .= '<span style="color:#C75DFF;">'.$row['name'].'('.date('Y/m/d H:i:s',$row['addtime']).'):</span>';
+				$str .= '<span>'.$row['content'].'</span>';
+				$str .= '</p>';
+			}else{
+				$str .= '<p class="story_hf">';
+				$str .= '<span style="color:#C75DFF;">&nbsp;&nbsp;&nbsp;'.$row['name'].'('.date('Y/m/d H:i:s',$row['addtime']).'):</span>';
+				$str .= '<span style="color:#FF7F27;">'.$row['content'].'</span>';
+				$str .= '</p>';
+			}
+		}
+		echo $str;
+	?>
+	<!--<p class="story_m">
+		<span style='color:#C75DFF;'>怜星(2015/07/12 20:48):</span>
+		<span>我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,他们的八卦呢我想问最近最火的tfboys呢？！他们的八卦呢？！</span>
+	</p>
+	<p class="story_hf">
+		<span style='color:#C75DFF;'>&nbsp;&nbsp;&nbsp;剑花烟雨(2015/07/12 20:48):</span>
+		<span style='color:#FF7F27;'>的是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契</span>
+	</p>-->
+</div>
+<div class="test_box" contenteditable="true"><br /></div> 
+<input type='hidden' id='userid' value='{$send_uid}' />
+<input type='hidden' id='sys_id' value='{$id}' />
+<input type='hidden' id='sendname' value='{$name}' />
+<div id='huifureplay'>
+<input type='button' id='sendbutton' value='回 复' style='background:#029400;width:70px;margin-top: 10px;'></input>
+</div>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+	function apandding(mname,contents){
+		var $apstr = '';
+		var time1 = new Date();
+		//alert(time1);
+		$apstr += '<p class="story_m">';
+		$apstr += '<span style="color:#C75DFF;">'+mname+'('+time1.toLocaleString()+'):</span>';
+		$apstr += '<span>'+contents+'</span>';
+		$apstr += '</p>';
+		$(".story").append($apstr);
+	}
+	$('#sendbutton').bind("click", function(){
+	      var content = $('.test_box').text();
+		  var userid = $('#userid').val();
+		  var sys_id = $('#sys_id').val();
+		  $.ajax({
+				url:"http://wgcmanage.59jiaju.com/index.php/Admin/Sysreplay/Replay",
+				data:{'userid':userid+"",'content':content+"",'sys_id':sys_id+""},
+				type:"post",
+				dataType:"json",
+				timeout:3000,
+				async: false,
+				beforeSend:function(XMLHttpRequest){
+				},
+				success:function(data,textStatus){
+					var code = data.code;
+					var message = data.message;
+					switch(code){
+						case 200:
+							//layer.msg(message+'',{icon:1,time:1000});
+							var name = $('#sendname').val();
+							apandding(name,message);
+							//window.location.href='__MODULE__/Systemmsg/getList';
+							break;
+						case 202:
+							layer.msg(message+'',{icon:5,time:1000});
+							break;
+						default:
+							layer.msg('未知错误',{icon:5,time:1000});
+						
+					}
+				},
+				complete: function(XMLHttpRequest, textStatus){
+					//HideLoading();
+					//alert("complete");
+				},
+				error:function(){
+					layer.msg('网络错误',{icon:5,time:1000});
+				}
+			});
+	});
+});
+</script>
+</html>

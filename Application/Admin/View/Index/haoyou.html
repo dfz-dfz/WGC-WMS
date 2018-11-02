@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>后台人员</title>
+    <!--<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Haoyouview/api.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Haoyouview/aui.css" />-->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Haoyouview/bootstrap.css" />
+	<script type="text/javascript" src="__PUBLIC__/JS/jquery-1.7.2.js" ></script>
+    <style>
+		.container{width:90%;margin:2.0rem auto;background: #fff}
+        #table{width:100%;}
+        #table th{border:0.01rem solid #ccc;border-spacing: 0rem;border-collapse: 0rem;}
+        #table td{border:0.01rem solid #ccc;}
+    </style>
+</head>
+<body>
+<!--<div class="aui-content aui-margin-b-15">
+        <ul class="aui-list aui-form-list">
+        <li class="aui-list-item">
+          <div class="aui-searchbar-wrap demo" id="search" style="">
+              <div class="aui-searchbar aui-border-radius" tapmode>
+                  <div class="aui-searchbar-input">
+                    <form action="__MODULE__/Haoyouview/getList" id='mansearchform' method='post'>
+						<input type='hidden' id='page' name='page' value='{$page}' />
+						<input type="text" name='keyword' value="{$keyword}" placeholder="请输入搜索姓名或号码" id="search-input">
+                    </form>
+                  </div>
+              </div>
+          </div>
+         <div class="aui-content-padded buttonright">
+            <div class="aui-btn aui-btn-danger" onclick="fabu()">搜索</div>
+         </div>-->
+	<div class="container">
+          <form class="" style="width:70%;" action="__MODULE__/Haoyouview/getList" id='mansearchform' method='post'>
+            <div class="form-group" style="width:80%;float:left">
+			  <input type='hidden' id='page' name='page' value='{$page}' />
+              <input type="text" class="form-control" name='keyword' value="{$keyword}"  placeholder="请输入要搜索的姓名/手机/职位">
+            </div>
+            <button type="button" class="btn btn-default" style="width:20%;float:right" onclick="fabu()" >搜索</button><br/>
+			<?php
+				$str = '';
+				if(($beteach === 0) || ($beteach === '0')){
+					$str .='<input name="beteach" type="radio" value="2" />未知';
+					$str .='<input name="beteach" type="radio" value="0" checked="checked" />否';
+					$str .='<input name="beteach" type="radio" value="1"  />是';
+				}else if(($beteach === 1) || ($beteach === '1')){
+					$str .='<input name="beteach" type="radio" value="2" />未知';
+					$str .='<input name="beteach" type="radio" value="0"  />否';
+					$str .='<input name="beteach" type="radio" value="1" checked="checked" />是';
+				}else if(($beteach === 2) || ($beteach === '2')){
+					$str .='<input name="beteach" type="radio" value="2" checked="checked" />未知';
+					$str .='<input name="beteach" type="radio" value="0"  />否';
+					$str .='<input name="beteach" type="radio" value="1"  />是';
+				}
+				echo $str;
+			?>
+			<br/>
+			目前所在地
+			<select id="selProvince" value='{$province}' name="province" >  
+			</select> -
+			<select id="selCity" value='{$city}'  name="city" >  
+			</select> -
+			 <select id="selDist" value='{$area}' name="area" >  
+			</select>
+			<script type="text/javascript" src="__PUBLIC__/JS/region.js"></script>
+          </form>
+          <!-- 详情列表 -->
+          <table class="table table-bordered">
+          <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>户籍</th>
+            <th>手机号</th>
+            <th>职位</th>
+            <th>好友（个）</th>
+            <th colspan="2">操作</th>
+          </tr>
+		  <foreach name="list" item="val" key="k" >
+				 <tr>
+					<td>{$val.name}</td>
+					<td>{$val.sex}</td>
+					<td>{$val.huji}</td>
+					<td>{$val.user_name}</td>
+					<td>{$val.zhiwei}</td>
+					<td>{$val.haoyoushu}</td>
+					<td colspan="2"><a href="__MODULE__/Haoyouview/userinfo/userid/{$val.user_id}">编辑</a><a href="__MODULE__/Haoyouview/deleteuser/userid/{$val.user_id}" style="margin-left:1.0rem">删除</a></td>
+				  
+				   </tr>
+		  </foreach>
+         
+          </table>
+     
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+				<?php
+					$string = '';
+					$pre = $page-1;
+					if($pre<=0){
+						$pre = 1;
+					}
+					$next = $page+1;
+					$string .= '<li>';
+					$string .= '<a onclick="tijiao('.$pre.')" aria-label="Previous">';
+					$string .= '  <span aria-hidden="true">&laquo;</span>';
+					$string .= '</a>';
+				    $string .= '</li>';
+					if(($allpage<=9) && ($allpage>$page)){
+						for($i=$page;$i<=$allpage;$i++){
+							$string .= '<li><a onclick="tijiao('.$i.')"  >'.$i.'</a></li>';
+						}
+					}else if(($allpage>9) && ($allpage>$page)){
+						$end=$page+9;
+						for($y=$page;$y<=$end;$y++){
+							$string .= '<li><a onclick="tijiao('.$y.')"  >'.$y.'</a></li>';
+						}
+					}else{
+						$page=$allpage;
+						if($allpage<=9){
+							for($i=1;$i<=$allpage;$i++){
+								$string .= '<li><a onclick="tijiao('.$i.')"  >'.$i.'</a></li>';
+							}
+						}else{
+							for($i=$allpage-9;$i<=$allpage;$i++){
+								$string .= '<li><a onclick="tijiao('.$i.')"  >'.$i.'</a></li>';
+							}
+						}
+					}
+					 $string .= '<li>';
+                     $string .= '<a onclick="tijiao('.$next.')"  aria-label="Next">';
+                     $string .= '<span aria-hidden="true">&raquo;</span>';
+                     $string .= '</a>';
+                     $string .= '</li>';
+					 echo $string;
+				?>
+              
+            </ul>
+          </nav>
+        
+     </div>
+ 
+            
+</body>
+<script type="text/javascript">
+   function fabu(){
+		$('#mansearchform').submit();
+   }
+	function tijiao($p){
+		$('#page').val($p+"");
+		$('#mansearchform').submit();
+	}
+</script>
+</html>

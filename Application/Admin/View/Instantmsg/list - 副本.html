@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>即使通讯</title>
+</head>
+<body>
+<div id="show"></div>
+<script src="__PUBLIC__/JS/RongIMLib-2.2.5.min.js"></script>
+<script>
+function showInfo(str){
+	var t = document.getElementById("show");
+	t.innerHTML += str + "<br>";
+}
+showInfo("开始加载");	
+</script>
+<script>
+	var appKey = "x18ywvqfx3ibc";
+	var token = "Fw56aA5JqGBT4n8KIgiB9+Kn3PNuIUJM+56i0FZ7xOr8tVpMdFv18lDLiFystekIuj6DkmLSVzhF3cMvLUaWJg==";
+	var RongIMClient=RongIMLib.RongIMClient;
+	RongIMClient.init(appKey);
+	RongIMClient.setConnectionStatusListener({
+    onChanged: function (status) {
+        switch (status) {
+            case RongIMLib.ConnectionStatus.CONNECTED:
+                showInfo('链接成功');
+                break;
+            case RongIMLib.ConnectionStatus.CONNECTING:
+                showInfo('正在链接');
+                break;
+            case RongIMLib.ConnectionStatus.DISCONNECTED:
+                showInfo('断开连接');
+                break;
+            case RongIMLib.ConnectionStatus.KICKED_OFFLINE_BY_OTHER_CLIENT:
+                showInfo('其他设备登录');
+                break;
+              case RongIMLib.ConnectionStatus.DOMAIN_INCORRECT:
+                showInfo('域名不正确');
+                break;
+            case RongIMLib.ConnectionStatus.NETWORK_UNAVAILABLE:
+              showInfo('网络不可用');
+              break;
+            }
+    }});
+
+ // 消息监听器
+ RongIMClient.setOnReceiveMessageListener({
+    // 接收到的消息
+    onReceived: function (message) {
+        // 判断消息类型
+        switch(message.messageType){
+            case RongIMClient.MessageType.TextMessage:
+                // message.content.content => 消息内容
+                break;
+            case RongIMClient.MessageType.VoiceMessage:
+                // 对声音进行预加载                
+                // message.content.content 格式为 AMR 格式的 base64 码
+                break;
+            case RongIMClient.MessageType.ImageMessage:
+               // message.content.content => 图片缩略图 base64。
+               // message.content.imageUri => 原图 URL。
+               break;
+            case RongIMClient.MessageType.DiscussionNotificationMessage:
+               // message.content.extension => 讨论组中的人员。
+               break;
+            case RongIMClient.MessageType.LocationMessage:
+               // message.content.latiude => 纬度。
+               // message.content.longitude => 经度。
+               // message.content.content => 位置图片 base64。
+               break;
+            case RongIMClient.MessageType.RichContentMessage:
+               // message.content.content => 文本消息内容。
+               // message.content.imageUri => 图片 base64。
+               // message.content.url => 原图 URL。
+               break;
+            case RongIMClient.MessageType.InformationNotificationMessage:
+                // do something...
+               break;
+            case RongIMClient.MessageType.ContactNotificationMessage:
+                // do something...
+               break;
+            case RongIMClient.MessageType.ProfileNotificationMessage:
+                // do something...
+               break;
+            case RongIMClient.MessageType.CommandNotificationMessage:
+                // do something...
+               break;
+            case RongIMClient.MessageType.CommandMessage:
+                // do something...
+               break;
+            case RongIMClient.MessageType.UnknownMessage:
+                // do something...
+               break;
+            default:
+                // do something...
+        }
+    }
+});
+ RongIMClient.connect(token, {
+        onSuccess: function(userId) {
+          showInfo("Login successfully." + userId);
+        },
+        onTokenIncorrect: function() {
+          showInfo('token无效');
+        },
+        onError:function(errorCode){
+              var info = '';
+              switch (errorCode) {
+                case RongIMLib.ErrorCode.TIMEOUT:
+                  info = '超时';
+                  break;
+                case RongIMLib.ErrorCode.UNKNOWN_ERROR:
+                  info = '未知错误';
+                  break;
+                case RongIMLib.ErrorCode.UNACCEPTABLE_PaROTOCOL_VERSION:
+                  info = '不可接受的协议版本';
+                  break;
+                case RongIMLib.ErrorCode.IDENTIFIER_REJECTED:
+                  info = 'appkey不正确';
+                  break;
+                case RongIMLib.ErrorCode.SERVER_UNAVAILABLE:
+                  info = '服务器不可用';
+                  break;
+              }
+              showInfo(errorCode);
+            }
+      });
+</script>
+</body>
+</html>

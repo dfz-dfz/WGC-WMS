@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>通讯录</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/tongxi/css/api.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/tongxi/css/aui.css" />
+    <style type="text/css">
+         html,body {background-color: #fff;}                    
+        .aui-card-list-header {background-color: #03a9f4;color: #fff;}
+        .aui-bar-nav .aui-btn .aui-icon-search {margin-right:1.2rem;}
+    </style>
+</head>
+<body>
+    <header class="aui-bar aui-bar-nav">
+        <a class="aui-pull-left aui-btn">
+            <span>通讯录</span>
+        </a>
+        <div class="aui-title"></div>
+        <a class="aui-pull-right aui-btn">
+            <span class="aui-iconfont aui-icon-search"></span>
+            <span class="aui-iconfont aui-icon-plus"></span>
+        </a>
+    </header>
+    <div class="aui-content aui-margin-b-15">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-item aui-list-item-middle" onclick="openChat()">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media" style="width: 3rem;">
+                        <img src="__PUBLIC__/admin/tongxi/image/demo5.png" class="aui-img-round aui-list-img-sm">
+                    </div>
+                    <div class="aui-list-item-inner aui-list-item-arrow">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-font-size-14">AUI</div>
+                            <div class="aui-list-item-right">08:00</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            www.auicss.com
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item aui-list-item-middle"  onclick="openChat()">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media" style="width: 3rem;">
+                        <img src="__PUBLIC__/admin/tongxi/image/liulangnan.png" class="aui-img-round aui-list-img-sm">
+                    </div>
+                    <div class="aui-list-item-inner aui-list-item-arrow">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title aui-font-size-14"> 流浪男</div>
+                            <div class="aui-list-item-right">08:00</div>
+                        </div>
+                        <div class="aui-list-item-text">
+                            www.auicss.com
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/admin/tongxi/script/api.js"></script>
+<script type="text/javascript">
+    
+    apiready = function(){
+        
+       
+    };
+
+    function openChat() {
+        api.openWin({
+	        name: 'chat',
+	        url: 'chat_list.html'
+        });
+    }
+</script>
+</html>

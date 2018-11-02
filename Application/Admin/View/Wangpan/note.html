@@ -1,0 +1,674 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>文档</title>
+<link rel="stylesheet" href="__PUBLIC__/admin/aui/BtFont/css/bootstrap.min.css">
+<link rel="stylesheet" href="__PUBLIC__/admin/aui/BtFont/css/font-awesome.min.css">
+<!--弹窗-->
+<style type="text/css"> 
+.window,.window2{ 
+    width:250px; 
+    background-color:#d0def0; 
+    position:absolute; 
+    padding:2px; 
+    margin:5px; 
+    display:none; 
+    } 
+ 
+.content,.content2{ 
+    height:150px; 
+    background-color:#FFF; 
+    font-size:14px; 
+    overflow:auto; 
+    } 
+.title,.title2{ 
+        padding:2px; 
+        color:#0CF; 
+        font-size:14px; 
+        } 
+.title img,.title2 img{ 
+        float:right; 
+        } 
+</style> 
+<script type="text/javascript" src="__PUBLIC__/admin/aui/script/jquery-1.7.2.js" ></script>
+<!---------------------------------------------------------上传等待js-------------------------------------------------->
+<script type="text/javascript">  
+/**  
+ * 使用方法:  
+ * 开启:MaskUtil.mask();  
+ * 关闭:MaskUtil.unmask();  
+ *   
+ * MaskUtil.mask('其它提示文字...');  
+ */  
+// MaskUtil Start  
+var MaskUtil = (function(){  
+      
+    var $mask,$maskMsg;  
+      
+    var defMsg = '正在处理，请稍待。。。';  
+      
+    function init(){  
+        if(!$mask){  
+            $mask = $("<div></div>")  
+            .css({  
+              'position' : 'absolute'  
+              ,'left' : '0'  
+              ,'top' : '0'  
+              ,'width' : '100%'  
+              ,'height' : '100%'  
+              ,'opacity' : '0.3'  
+              ,'filter' : 'alpha(opacity=30)'  
+              ,'display' : 'none'  
+              ,'background-color': '#ccc'  
+            })  
+            .appendTo("body");  
+        }  
+        if(!$maskMsg){  
+            $maskMsg = $("<div></div>")  
+                .css({  
+                  'position': 'absolute'  
+                  ,'top': '50%'  
+                  ,'margin-top': '-20px'  
+                  ,'padding': '5px 20px 5px 20px'  
+                  ,'width': 'auto'  
+                  ,'border-width': '1px'  
+                  ,'border-style': 'solid'  
+                  ,'display': 'none'  
+                  ,'background-color': '#ffffff'  
+                  ,'font-size':'14px'  
+                })  
+                .appendTo("body");  
+        }  
+          
+        $mask.css({width:"100%",height:$(document).height()});  
+          
+        var scrollTop = $(document.body).scrollTop();  
+          
+        $maskMsg.css({  
+            left:( $(document.body).outerWidth(true) - 190 ) / 2  
+            ,top:( ($(window).height() - 45) / 2 ) + scrollTop  
+        });   
+                  
+    }  
+      
+    return {  
+        mask:function(msg){  
+            init();  
+            $mask.show();  
+            $maskMsg.html(msg||defMsg).show();  
+        }  
+        ,unmask:function(){  
+            $mask.hide();  
+            $maskMsg.hide();  
+        }  
+    }  
+      
+}());  
+// MaskUtil End
+</script>  
+<!---------------------------------------------------------上传等待js-------------------------------------------------->
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+		//点击创建文件夹
+        $("#btn_center").click(function () {
+            popCenterWindow();
+        });
+		//点击重新命名
+        $("#btn_center2").click(function () {
+            popCenterWindow2();
+        });
+
+        $("#btn_right").click(function () {
+            popRightWindow();
+        });
+        $("#btn_left").click(function () {
+            popLeftWindow();
+        });
+		
+		//点击选取上传文件 
+		$("#upload_file").click(function () {
+			//指示牌取值
+			var ppid = $('#ppid').val();
+			var puserid = $('#puserid').val();
+			var ptypes = $('#ptypes').val();
+			var plevels = $('#plevels').val();
+			var pdisplay = $('#pdisplay').val();
+			if(plevels < 2){
+				layer.msg('两层文件夹以内的不可以创建文件',{icon: 5,time:1000});
+			}else{
+				//文件表单赋初始值
+				$('#formpid').val(ppid+"");
+				$('#formuserid').val(puserid+"");
+				$('#formtypes').val(ptypes+"");
+				$('#formlevels').val(plevels+"");
+				$('#formdisplay').val(pdisplay+"");
+				$('#fileware').click();
+			}
+        });
+		//文件组建进行监听 文件上传
+		$('#fileware').live('change',function(){ 
+			//提交表单
+			var formData = new FormData($('#documentuploads')[0]);
+			$.ajax({ 
+				url : '__MODULE__/Wangpan/uploadnot', 
+				type : 'POST', 
+				data : formData, 
+				// 告诉jQuery不要去处理发送的数据
+				processData : false, 
+				// 告诉jQuery不要去设置Content-Type请求头
+				contentType : false,
+				beforeSend:function(){
+				    //console.log("正在进行，请稍候");
+					//提示上传中
+					MaskUtil.mask('上传中请稍候...');
+				},
+				success : function(responseStr) { 
+					if(responseStr.code == 200){
+						var wenjian = "<div class='laosu' style='min-width:80px;min-height:80px;width:10%;text-align:center;padding:5px;float:left;position:relative;'>";
+							if((responseStr.isdir == 2)){
+								wenjian += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/g16.ico' style='width:100%;' />";
+							}
+							wenjian += "<span style='width:100%;'>"+responseStr.filename+"</span>";
+							wenjian += "<div style='width:100%;height:100%;position:relative;left:0px;display:none;' >";
+							wenjian += "<input type='checkbox' class='checkboxselect' style='float:left;' />";
+							wenjian += "<input type='hidden'   class='checkboxselectval' name='checkboxselectval' value='0' />";
+							wenjian += "<input type='hidden'   class='pid' name='pid' value='"+responseStr.id+"' />";
+							wenjian += "<input type='hidden'   class='userid' name='userid' value='"+responseStr.userid+"' />";
+							wenjian += "<input type='hidden'   class='types' name='types' value='"+responseStr.types+"' />";
+							wenjian += "<input type='hidden'   class='levels' name='levels' value='"+responseStr.levels+"' />";
+							wenjian += "<input type='hidden'   class='isdir' name='isdir' value='"+responseStr.isdir+"' />";
+							wenjian += "<input type='hidden'   class='display' name='display' value='"+responseStr.display+"' />";
+							wenjian += "</div>";
+							wenjian += "</div>";
+						$("#mainbody").append(wenjian);
+						//关闭上传提示  
+						MaskUtil.unmask(); 
+					 }else if(responseStr.code == 202){
+					 alert(responseStr.message);
+						//layer.msg(responseStr.message,{icon: 5,time:1000});
+						//关闭上传提示  
+						MaskUtil.unmask(); 
+					 }else{
+						layer.msg('网络连接错误，请检查网络！',{icon: 5,time:1000});
+						//关闭上传提示  
+						MaskUtil.unmask(); 
+					 }
+				}, 
+				error : function(responseStr) { 
+						//console.log("error");
+						layer.msg('网络连接错误，请检查网络！',{icon: 5,time:1000});
+						//关闭上传提示  
+						MaskUtil.unmask(); 
+					} 
+			});
+			
+		});
+    }); 
+ 
+</script> 
+<!--弹窗-->
+</head>
+<body>
+<!----------------------------------------------------------------------弹窗开始--------------------------------------------------------------->
+	<!--创建文件夹-->
+	<div class="window" id="center"> 
+		<div id="title" class="title"><img src="__PUBLIC__/admin/aui/image/close.png" style='width:20px;' alt="关闭" />创建文件夹</div> 
+		<div class="content">
+		<span style='font-size:25px;'>文件名：</span><br/>
+		<input id='wenjianming' type='text' style='width:80%;height:30px;margin-left:10px;' /><br/>
+		<input type='button' id='create' value='创 建' style='margin-left:40%;margin-top:10px;' />
+		</div> 
+	</div> 
+	<!--创建文件夹-->
+	<!--重新命名-->
+	<div class="window2" id="center2"> 
+		<div id="title2" class="title2"><img src="__PUBLIC__/admin/aui/image/close.png" style='width:20px;' alt="关闭" />重命名</div> 
+		<div class="content2">
+		<span style='font-size:25px;'>新文件名：</span><br/>
+		<input id='newname' type='text' style='width:80%;height:30px;margin-left:10px;' /><br/>
+		<input type='button' id='renames' value='确 定' style='margin-left:40%;margin-top:10px;' />
+		</div> 
+	</div> 
+	<!--重新命名-->
+<!------------------------------------------------------------------------------弹窗结束--------------------------------------------------------->
+
+<div id='navi' style='width:100%;height:100%;padding:15px;overflow:auto;border:2px solid #C5C5C5;' >
+	<div style='float:left;border:1px solid #C5C5C5;padding:5px;' id='download'>
+		<i class="icon-download-alt"></i>下载
+	</div>
+	<div style='float:left;border:1px solid #C5C5C5;padding:5px;margin-left:20px;' id='btn_center2'>
+		<i class="icon-edit"></i>重命名
+	</div>
+	<div style='float:left;border:1px solid #C5C5C5;padding:5px;margin-left:20px;' id='delete'>
+		<i class="icon-trash"></i>删除
+		<input type='hidden' id='ids' value='' />
+	</div>
+	<div style='float:left;border:1px solid #C5C5C5;padding:5px;margin-left:20px;' id="btn_center">
+		<i class=" icon-folder-close-alt"></i>创建文件夹
+	</div>
+	<div style='float:left;border:1px solid #C5C5C5;padding:5px;margin-left:20px;' id="upload_file">
+		<i class="icon-upload-alt"></i>上传文件
+	</div>
+	<form id='documentuploads' action='__MODULE__/Wangpan/uploadnot' method='post' enctype="multipart/form-data" >
+		<input type='hidden' id='formfilename' name='filename' value='filename' />
+		<input type='hidden' id='formpid' name='pid' value='' />
+		<input type='hidden' id='formuserid' name='userid' value='' />
+		<input type='hidden' id='formtypes' name='types' value='' />
+		<input type='hidden' id='formlevels' name='levels' value='' />
+		<input type='hidden' id='formdisplay' name='display' value='' />
+		<input id='fileware' type='file' name='filename' style='display:none;' />
+	</form>
+</div>
+
+<!---------------------------文件当前位置指示牌，用于创建文件----------------------------->
+<div>
+	<input type='hidden' id='ppid' value='0' />
+	<input type='hidden' id='puserid' value='{$Think.session.admininfo.user_id}' />
+	<input type='hidden' id='ptypes' value='4' />
+	<input type='hidden' id='plevels' value='0' />
+	<input type='hidden' id='pdisplay' value='1' />
+</div> 
+<!------------------------------文件当前位置指示牌，用于创建文件------------------------------->
+
+
+
+<!---------------------------------------文件列表开始--------------------------------------------->
+<div id='mainbody' style='width:100%;height:100%;overflow:auto;'>
+
+</div>
+<!-----------------------------------------文件列表结束--------------------------------------------->
+
+<script type="text/javascript" src="__PUBLIC__/admin/lib/layer/2.1/layer.js"></script> 
+<script type='text/javascript'>
+$(document).ready(function(){
+	//指示牌取值
+	var ppid = $('#ppid').val();
+	var puserid = $('#puserid').val();
+	var ptypes = $('#ptypes').val();
+	var plevels = $('#plevels').val();
+	var pdisplay = $('#pdisplay').val();
+	var isdir = 1;
+	if(plevels == 2){
+		isdir = 2;
+	}
+	//ajax获取首层文档文件夹列表
+	$.post("__MODULE__/Wangpan/folderList", {  "pid": ppid+"", "userid": puserid+"","types": ptypes+"","levels": plevels+"","display":pdisplay+"","isdir":isdir+""},
+	   function(data){
+		 if(data.code == 200){
+			var msg = data.message;
+			for(var o in msg){ 
+				var wenjian = "<div class='laosu' style='min-width:80px;min-height:80px;width:10%;text-align:center;padding:5px;float:left;position:relative;'>";
+				if((msg[o].types==2) && (msg[o].isdir==1)){
+				wenjian += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/h6.png' style='width:100%;' />";
+				}
+				if((msg[o].types==3) && (msg[o].isdir==1)){
+				wenjian += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/h12.png' style='width:100%;' />";
+				}
+				if((msg[o].types==4) && (msg[o].isdir==1)){
+				wenjian += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/h2.png' style='width:100%;' />";
+				}
+				if((msg[o].types==5) && (msg[o].isdir==1)){
+				wenjian += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/h13.png' style='width:100%;' />";
+				}
+				if(msg[o].isdir == 2){
+					wenjian += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/g16.ico' style='width:100%;' />";
+				}
+				wenjian += "<span style='width:100%;'>"+msg[o].filename+"</span>";
+				wenjian += "<div style='width:100%;height:100%;position:relative;left:0px;display:none;'>";
+				wenjian += "<input type='checkbox' class='checkboxselect' style='float:left;' />";
+				wenjian += "<input type='hidden'   class='checkboxselectval' name='checkboxselectval' value='0' />";
+				wenjian += "<input type='hidden'   class='pid' name='pid' value='"+msg[o].id+"' />";
+				wenjian += "<input type='hidden'   class='userid' name='userid' value='"+msg[o].userid+"' />";
+				wenjian += "<input type='hidden'   class='types' name='types' value='"+msg[o].types+"' />";
+				wenjian += "<input type='hidden'   class='levels' name='levels' value='"+msg[o].levels+"' />";
+				wenjian += "<input type='hidden'   class='isdir' name='isdir' value='"+msg[o].isdir+"' />";
+				wenjian += "<input type='hidden'   class='display' name='display' value='"+msg[o].display+"' />";
+				wenjian += "</div>";
+				wenjian += "</div>";
+				$("#mainbody").append(wenjian);
+			  } 
+		 }else if(data.code == 202){
+			//layer.msg(data.message,{icon: 5,time:1000});
+		 }else{
+			layer.msg('网络连接错误，请检查网络！',{icon: 5,time:1000});
+		 }
+	   }, "json");
+		
+	//下载 filedownload
+	$("#download").bind("click", function(){
+		//便利
+		var length = $(".laosu div input[name='checkboxselectval'][value='1']").length;
+		if(length <= 0){
+			layer.msg('请选择文件！',{icon: 5,time:1000});
+		}else if(length >= 2){
+			layer.msg('一次只能下载一个文件！',{icon: 5,time:1000});
+		}else{
+			var pid = $(".laosu div input[name='checkboxselectval'][value='1']").siblings(".pid").val();
+			var isdir = $(".laosu div input[name='checkboxselectval'][value='1']").siblings(".isdir").val();
+			if(isdir == 1){
+				layer.msg('文件夹不能下载',{icon: 5,time:1000});
+			}else{
+				//下载文件
+				var url = "__MODULE__/Wangpan/filedownload/id/"+pid+"";
+				//alert(url);
+				$(window).attr('location',url);
+			}
+		}
+	});
+	
+	//重命名
+	$("#rename").bind("click", function(){
+	  $('.selectcheckbox').show();
+	});
+	//创建
+	$("#create").bind("click", function(){
+		var wenjianming = $('#wenjianming').val();
+		wenjianming = $.trim(wenjianming);
+		if(wenjianming == ''){
+			layer.msg('文件名不能为空',{icon: 5,time:1000});
+		}else{
+			
+			if($('#plevels').val() >=4){
+				layer.msg('文件夹只能创建两层',{icon: 5,time:1000});
+			}else{
+				//指示牌取值
+				var ppid = $('#ppid').val();
+				var puserid = $('#puserid').val();
+				var ptypes = $('#ptypes').val();
+				var plevels = $('#plevels').val();
+				var pdisplay = $('#pdisplay').val();
+				//上传创建文件数据创建成功后添加 
+				$.post("__MODULE__/Wangpan/creat", { "pid": ppid+"", "userid": puserid+"","filename": wenjianming+"","types": ptypes+"","levels": plevels+"","display":pdisplay+""},
+				   function(data){
+					 if(data.code == 200){
+						var wenjian = "<div class='laosu' style='min-width:80px;min-height:80px;width:10%;text-align:center;padding:5px;float:left;position:relative;'>";
+							if((data.types==2) && (data.isdir==1)){
+							wenjian += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/h6.png' style='width:100%;' />";
+							}
+							if((data.types==3) && (data.isdir==1)){
+							wenjian += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/h12.png' style='width:100%;' />";
+							}
+							if((data.types==4) && (data.isdir==1)){
+							wenjian += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/h2.png' style='width:100%;' />";
+							}
+							if((data.types==5) && (data.isdir==1)){
+							wenjian += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/h13.png' style='width:100%;' />";
+							}
+							if((data.isdir == 2)){
+								wenjian += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/g16.ico' style='width:100%;' />";
+							}
+							wenjian += "<span style='width:100%;'>"+data.filename+"</span>";
+							wenjian += "<div style='width:100%;height:100%;position:relative;left:0px;display:none;' >";
+							wenjian += "<input type='checkbox' class='checkboxselect' style='float:left;' />";
+							wenjian += "<input type='hidden'   class='checkboxselectval' name='checkboxselectval' value='0' />";
+							wenjian += "<input type='hidden'  class='pid' name='pid' value='"+data.id+"' />";
+							wenjian += "<input type='hidden'  class='userid' name='userid' value='"+data.userid+"' />";
+							wenjian += "<input type='hidden'  class='types' name='types' value='"+data.types+"' />";
+							wenjian += "<input type='hidden'  class='levels' name='levels' value='"+data.levels+"' />";
+							wenjian += "<input type='hidden'  class='isdir' name='isdir' value='"+data.isdir+"' />";
+							wenjian += "<input type='hidden'  class='display' name='display' value='"+data.display+"' />";
+							wenjian += "</div>";
+							wenjian += "</div>";
+						$("#mainbody").append(wenjian);
+					 }else if(data.code == 202){
+						layer.msg(data.message,{icon: 5,time:1000});
+					 }else{
+						layer.msg('网络连接错误，请检查网络！',{icon: 5,time:1000});
+					 }
+				   }, "json");
+			}
+		}
+		
+	});
+	//重命名
+	$("#renames").bind("click", function(){
+		//便利
+		var length = $(".laosu div input[name='checkboxselectval'][value='1']").length;
+		if(length <= 0){
+			layer.msg('请选择要重命名的文件或文件夹！',{icon: 5,time:1000});
+		}else if(length >= 2){
+			layer.msg('一次只能重命名一个文件或文件夹！',{icon: 5,time:1000});
+		}else{
+			var newname = $('#newname').val();
+			newname = $.trim(newname);
+			if(newname == ''){
+				layer.msg('文件名不能为空！',{icon: 5,time:1000});
+			}else{
+				var pid = $(".laosu div input[name='checkboxselectval'][value='1']").siblings(".pid").val();
+				var isdir = $(".laosu div input[name='checkboxselectval'][value='1']").siblings(".isdir").val();
+				if(isdir == 1){
+					//layer.msg('文件夹名称不能修改！',{icon: 5,time:1000});
+					//ajax修改文件（夹）名
+					$.post("__MODULE__/Wangpan/filerename", { "id": pid+"","userid": puserid+"", "filename": newname+""},
+					   function(data){
+						  var message = data.message;
+						 if(data.code == 200){
+							$(".laosu div input[name='checkboxselectval'][value='1']").parent().siblings("span").html(message+"")
+						 }else if(data.code == 202){
+							layer.msg(message+"",{icon: 5,time:1000});
+						 }else{
+							layer.msg('网络连接错误，请检查网络！',{icon: 5,time:1000});
+						 }
+					   }, "json");
+				}else{
+					//ajax修改文件（夹）名
+					$.post("__MODULE__/Wangpan/filerename", { "id": pid+"","userid": puserid+"", "filename": newname+""},
+					   function(data){
+						  var message = data.message;
+						 if(data.code == 200){
+							$(".laosu div input[name='checkboxselectval'][value='1']").parent().siblings("span").html(message+"")
+						 }else if(data.code == 202){
+							layer.msg(message+"",{icon: 5,time:1000});
+						 }else{
+							layer.msg('网络连接错误，请检查网络！',{icon: 5,time:1000});
+						 }
+					   }, "json");
+				}
+				
+			}
+			
+		}
+	});
+	//删除文件或者文件夹
+	$("#delete").bind("click", function(){
+		//便利
+		var length = $(".laosu div input[name='checkboxselectval'][value='1']").length;
+		if(length <= 0){
+			layer.msg('请选择要重命名的文件或文件夹！',{icon: 5,time:1000});
+		}else{
+			$('#ids').val("");
+			var idobj = $(".laosu div input[name='checkboxselectval'][value='1']").siblings(".pid");
+			idobj.each(function(i){
+				var id = $('#ids').val();
+			    var thisid = $(this).val();
+				if(id == ''){
+					id = thisid;
+				}else{
+					id = id+','+thisid;
+				}
+				$('#ids').val(id);
+			 });
+			var ids = $('#ids').val();
+			//layer.msg(ids,{icon: 6,time:1000});
+			$.post("__MODULE__/Wangpan/deletfile", { "ids": ids+"","userid": puserid+""},
+			   function(data){
+				  var message = data.message;
+				 if(data.code == 200){
+					$('#ids').val("");
+					$(".laosu div input[name='checkboxselectval'][value='1']").parent().parent().remove();
+				 }else if(data.code == 202){
+					layer.msg(message+"",{icon: 5,time:1000});
+				 }else{
+					layer.msg('网络连接错误，请检查网络！',{icon: 5,time:1000});
+				 }
+			   }, "json");
+		}
+	});
+	
+	//点击进入相应文件夹
+	$('.enterimg').live('click', function(){
+		//layer.msg('进入文件夹',{icon: 6,time:1000});
+		var userid =$(this).siblings("div").children("input.userid").val();
+		var pid =$(this).siblings("div").children("input.pid").val();
+		var types =$(this).siblings("div").children("input.types").val();
+		var levels =$(this).siblings("div").children("input.levels").val();
+		var isdir =$(this).siblings("div").children("input.isdir").val();
+		var display =$(this).siblings("div").children("input.display").val();
+		if(levels < 6){
+			if(levels == 5){
+				isdir = 2;
+			}
+			//指示牌赋予值
+			$('#ppid').val(pid+"");
+			$('#puserid').val(userid+"");
+			$('#ptypes').val(types+"");
+			$('#plevels').val(levels+"");
+			$('#pdisplay').val(display+"");
+			
+			//ajax获取第二层文档文件夹列表
+			$.post("__MODULE__/Wangpan/folderList", { "pid": pid+"", "userid": userid+"","types": types+"","levels": levels+"","display":display+"","isdir":isdir+""},
+			   function(data){
+				 if(data.code == 200){
+					//清空列表
+					$("#mainbody").empty();
+					var msg = data.message;
+					for(var o in msg){ 
+						var wenjian2 = "<div class='laosu' style='min-width:80px;min-height:80px;width:10%;text-align:center;padding:5px;float:left;position:relative;'>";
+						if((msg[o].types==2) && (msg[o].isdir==1)){
+						wenjian2 += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/h6.png' style='width:100%;' />";
+						}
+						if((msg[o].types==3) && (msg[o].isdir==1)){
+						wenjian2 += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/h12.png' style='width:100%;' />";
+						}
+						if((msg[o].types==4) && (msg[o].isdir==1)){
+						wenjian2 += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/h2.png' style='width:100%;' />";
+						}
+						if((msg[o].types==5) && (msg[o].isdir==1)){
+						wenjian2 += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/h13.png' style='width:100%;' />";
+						}
+						if(msg[o].isdir == 2){
+							wenjian2 += "<img class='enterimg' src='__PUBLIC__/admin/aui/image/6505/g16.ico' style='width:100%;' />";
+						}
+						wenjian2 += "<span style='width:100%;'>"+msg[o].filename+"</span>";
+						wenjian2 += "<div style='width:100%;height:100%;position:relative;left:0px;display:none;' >";
+						wenjian2 += "<input type='checkbox' class='checkboxselect' style='float:left;' />";
+						wenjian2 += "<input type='hidden'   class='checkboxselectval' name='checkboxselectval' value='0' />";
+						wenjian2 += "<input type='hidden'   class='pid' name='pid' value='"+msg[o].id+"' />";
+						wenjian2 += "<input type='hidden'   class='userid' name='userid' value='"+msg[o].userid+"' />";
+						wenjian2 += "<input type='hidden'   class='types' name='types' value='"+msg[o].types+"' />";
+						wenjian2 += "<input type='hidden'   class='levels' name='levels' value='"+msg[o].levels+"' />";
+						wenjian2 += "<input type='hidden'   class='isdir' name='isdir' value='"+msg[o].isdir+"' />";
+						wenjian2 += "<input type='hidden'   class='display' name='display' value='"+msg[o].display+"' />";
+						wenjian2 += "</div>";
+						wenjian2 += "</div>";
+						$("#mainbody").append(wenjian2);
+					  } 
+				 }else if(data.code == 202){
+					$("#mainbody").empty();
+					//layer.msg(data.message,{icon: 5,time:1000});
+				 }else{
+					layer.msg('网络连接错误，请检查网络！',{icon: 5,time:1000});
+				 }
+			   }, "json");
+		}
+	});
+	
+	//问价列表文件的监听鼠标事件
+	$('.laosu').live('mouseover mouseout',function(event) {
+   if (event.type == 'mouseover') {
+		//do something on mouseover
+		$(this).children("div").show();
+	  }else{
+		var val = $(this).children("div").children("input.checkboxselectval").val();
+		if(val == 1){
+			$(this).children("div").show();
+		}else{
+			$(this).children("div").hide();
+		}
+		//layer.msg(val,{icon: 6,time:1000});
+	  }
+	});
+	//监听复选框
+	$('.checkboxselect').live("change", function(){
+		var val = $(this).siblings(".checkboxselectval").val();
+		if(val == 1){
+			$(this).siblings("input.checkboxselectval").val(0);
+		}else{
+			$(this).siblings("input.checkboxselectval").val(1);
+		}
+	});
+});
+
+//弹窗js开始-----------------------------------------------------------------------------------------------------------------------
+//获取窗口的高度 
+var windowHeight; 
+//获取窗口的宽度 
+var windowWidth; 
+//获取弹窗的宽度 
+var popWidth; 
+//获取弹窗高度 
+var popHeight; 
+function init(){ 
+   windowHeight=$(window).height(); 
+   windowWidth=$(window).width(); 
+   popHeight=$(".window").height(); 
+   popWidth=$(".window").width(); 
+} 
+//关闭窗口的方法 
+function closeWindow(){ 
+    $(".title img").click(function(){ 
+        $(this).parent().parent().hide("slow"); 
+        }); 
+    } 
+	//关闭窗口的方法 
+function closeWindow2(){ 
+    $(".title2 img").click(function(){ 
+        $(this).parent().parent().hide("slow"); 
+        }); 
+    } 
+    //定义弹出居中窗口的方法 
+    function popCenterWindow(){ 
+        init(); 
+        //计算弹出窗口的左上角Y的偏移量 
+		var popY=(windowHeight-popHeight)/2; 
+		var popX=(windowWidth-popWidth)/2; 
+		//alert('jihua.cnblogs.com'); 
+		//设定窗口的位置 
+		$("#center").css("top",popY).css("left",popX).slideToggle("slow");  
+		closeWindow(); 
+    } 
+	//定义弹出居中窗口的方法2 
+    function popCenterWindow2(){ 
+        init(); 
+        //计算弹出窗口的左上角Y的偏移量 
+		var popY=(windowHeight-popHeight)/2; 
+		var popX=(windowWidth-popWidth)/2; 
+		//alert('jihua.cnblogs.com'); 
+		//设定窗口的位置 
+		$("#center2").css("top",popY).css("left",popX).slideToggle("slow");  
+		closeWindow2(); 
+    }
+    function popLeftWindow(){ 
+        init(); 
+        //计算弹出窗口的左上角Y的偏移量 
+    var popY=windowHeight-popHeight; 
+    //var popX=-(windowWidth-popWidth); 
+    //alert(popY); 
+    //设定窗口的位置 
+    $("#left").css("top",popY-50).css("left",50).slideToggle("slow"); 
+    closeWindow(); 
+    } 
+    function popRightWindow(){ 
+        init(); 
+        //计算弹出窗口的左上角Y的偏移量 
+    var popY=windowHeight-popHeight; 
+    var popX=windowWidth-popWidth; 
+    //alert(www.cnblogs.com/jihua); 
+    //设定窗口的位置 
+    $("#right").css("top",popY-50).css("left",popX-50).slideToggle("slow"); 
+    closeWindow(); 
+    }
+//弹窗js结束-------------------------------------------------------------------------------------------------------------------------------
+</script>
+</body>
+</html>
