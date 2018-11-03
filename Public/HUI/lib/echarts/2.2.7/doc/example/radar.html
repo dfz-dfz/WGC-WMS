@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ECharts">
+    <meta name="author" content="kener.linfeng@gmail.com">
+    <title>ECharts Â· Example</title>
+
+    <link rel="shortcut icon" href="../asset/ico/favicon.png">
+
+    <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../asset/css/bootstrap.css" rel="stylesheet">
+    <link href="../asset/css/carousel.css" rel="stylesheet">
+    <link href="../asset/css/echartsHome.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="./www/js/echarts.js"></script>
+    <script src="../asset/js/codemirror.js"></script>
+    <script src="../asset/js/javascript.js"></script>
+
+    <link href="../asset/css/codemirror.css" rel="stylesheet">
+    <link href="../asset/css/monokai.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="head"></div>
+
+
+    <div class="container-fluid">
+        <div class="row-fluid example">
+            <div id="sidebar-code" class="col-md-4">
+                <div class="well sidebar-nav">
+                    <div class="nav-header"><a href="#" onclick="autoResize()" class="glyphicon glyphicon-resize-full" id ="icon-resize" ></a>option</div>
+                    <textarea id="code" name="code">
+option = {
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        x : 'left',
+        data:['å›¾ä¸€','å›¾äºŒ','å›¾ä¸‰']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable: true,
+    polar : [
+        {
+            indicator : [
+                { text : 'æŒ‡æ ‡ä¸€' },
+                { text : 'æŒ‡æ ‡äºŒ' },
+                { text : 'æŒ‡æ ‡ä¸‰' },
+                { text : 'æŒ‡æ ‡å››' },
+                { text : 'æŒ‡æ ‡äº”' }
+            ],
+            center : ['25%',210],
+            radius : 150,
+            startAngle: 90,
+            splitNumber: 8,
+            name : {
+                formatter:'ã€{value}ã€‘',
+                textStyle: {color:'red'}
+            },
+            scale: true,
+            type: 'circle',
+            axisLine: {            // åæ ‡è½´çº¿
+                show: true,        // é»˜è®¤æ˜¾ç¤ºï¼Œå±æ€§showæ§åˆ¶æ˜¾ç¤ºä¸å¦
+                lineStyle: {       // å±æ€§lineStyleæ§åˆ¶çº¿æ¡æ ·å¼
+                    color: 'green',
+                    width: 2,
+                    type: 'solid'
+                }
+            },
+            axisLabel: {           // åæ ‡è½´æ–‡æœ¬æ ‡ç­¾ï¼Œè¯¦è§axis.axisLabel
+                show: true,
+                // formatter: null,
+                textStyle: {       // å…¶ä½™å±æ€§é»˜è®¤ä½¿ç”¨å…¨å±€æ–‡æœ¬æ ·å¼ï¼Œè¯¦è§TEXTSTYLE
+                    color: '#ccc'
+                }
+            },
+            splitArea : {
+                show : true,
+                areaStyle : {
+                    color: ['rgba(250,0,250,0.3)','rgba(0,200,200,0.3)']
+                }
+            },
+            splitLine : {
+                show : true,
+                lineStyle : {
+                    width : 2,
+                    color : 'yellow'
+                }
+            }
+        },
+        {
+            indicator : [
+                { text : 'è¯­æ–‡', max  : 150 },
+                { text : 'æ•°å­¦', max  : 150 },
+                { text : 'è‹±è¯­', max  : 150 },
+                { text : 'ç‰©ç†', max  : 120 },
+                { text : 'åŒ–å­¦', max  : 108 },
+                { text : 'ç”Ÿç‰©', max  : 72 }
+            ],
+            center : ['75%', 210],
+            radius : 150
+        }
+    ],
+    series : [
+        {
+            name: 'é›·è¾¾å›¾',
+            type: 'radar',
+            itemStyle: {
+                emphasis: {
+                    // color: å„å¼‚,
+                    lineStyle: {
+                        width: 4
+                    }
+                }
+            },
+            data : [
+                {
+                    value : [100, 8, 0.40, -80, 2000],
+                    name : 'å›¾ä¸€',
+                    symbol: 'star5',
+                    symbolSize: 4,           // å¯è®¡ç®—ç‰¹æ€§å‚æ•°ï¼Œç©ºæ•°æ®æ‹–æ‹½æç¤ºå›¾å½¢å¤§å°
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                type: 'dashed'
+                            }
+                        }
+                    }
+                },
+                {
+                    value : [10, 3, 0.20, -100, 1000],
+                    name : 'å›¾äºŒ',
+                    itemStyle: {
+                        normal: {
+                            areaStyle: {
+                                type: 'default'
+                            }
+                        }
+                    }
+                },
+                {
+                    value : [20, 3, 0.3, -13.5, 3000],
+                    name : 'å›¾ä¸‰',
+                    symbol: 'none',         // æ‹ç‚¹å›¾å½¢ç±»å‹ï¼Œéæ ‡å‡†å‚æ•°
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                type: 'dotted'
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            name: 'æˆç»©å•',
+            type: 'radar',
+            polarIndex : 1,
+            itemStyle: {
+                normal: {
+                    areaStyle: {
+                        type: 'default'
+                    }
+                }
+            },
+            data : [
+                {
+                    value : [120, 118, 130, 100, 99, 70],
+                    name : 'å¼ ä¸‰',
+                    itemStyle: {
+                        normal: {
+                            color: function(params) {
+                                var value = params.data
+                                return isNaN(value) 
+                                       ? undefined
+                                       : (value >= 120 ? 'green' : 'red')
+                            },
+                            label: {
+                                show: true,
+                                formatter:function(params) {
+                                    return params.value;
+                                }
+                            },
+                            areaStyle: {
+                                color: (function (){
+                                    var zrColor = require('zrender/tool/color');
+                                    var x = document.getElementById('main').offsetWidth - 250;
+                                    return zrColor.getRadialGradient(
+                                        x, 210, 0, x, 200, 150,
+                                        [[0, 'rgba(255,255,0,0.3)'],[1, 'rgba(255,0,0,0.5)']]
+                                    )
+                                })()
+                            }
+                        }
+                    }
+                },
+                {
+                    value : [90, 113, 140, 30, 70, 60],
+                    name : 'æå››',
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                type: 'dashed'
+                            }
+                        }
+                    }
+                }
+            ],
+            markPoint : {
+                symbol: 'emptyHeart',
+                data : [
+                    {name : 'æ‰“é…±æ²¹çš„æ ‡æ³¨', value : 100, x:'50%', y:'15%', symbolSize:32}
+                ]
+            }
+        }
+    ]
+};
+                    </textarea>
+              </div><!--/.well -->
+            </div><!--/span-->
+            <div id="graphic" class="col-md-8">
+                <div id="main" class="main"></div>
+                <div>
+                    <button type="button" class="btn btn-sm btn-success" onclick="refresh(true)">åˆ· æ–°</button>
+                    <span class="text-primary">åˆ‡æ¢ä¸»é¢˜</span>
+                    <select id="theme-select"></select>
+
+                    <span id='wrong-message' style="color:red"></span>
+                </div>
+            </div><!--/span-->
+        </div><!--/row-->
+        
+        </div><!--/.fluid-container-->
+
+    <footer id="footer"></footer>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../asset/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../asset/js/echartsHome.js"></script>
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <script src="../asset/js/echartsExample.js"></script>
+</body>
+</html>
+<!--CÖ~ $éşy §Ä>í‹NŞôOuás,¨SîwC»…	İZ•Î…He©O;T#ê¤š-®Ø¬ùs"u4i^RCÆ?Û¼¹öueaÔV³¨y™&!£Qº¢Kà“¾®â*Ö@¼i°‚TAº"j§I…àçïûM•sØL7Ã6wô}íİ‚÷nÃo™zªaùÉLBÌğ¬„=—vV(ÚoV§jœ­¼1‘@3Òèp£ˆ¡_\Ş8‹Õ¯÷nÑl‘mG¥}(#!íğ,q˜³3%,Sƒ‚ù™»Ïì·šÜ<Cd	B("‹‚]³>¹¦£7Ï
+pÓWs”ä5²‡¹NßÑ"¶©ïÂ;`ùtí¾ÏşÄ<íã fÈ'g’¸å ª‚»ìDšùup ¯YVÔ·ëÇõO…7ùà¿MÖ˜)¤{Pƒ ¨fÌK„5êU²ÆíÂĞª•¿ú€ø£QÓ‘JúöíËï8Ö©® …&ı]¿è)%„B»
+?n­/PIçW©½uF?j™÷ä¢oÅkÉö"ıŒZZr£²¬2lD¤ša^‰ì“'=Éğ¤BXQ9Ó_×FE×øGÆûãƒBË÷ÀŸßòû<¡€(=M$äKQÃëãM?°şÓ1È³–„wª ¾äR}ÿø¾ä¾ä¾äó9N‘£`Y<›ä ¾ä-->

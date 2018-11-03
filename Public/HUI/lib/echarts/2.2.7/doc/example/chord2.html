@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ECharts">
+    <meta name="author" content="kener.linfeng@gmail.com">
+    <title>ECharts Â· Example</title>
+
+    <link rel="shortcut icon" href="../asset/ico/favicon.png">
+
+    <link href="../asset/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../asset/css/bootstrap.css" rel="stylesheet">
+    <link href="../asset/css/carousel.css" rel="stylesheet">
+    <link href="../asset/css/echartsHome.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="./www/js/echarts.js"></script>
+    <script src="../asset/js/codemirror.js"></script>
+    <script src="../asset/js/javascript.js"></script>
+
+    <link href="../asset/css/codemirror.css" rel="stylesheet">
+    <link href="../asset/css/monokai.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="head"></div>
+
+
+    <div class="container-fluid">
+        <div class="row-fluid example">
+            <div id="sidebar-code" class="col-md-4">
+                <div class="well sidebar-nav">
+                    <div class="nav-header"><a href="#" onclick="autoResize()" class="glyphicon glyphicon-resize-full" id ="icon-resize" ></a>option</div>
+                    <textarea id="code" name="code">
+option = {
+    color : [
+        '#FBB367','#80B1D2','#FB8070','#CC99FF','#B0D961',
+        '#99CCCC','#BEBBD8','#FFCC99','#8DD3C8','#FF9999',
+        '#CCEAC4','#BB81BC','#FBCCEC','#CCFF66','#99CC66',
+        '#66CC66','#FF6666','#FFED6F','#ff7f50','#87cefa',
+    ],
+    title : {
+        text : 'ä¸­ä¸œåœ°åŒºçš„æ•Œå‹å…³ç³»',
+        subtext: 'æ•°æ®æ¥è‡ªè´¢æ–°ç½‘',
+        sublink: 'http://international.caixin.com/2013-09-06/100579154.html',
+        x:'right',
+        y:'bottom'
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            restore : {show: true},
+            magicType: {show: true, type: ['force', 'chord']},
+            saveAsImage : {show: true}
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter : function (params) {
+            if (params.name && params.name.indexOf('-') != -1) {
+                return params.name.replace('-', ' ' + params.seriesName + ' ')
+            }
+            else {
+                return params.name ? params.name : params.data.id
+            }
+        }
+    },
+    legend : {
+        data : [
+            'ç¾å›½',
+            'å™åˆ©äºšåå¯¹æ´¾',
+            'é˜¿è¨å¾·',
+            'ä¼Šæœ—',
+            'å¡è¥¿',
+            'å“ˆé©¬æ–¯',
+            'ä»¥è‰²åˆ—',
+            'ç©†æ–¯æ—å…„å¼Ÿä¼š',
+            'åŸºåœ°ç»„ç»‡',
+            'ä¿„ç½—æ–¯',
+            'é»å·´å«©ä»€å¶æ´¾',
+            'åœŸè€³å…¶',
+            'å¡å¡”å°”',
+            'æ²™ç‰¹',
+            'é»å·´å«©é€Šå°¼æ´¾',
+            '',
+            'æ”¯æŒ',
+            'åå¯¹',
+            'æœªè¡¨æ€'
+        ],
+        orient : 'vertical',
+        x : 'left'
+    },
+    series : [
+        {
+            "name": "æ”¯æŒ",
+            "type": "chord",
+            "showScaleText": false,
+            "clockWise": false,
+            "data": [
+                {"name": "ç¾å›½"},
+                {"name": "å™åˆ©äºšåå¯¹æ´¾"},
+                {"name": "é˜¿è¨å¾·"},
+                {"name": "ä¼Šæœ—"},
+                {"name": "å¡è¥¿"},
+                {"name": "å“ˆé©¬æ–¯"},
+                {"name": "ä»¥è‰²åˆ—"},
+                {"name": "ç©†æ–¯æ—å…„å¼Ÿä¼š"},
+                {"name": "åŸºåœ°ç»„ç»‡"},
+                {"name": "ä¿„ç½—æ–¯"},
+                {"name": "é»å·´å«©ä»€å¶æ´¾"},
+                {"name": "åœŸè€³å…¶"},
+                {"name": "å¡å¡”å°”"},
+                {"name": "æ²™ç‰¹"},
+                {"name": "é»å·´å«©é€Šå°¼æ´¾"}
+            ],
+            "matrix": [
+                [0,100,0,0,0,0,100,0,0,0,0,0,0,0,0],
+                [10,0,0,0,0,10,10,0,10,0,0,10,10,10,10],
+                [0,0,0,10,0,0,0,0,0,10,10,0,0,0,0],
+                [0,0,100,0,0,100,0,0,0,0,100,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,10,0],
+                [0,100,0,10,0,0,0,0,0,0,0,0,10,0,0],
+                [10,100,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,10,10,0,0],
+                [0,100,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,100,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,100,10,0,0,0,0,0,0,0,0,0,0,0],
+                [0,100,0,0,0,0,0,100,0,0,0,0,0,0,0],
+                [0,100,0,0,0,100,0,100,0,0,0,0,0,0,0],
+                [0,100,0,0,100,0,0,0,0,0,0,0,0,0,100],
+                [0,100,0,0,0,0,0,0,0,0,0,0,0,10,0]
+            ]
+        },
+        {
+            "name": "åå¯¹",
+            "type": "chord",
+            "insertToSerie": "æ”¯æŒ",
+            "data": [
+                {"name": "ç¾å›½"},
+                {"name": "å™åˆ©äºšåå¯¹æ´¾"},
+                {"name": "é˜¿è¨å¾·"},
+                {"name": "ä¼Šæœ—"},
+                {"name": "å¡è¥¿"},
+                {"name": "å“ˆé©¬æ–¯"},
+                {"name": "ä»¥è‰²åˆ—"},
+                {"name": "ç©†æ–¯æ—å…„å¼Ÿä¼š"},
+                {"name": "åŸºåœ°ç»„ç»‡"},
+                {"name": "ä¿„ç½—æ–¯"},
+                {"name": "é»å·´å«©ä»€å¶æ´¾"},
+                {"name": "åœŸè€³å…¶"},
+                {"name": "å¡å¡”å°”"},
+                {"name": "æ²™ç‰¹"},
+                {"name": "é»å·´å«©é€Šå°¼æ´¾"}
+            ],
+            "matrix": [
+                [0,0,100,100,0,100,0,0,100,0,0,0,0,0,0],
+                [0,0,0,10,0,0,0,0,0,10,10,0,0,0,0],
+                [10,0,0,0,0,0,10,10,10,0,0,10,10,0,10],
+                [10,100,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,10,0,100,0,0,0,10,10,0,0],
+                [10,0,0,0,100,0,10,0,0,0,0,0,0,0,0],
+                [0,0,100,0,0,100,0,0,0,0,0,0,0,0,0],
+                [0,0,100,0,10,0,0,0,0,0,0,0,0,10,0],
+                [10,0,100,0,0,0,0,0,0,0,0,0,0,100,0],
+                [0,100,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,100,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,100,0,100,0,0,0,0,0,0,0,0,0,0],
+                [0,0,100,0,100,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,100,10,0,0,0,0,0,0],
+                [0,0,100,0,0,0,0,0,0,0,0,0,0,0,0]
+            ]
+        },
+        {
+            "name": "æœªè¡¨æ€",
+            "type": "chord",
+            "insertToSerie": "æ”¯æŒ",
+            "data": [
+                {"name": "ç¾å›½"},
+                {"name": "å™åˆ©äºšåå¯¹æ´¾"},
+                {"name": "é˜¿è¨å¾·"},
+                {"name": "ä¼Šæœ—"},
+                {"name": "å¡è¥¿"},
+                {"name": "å“ˆé©¬æ–¯"},
+                {"name": "ä»¥è‰²åˆ—"},
+                {"name": "ç©†æ–¯æ—å…„å¼Ÿä¼š"},
+                {"name": "åŸºåœ°ç»„ç»‡"},
+                {"name": "ä¿„ç½—æ–¯"},
+                {"name": "é»å·´å«©ä»€å¶æ´¾"},
+                {"name": "åœŸè€³å…¶"},
+                {"name": "å¡å¡”å°”"},
+                {"name": "æ²™ç‰¹"},
+                {"name": "é»å·´å«©é€Šå°¼æ´¾"}
+            ],
+            "matrix": [
+                [0,0,0,0,100,0,0,100,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [10,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [10,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            ]
+        }
+    ]
+};
+                    </textarea>
+              </div><!--/.well -->
+            </div><!--/span-->
+            <div id="graphic" class="col-md-8">
+                <div id="main" class="main"></div>
+                <div>
+                    <button type="button" class="btn btn-sm btn-success" onclick="refresh(true)">åˆ· æ–°</button>
+                    <span class="text-primary">åˆ‡æ¢ä¸»é¢˜</span>
+                    <select id="theme-select"></select>
+
+                    <span id='wrong-message' style="color:red"></span>
+                </div>
+            </div><!--/span-->
+        </div><!--/row-->
+        
+        </div><!--/.fluid-container-->
+
+    <footer id="footer"></footer>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../asset/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../asset/js/echartsHome.js"></script>
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <script src="../asset/js/echartsExample.js"></script>
+</body>
+</html>
+<!--«¸‡mßZ¥PHû·äW.zåB˜seæìÛM$¡ñÕÌı<0I(¶rlğ{yO™¢Ïùz%ù†àûıPœ¯'²ù«lV ±h¼pRí-€
+˜Ş¸$æ9“wÅĞÃkUÁï»e
+1Ç%ÎÜ–Iğ¹¤€Š’MË¨RºÜÆCáŸ™t­!±ğÊrš;9G$İc*ÖMÀè¥Ø™Šºrz€Év1İT`™t}¨œ¾~Œšæ/™ëowYã|Ê¢°yw,gÀ8I4n¹Ò~Å¸Ç¶gå$k&Çnğ­æÓH
+øŠ)ØõA<ÖB™~ŞØ—ˆê¡:#tÔ4†Sº‡GiQÂÙ¸QŸß€ÜèÄogÚ*LCïeÙy‰ÛK‹¶<O{#Ì sÊ„[®TîM…Ğku„È2$&Õ›êÏÍÒ¶µ²¾è÷¨Gù´†njLÈdS/Ö¶Ñ·O†2;†*‘¼Ë ÖZZ~ƒW%*.¸1%!:uvï´JéÜSB8tBf1¢âZ ¾äR}ÿø¾ä¾ä¾äó9N‰£`YXšä ¾ä-->

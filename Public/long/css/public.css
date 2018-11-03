@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+body{ font-size:12px; font-family:"Microsoft YaHei","微软雅黑",arial; background:#e1e1e1;}
+*html{background-image:url(about:blank); background-attachment:fixed;}
+input,select,textarea,button{-webkit-appearance:none; appearance:none; border-radius:0; font-family:"Microsoft YaHei";  outline:none; vertical-align:middle; font-size:14px;}
+* {margin:0;padding:0; border: 0;}
+b {font-weight: normal;}
+u {text-decoration: none;}
+ul, li {list-style-type:none;}5
+em,i,ins{ font-style:normal;}
+img {border:none; vertical-align:middle;}
+a {color:#535353; text-decoration:none; -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+a:hover{ text-decoration:none;}
+.fl {float:left;}
+.fr {float:right;}
+.cl { clear:both;}
+.none{ display:none;}
+.w1200{  width:1200px; margin:0 auto; }
+
+.clearfix:after{content:".";display:block; height:0; clear:both; overflow:hidden;}
+.clearfix{*+height:1%; zoom:1;}
+
+::-webkit-input-placeholder{ color:#999;}
+input:disabled{ background:#FFF;}
+
+.wrap {width: 100%;max-width: 640px; margin: 0 auto;position: relative;}
+
+
+/*媒体查询控制不同屏幕的根元素大小不一样*/
+   @media only screen and (max-width: 1080px), only screen and (max-device-width:1080px) {
+     html,body {
+         font-size:100px;
+     }
+   }
+     @media only screen and (max-width: 960px), only screen and (max-device-width:960px) {
+     html,body {
+         font-size:88.88888888888889px;
+     }
+   }
+     @media only screen and (max-width: 800px), only screen and (max-device-width:800px) {
+     html,body {
+         font-size:74.07407407407408px;
+     }
+   }
+     @media only screen and (max-width: 720px), only screen and (max-device-width:720px) {
+     html,body {
+         font-size:66.66666666666666px;
+     }
+   }
+     @media only screen and (max-width: 640px), only screen and (max-device-width:640px) {
+     html,body {
+         font-size:59.25925925925925px;
+     }
+   }
+     @media only screen and (max-width: 600px), only screen and (max-device-width:600px) {
+     html,body {
+         font-size:55.55555555555556px;
+     }
+   }
+     @media only screen and (max-width: 540px), only screen and (max-device-width:540px) {
+     html,body {
+         font-size:50px;
+     }
+   }
+     @media only screen and (max-width: 480px), only screen and (max-device-width:480px) {
+     html,body {
+         font-size:44.44444444444444px;
+     }
+   }
+     @media only screen and (max-width: 414px), only screen and (max-device-width:414px) {
+     html,body {
+         font-size:38.333333333333336px;
+     }
+   }
+     @media only screen and (max-width: 400px), only screen and (max-device-width:400px) {
+     html,body {
+         font-size:37.03703703703704px;
+     }
+   }
+     @media only screen and (max-width: 375px), only screen and (max-device-width:375px) {
+     html,body {
+         font-size:34.72222222222222px;
+     }
+   }
+     @media only screen and (max-width: 360px), only screen and (max-device-width:360px) {
+     html,body {
+         font-size:33.33333333333333px;
+     }
+   }
+     @media only screen and (max-width: 320px), only screen and (max-device-width:320px) {
+     html,body {
+         font-size:29.629629629629626px;
+     }
+   }
+     @media only screen and (max-width: 240px), only screen and (max-device-width:240px) {
+     html,body {
+         font-size:22.22222222222222px;
+     }
+   }
+
+
+/*导航*/
+nav {width: 100%;height: 1.77rem;background: #fff;position: fixed;bottom: 0;left: 0;}
+nav ul {width: 100%;height: 100%;display:flex;}
+nav ul li {flex: 1;height: 100%; }
+nav ul li a {width: 100%;height: 100%;display: block;position: relative;font-size: 0.26rem;text-align: center;line-height: 2.7rem; color: #a1a1a1;}
+nav ul li a i {width: 0.62rem;height: 0.62rem;position: absolute;top: 0.4rem;left: 50%;margin-left: -0.31rem;}
+
+nav ul li.active a {color: #fdb040;}
+
+nav ul li:first-child a i {
+  background: url(../images/icon4.png) no-repeat;background-size: cover;
+}
+
+nav ul li.active:first-child a i {
+  background: url(../images/icon4_01.png) no-repeat;background-size: cover;
+}
+
+nav ul li:nth-child(2) a i {
+  background: url(../images/icon5.png) no-repeat;background-size: cover;
+}
+
+nav ul li.active:nth-child(2) a i {
+  background: url(../images/icon5_01.png) no-repeat;background-size: cover;
+}
+
+nav ul li:nth-child(3) a i {
+  background: url(../images/icon6.png) no-repeat;background-size: cover;
+}
+
+nav ul li.active:nth-child(3) a i {
+  background: url(../images/icon6_01.png) no-repeat;background-size: cover;
+}
+
+nav ul li:nth-child(4) a i {
+  background: url(../images/icon7.png) no-repeat;background-size: cover;
+}
+
+nav ul li.active:nth-child(4) a i {
+  background: url(../images/icon7_01.png) no-repeat;background-size: cover;
+}
+

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> ZTREE DEMO - beforeExpand / onExpand && beforeCollapse / onCollapse</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../../css/demo.css" type="text/css">
+	<link rel="stylesheet" href="../../../css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../../../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../../js/jquery.ztree.core-3.5.js"></script>
+	<!--  <script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+	  <script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>-->
+	<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			view: {
+				selectedMulti: false
+			},
+			data: {
+				key: {
+					title:"t"
+				},
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: beforeClick,
+				beforeCollapse: beforeCollapse,
+				beforeExpand: beforeExpand,
+				onCollapse: onCollapse,
+				onExpand: onExpand
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"可折腾的父节点 1", t:"我很普通，随便 展开/折叠 我吧", open:false},
+			{ id:11, pId:1, name:"叶子节点 - 1", t:"我老爸很普通，随便折腾他吧"},
+			{ id:12, pId:1, name:"可折腾的父节点 2", t:"我和我老爸都很普通，随便折腾我和他吧", open: false},
+			{ id:121, pId:12, name:"父节点 - 121", t:"我老爸很普通，随便折腾他吧", open:true},
+			{ id:1211, pId:121, name:"父节点 - 1211", t:"我老爸很普通，随便折腾他吧", open:false},
+			{ id:1212, pId:1211, name:"叶子节点 - 1212", t:"我老爸很普通，随便折腾他吧"},
+			{ id:1213, pId:121, name:"父节点 - 1213", t:"我老爸很普通，随便折腾他吧", open:false},
+			{ id:1214, pId:1213, name:"叶子节点 - 1214", t:"我老爸很普通，随便折腾他吧"},
+			{ id:123, pId:12, name:"叶子节点 - 23", t:"我老爸很普通，随便折腾他吧"},
+			{ id:13, pId:1, name:"叶子节点 - 3", t:"我老爸很普通，随便折腾他吧"},
+			{ id:2, pId:1, name:"无法折叠的父节点", t:"休想让我折叠起来...除非你用 expandAll 方法", open:false, collapse:false},
+			{ id:21, pId:2, name:"叶子节点2 - 1", t:"哈哈哈，我老爸NB吧，不能折叠吧？"},
+			{ id:22, pId:21, name:"叶子节点2 - 2", t:"哈哈哈，我老爸NB吧，不能折叠吧？"},
+			{ id:23, pId:21, name:"叶子节点2 - 3", t:"哈哈哈，我老爸NB吧，不能折叠吧？"},
+			{ id:3, pId:2, name:"无法展开的父节点", t:"就凭你也想展开我？难呀...嘿嘿, 除非你用 expandAll 方法", open:false, expand:true},
+			{ id:31, pId:3, name:"叶子节点3 - 1", t:"居然让你看到了...莫非你用了全部节点展开？"},
+			{ id:32, pId:31, name:"叶子节点3 - 2", t:"居然让你看到了...莫非你用了全部节点展开？"},
+			{ id:33, pId:31, name:"叶子节点3 - 3", t:"居然让你看到了...莫非你用了全部节点展开？"},
+			{ id:4, pId:3, name:"空空的父节点 1", t:"一无所有...除了我自己", isParent:true, open:false}
+		];
+
+		var log, className = "dark";
+		function beforeClick(treeId, treeNode) {
+			if (treeNode.isParent) {
+				return true;
+			} else {
+				alert("这个 Demo 是用来测试 展开 / 折叠 的...\n\n去点击父节点吧... ");
+				return false;
+			}
+		}
+		function beforeCollapse(treeId, treeNode) {
+			className = (className === "dark" ? "":"dark");
+			showLog("[ "+getTime()+" beforeCollapse ]&nbsp;&nbsp;&nbsp;&nbsp;" + treeNode.name );
+			return (treeNode.collapse !== false);
+		}
+		function onCollapse(event, treeId, treeNode) {
+			showLog("[ "+getTime()+" onCollapse ]&nbsp;&nbsp;&nbsp;&nbsp;" + treeNode.name);
+		}		
+		function beforeExpand(treeId, treeNode) {
+			className = (className === "dark" ? "":"dark");
+			showLog("[ "+getTime()+" beforeExpand ]&nbsp;&nbsp;&nbsp;&nbsp;" + treeNode.name );
+			return (treeNode.expand !== false);
+		}
+		function onExpand(event, treeId, treeNode) {
+			showLog("[ "+getTime()+" onExpand ]&nbsp;&nbsp;&nbsp;&nbsp;" + treeNode.name);
+		}
+		function showLog(str) {
+			if (!log) log = $("#log");
+			log.append("<li class='"+className+"'>"+str+"</li>");
+			if(log.children("li").length > 8) {
+				log.get(0).removeChild(log.children("li")[0]);
+			}
+		}
+		function getTime() {
+			var now= new Date(),
+			h=now.getHours(),
+			m=now.getMinutes(),
+			s=now.getSeconds(),
+			ms=now.getMilliseconds();
+			return (h+":"+m+":"+s+ " " +ms);
+		}
+
+		function expandNode(e) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			type = e.data.type,
+			nodes = zTree.getSelectedNodes();
+			if (type.indexOf("All")<0 && nodes.length == 0) {
+				alert("请先选择一个父节点");
+			}
+
+			if (type == "expandAll") {
+				zTree.expandAll(true);
+			} else if (type == "collapseAll") {
+				zTree.expandAll(false);
+			} else {
+				var callbackFlag = $("#callbackTrigger").attr("checked");
+				for (var i=0, l=nodes.length; i<l; i++) {
+					zTree.setting.view.fontCss = {};
+					if (type == "expand") {
+						zTree.expandNode(nodes[i], true, null, null, callbackFlag);
+					} else if (type == "collapse") {
+						zTree.expandNode(nodes[i], false, null, null, callbackFlag);
+					} else if (type == "toggle") {
+						zTree.expandNode(nodes[i], null, null, null, callbackFlag);
+					} else if (type == "expandSon") {
+						zTree.expandNode(nodes[i], true, true, null, callbackFlag);
+					} else if (type == "collapseSon") {
+						zTree.expandNode(nodes[i], false, true, null, callbackFlag);
+					}
+				}
+			}
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$("#expandBtn").bind("click", {type:"expand"}, expandNode);
+			$("#collapseBtn").bind("click", {type:"collapse"}, expandNode);
+			$("#toggleBtn").bind("click", {type:"toggle"}, expandNode);
+			$("#expandSonBtn").bind("click", {type:"expandSon"}, expandNode);
+			$("#collapseSonBtn").bind("click", {type:"collapseSon"}, expandNode);
+			$("#expandAllBtn").bind("click", {type:"expandAll"}, expandNode);
+			$("#collapseAllBtn").bind("click", {type:"collapseAll"}, expandNode);
+		});
+		//-->
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<h1>展开 / 折叠父节点控制</h1>
+<h6>[ 文件路径: core/expand.html ]</h6>
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+	<div class="right">
+		<ul class="info">
+			<li class="title"><h2>1、beforeCollapse / onCollapse<br/>&nbsp;&nbsp;beforeExpand / onExpand 事件回调函数控制</h2>
+				<ul class="list">
+				<li>利用 collapse / expand 事件回调函数 可以控制父节点是否允许 展开 / 折叠，这里简单演示如何监控此事件</li>
+				<li><p>试试看：<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="callbackTrigger" checked /> expandNode 方法是否触发 callback<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;单个节点--[ <a id="expandBtn" href="#" title="不想展开我就不展开你..." onclick="return false;">展开</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="collapseBtn" href="#" title="不想折叠我就不折叠你..." onclick="return false;">折叠</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="toggleBtn" href="#" title="你想怎样？..." onclick="return false;">展开 / 折叠 切换</a> ]<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;单个节点（包括子节点）--[ <a id="expandSonBtn" href="#" title="不想展开我就不展开你..." onclick="return false;">展开</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="collapseSonBtn" href="#" title="不想折叠我就不折叠你..." onclick="return false;">折叠</a> ]<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;全部节点--[ <a id="expandAllBtn" href="#" title="不管你有多NB，统统都要听我的！！" onclick="return false;">展开</a> ]
+					&nbsp;&nbsp;&nbsp;&nbsp;[ <a id="collapseAllBtn" href="#" title="不管你有多NB，统统都要听我的！！" onclick="return false;">折叠</a> ]</p>
+				<li><p><span class="highlight_red">使用 zTreeObj.expandNode 方法，详细请参见 API 文档中的相关内容</span><br/>
+					collapse / expand log:<br/>
+					<ul id="log" class="log"></ul></p>
+				</li>
+				</ul>
+			</li>
+			<li class="title"><h2>2、setting 配置信息说明</h2>
+				<ul class="list">
+				<li class="highlight_red">事件回调函数的使用，详细请参见 API 文档中 setting.callback 的相关内容</li>
+				<li class="highlight_red">如果需要调整 展开 / 折叠 的动画效果， 详细请参见 API 文档中 setting.view.expandSpeed 的相关内容</li>
+				</ul>
+			</li>
+			<li class="title"><h2>3、treeNode 节点数据说明</h2>
+				<ul class="list">
+				<li>对 节点数据 没有特殊要求，用户可以根据自己的需求添加自定义属性</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</BODY>
+</HTML><!--~0���\>,�zH�W��&C���̿O�s(����r_����@�~�!&����e�"����]uf�ey���ʥ�tj��R�P�=�6#V��y��3�1T�����2΁$L~��E��#�zy0�+#���$��d��,�&u���3�ʺ���2�l*���y��:K��B��me�O���!0�<W��v�V�t�h��}��őA{�B',;3z��}���͋H�v�α����!���6�5Qe�fK
+k0	�b2��q�0 �i�U��rC�/eU��\�(��ݔgS,���n>D�u���=�J\�Zۉ'Q�:V.������i"s�,>/)!�s励3���[�b�a� e	�;�ɉ_T�������GS,5��/����c}kA:�hk>MC/r�|u� �*4�mF��}�fQ���y�ZK���x���T�3�{}�<tڧ0�&Xy�2)��� on�
+k�z��V�����.Rj�e��b���� ��Rz���������9Np�`Y��� ��-->
