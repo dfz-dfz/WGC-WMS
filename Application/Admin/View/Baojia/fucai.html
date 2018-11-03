@@ -28,18 +28,14 @@
 
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 辅材定价 <span class="c-gray en">&gt;</span> 辅材列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
-	<div class="text-c"> 
-		<form action="__URL__/weixiu" method="post">
-		
-			<input type="text" name="key" value="{$key}" placeholder="关键词名称" style="width:250px" class="input-text">
-			<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 查找</button>
-		</form>
+	<div class="text-c">
+		<input type="text" name="key" id="key" value="" placeholder="关键词名称" style="width:250px" class="input-text">
+		<button name="" id="" class="btn btn-success" type="submit" onclick="list()"><i class="Hui-iconfont">&#xe665;</i> 查找</button>
 	</div>
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
 	<span class="l">
 	
-	</span> 
-	<span class="r">共有数据：<strong>{$count}</strong> 条</span> </div>
+	</span>
 	<div class="mt-20">
 		<table class="table table-border table-bordered table-bg table-hover table-sort">
 			
@@ -47,44 +43,25 @@
 				<tr class="text-c">
 					<th width="40">ID</th>
 					<th width="150">项目名称</th>
-					<th width="60">创建人</th>
-					<th width="120">地址</th>
-					<th width="60">开始时间</th>
-					<th width="60">完工时间</th>
-					<th width="40">状态</th>
+					<th width="60">联系人</th>
+					<th width="90">材料品牌</th>
+					<th width="80">联系方式</th>
+					<th width="120">供应商名称</th>
+					<th width="90">配送时间</th>
+					<th width="100">缩略图</th>
+					<th width="90">发布时间</th>
 					<th width="120">操作</th>
 				</tr>
 			</thead>
 		
-			<tbody>
-			
-				<foreach name="list" item="v">
-					<tr class="text-c">
-						<td>{$v['prj_id']}</td>
-						<td>{$v['prj_name']}</td>
-						<td class="text-l"><u style="cursor:pointer" class="text-primary" title="查看">{$v['uname']}</u></td>
-						<td>{$v['address']}</td>
-						<td>{$v['start_time']}</td>
-						<td>{$v['expire_time']}</td>
-						<td class="td-status">{$v['status']}</td>
-						<td class="f-14 td-manage">
-							<a title="删除维修项目" href="javascript:;" onclick="admin_del('{$v['prj_id']}')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>
-							<a style="text-decoration:none" href="{:U('Xiangmu/bianji',array('id'=>$v['prj_id'],'kzq'=>weixiu))}" title="编辑"><i style="margin:0 5px;font-size:18px" class=" Hui-iconfont">&#xe6df;</i></a>
-							<a style="text-decoration:none" href="{:U('Xiangmu/xiangmu_qiandao',array('kid'=>$v['prj_id']))}" title="签到列表"><i style="margin:0 5px;font-size:18px" class="Hui-iconfont">&#xe637;</i></a>
-							<!--
-							<a style="text-decoration:none" href="{:U('Xiangmu/weixiu_weixiuneirong',array('kid'=>$v['prj_id']))}" title="维修内容"><i style="margin:0 5px;font-size:18px" class="Hui-iconfont">&#xe637;</i></a>
-							-->
-							<a style="text-decoration:none" href="{:U('Xiangmu/xiangmu_cailiaoshengou',array('kid'=>$v['prj_id']))}" title="材料申购"><i style="margin:0 5px;font-size:18px" class="Hui-iconfont">&#xe6cf;</i></a>
-							<a style="text-decoration:none" href="{:U('Xiangmu/xiangmu_qingkuan',array('kid'=>$v['prj_id'],'type'=>1))}" title="请款列表"><i style="margin:0 5px;font-size:18px" class="Hui-iconfont">&#xe63a;</i></a>
-							<a style="text-decoration:none" href="{:U('Xiangmu/xiangmu_zhaogong',array('kid'=>$v['prj_id'],'gtype'=>2,'type'=>2))}" title="招工"><i style="margin:0 5px;font-size:18px" class="Hui-iconfont">&#xe6c1;</i></a>
-							<a style="text-decoration:none" href="{:U('Xiangmu/xiangmu_user',array('kid'=>$v['prj_id']))}" title="成员列表"><i style="margin:0 5px;font-size:18px" class="Hui-iconfont">&#xe62b;</i></a>
-						</td>
-					</tr>
-			</foreach>
+			<tbody id="fucai_list">
 				
 			</tbody>
 		</table>
-		<div class="page b-page">{$page}</div>
+		<div class="unpages" id="unpage" style="margin:50px auto;width: 200px;text-align: center;">
+			<a id="uppage" style="background:red;color:#fff;width: 70px;height: 30px;line-height: 30px;padding:4px 5px;cursor:pointer;margin-right: 20px;" onclick="uppage()">上一页</a>
+			<a id="nextpage" style="background:red;color:#fff;width: 70px;height: 30px;line-height: 30px;padding:4px 5px;cursor:pointer;" onclick="nextpage()">下一页</a>
+		</div>
 	</div>
 </div>
 
@@ -93,105 +70,135 @@
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript">
-$('.table-sort').dataTable({
-	"aaSorting": [[ 1, "desc" ]],//默认第几个排序
-	"bStateSave": true,//状态保存
-	"aoColumnDefs": [
-	  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
-	  {"orderable":false,"aTargets":[0,8]}// 不参与排序的列
-	]
-});
-/*管理员-删除*/
-function admin_del(prj_id){
-	layer.confirm('确认要删除整个项目吗？',function(index){
-		//此处请求后台程序，下方是成功后的前台处理……
-		
-		window.location.href = '__URL__/xiangmu_del/prj_id/'+prj_id;
-		
+	$(function(){
+		list(page);
 	});
-}
-/*资讯-添加*/
-function article_add(title,url,w,h){
-	var index = layer.open({
-		type: 2,
-		title: title,
-		content: url
-	});
-	layer.full(index);
-}
-/*资讯-编辑*/
-function article_edit(title,url,id,w,h){
-	var index = layer.open({
-		type: 2,
-		title: title,
-		content: url
-	});
-	layer.full(index);
-}
+	
+	var page = 1,key = '';
+	function list(page){
+		var url = 'http://wgcapp.wgc2013.com/jingyi.php/Home/Dinge/zhucai_list_admin';
+		var key = $('#key').val();
+		if(page == 1){
+			$('#uppage').hide();
+		}else{
+			$('#uppage').show();
+		}
+		$.ajax({
+			type:"POST",
+			url:url,
+			data:{
+				key      : key,
+				page     : page,
+				type    : 2
+			},
+			cache:false,
+			crossDomain: true == !(document.all),
+			dataType: "json",
+			success:function(ret){
+				page++;
+				if(ret.status == 200){
+					var data = ret.retData;
+					var listHtml = '';
+					for(i in data){
+						var imgArray = [];
+						var id       = data[i].id;
+						var j = parseInt(i)+1;
+						var	id = data[i].id,
+							userid = data[i].userid,
+							pingpai  = data[i].pingpai,
+							name     = data[i].name,
+							danwei   = data[i].danwei,
+							danjia   = data[i].danjia,
+							xinghao  = data[i].xinghao,
+							hanshuijiage   = data[i].hanshuijiage,
+							peisongtime   = data[i].peisongtime,
+							gongyingshang   = data[i].gongyingshang,
+							lianxiren   = data[i].lianxiren,
+							dianhua   = data[i].dianhua,
+							weixin   = data[i].weixin,
+							web   = data[i].web,
+							email   = data[i].email,
+							content   = data[i].content,
+							pingpai = data[i].pingpai,
+							type      = 2,
+							img       = data[i].img,
+							addtime = _trans_php_time_to_str(data[i].addtime,2),
+							defaults     = (data[i].defaults<1)?'':'checked="checked"';
+						var photoArr = new Array();
+							photoArr = img.split(',');
 
-/*资讯-删除*/
-function article_del(obj,id){
-	layer.confirm('确认要删除吗？',function(index){
-		$.post("{:U('Advertisement/del')}",{id:id}, function(data) {
-			if(data.status == 1){
-				$(obj).parents("tr").remove();
-				window.location.reload();
-			}else{
-				alert('删除失败！');
-				window.location.reload();
+							listHtml += '<tr class="tmain">';
+							listHtml +=		'<td>'+id+'</td>';
+							listHtml +=		'<td><span>'+name+'</span></td>';
+							listHtml +=		'<td><span>'+lianxiren+'</span></td>';
+							listHtml +=		'<td><span>'+pingpai+'</span></td>';
+							listHtml +=		'<td><span>'+dianhua+'</span></td>';
+							listHtml +=		'<td><span>'+gongyingshang+'</span></td>';
+							listHtml +=		'<td><span>'+peisongtime+'</span></td>';
+							listHtml += '<td>';
+							if(img != ''){
+								for(var i in photoArr){
+									listHtml += '<a href="http://wgcapp.wgc2013.com'+photoArr[i]+'" target="_blank">';
+									listHtml += '<img src="http://wgcapp.wgc2013.com'+photoArr[i]+'" width="120" height="80" style="margin-right:10px;margin-bottom:10px;">';	
+									listHtml += '</a>';
+								}
+							}else{
+								listHtml += '<span>暂无缩略图</span>';
+							}
+							listHtml += '</td>';
+							listHtml += '<td>'+addtime+'</td>';
+							listHtml +=		'<td><a title="删除" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Dinge/zhucai_list_del/id/'+id+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a></td>';
+							listHtml +=		'</tr>';
+					}
+					$("#fucai_list").html(listHtml);
+					$('#nextpage').show();
+				}else if(ret.status == 202){
+					$("#fucai_list").html('<div style="border: none;width:100px;height:100px;margin:50px auto;font-size:20px;color:#999;line-height:50px;" class="empty">暂无数据</div>');
+					$('#nextpage').hide();
+				}
+
+			},
+			error:function(err){
+				console.log(err)
 			}
-			
-		},'json');
-		
-	});
-}
+		});
+	}
+	
+	function uppage(){
+		if(page<1){
+			page=1;
+		}
+		page--;
+		list(page);
+	}
 
-/*资讯-审核*/
-function article_shenhe(obj,id){
-	layer.confirm('审核文章？', {
-		btn: ['通过','不通过','取消'], 
-		shade: false,
-		closeBtn: 0
-	},
-	function(){
-		$(obj).parents("tr").find(".td-manage").prepend('<a class="c-primary" onClick="article_start(this,id)" href="javascript:;" title="申请上线">申请上线</a>');
-		$(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已发布</span>');
-		$(obj).remove();
-		layer.msg('已发布', {icon:6,time:1000});
-	},
-	function(){
-		$(obj).parents("tr").find(".td-manage").prepend('<a class="c-primary" onClick="article_shenqing(this,id)" href="javascript:;" title="申请上线">申请上线</a>');
-		$(obj).parents("tr").find(".td-status").html('<span class="label label-danger radius">未通过</span>');
-		$(obj).remove();
-    	layer.msg('未通过', {icon:5,time:1000});
-	});	
-}
-/*资讯-下架*/
-function article_stop(obj,id){
-	layer.confirm('确认要下架吗？',function(index){
-		$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="article_start(this,id)" href="javascript:;" title="发布"><i class="Hui-iconfont">&#xe603;</i></a>');
-		$(obj).parents("tr").find(".td-status").html('<span class="label label-defaunt radius">已下架</span>');
-		$(obj).remove();
-		layer.msg('已下架!',{icon: 5,time:1000});
-	});
-}
-
-/*资讯-发布*/
-function article_start(obj,id){
-	layer.confirm('确认要发布吗？',function(index){
-		$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="article_stop(this,id)" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>');
-		$(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已发布</span>');
-		$(obj).remove();
-		layer.msg('已发布!',{icon: 6,time:1000});
-	});
-}
-/*资讯-申请上线*/
-function article_shenqing(obj,id){
-	$(obj).parents("tr").find(".td-status").html('<span class="label label-default radius">待审核</span>');
-	$(obj).parents("tr").find(".td-manage").html("");
-	layer.msg('已提交申请，耐心等待审核!', {icon: 1,time:2000});
-}
-
+	function nextpage(){
+		page++;
+		list(page);
+	}
+	
+	function _trans_php_time_to_str(timestamp, n) {
+		update = new Date(timestamp * 1000);
+		year = update.getFullYear();
+		month = (update.getMonth() + 1 < 10) ? ('0' + (update.getMonth() + 1)) : (update.getMonth() + 1);
+		day = (update.getDate() < 10) ? ('0' + update.getDate()) : (update.getDate());
+		hour = (update.getHours() < 10) ? ('0' + update.getHours()) : (update.getHours());
+		minute = (update.getMinutes() < 10) ? ('0' + update.getMinutes()) : (update.getMinutes());
+		second = (update.getSeconds() < 10) ? ('0' + update.getSeconds()) : (update.getSeconds());
+		if (n == 1) {
+			return (year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second);
+		} else if (n == 2) {
+			return (year + '-' + month + '-' + day);
+		} else if (n == 3) {
+			return (month + '-' + day);
+		} else if (n == 4) {
+			return (hour + ':' + minute + ':' + second);
+		} else if (n == 5) {
+			return (year + '-' + month + '-' + day + ' ' + hour + ':' + minute );
+		} else {
+			return 0;
+		}
+	}
 </script> 
 </body>
 </html>
