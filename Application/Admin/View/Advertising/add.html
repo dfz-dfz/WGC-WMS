@@ -83,6 +83,38 @@
 						<option value="17" class="information">行业资讯8</option>
 						<option value="18" class="information">行业资讯9</option>
 						<option value="19" class="information">行业资讯10</option>
+						<option value="20" class="information">热门职位1</option>
+						<option value="21" class="information">热门职位2</option>
+						<option value="22" class="information">热门职位3</option>
+						<option value="23" class="information">热门职位4</option>
+						<option value="24" class="information">热门职位5</option>
+						<option value="25" class="information">热门职位6</option>
+						<option value="26" class="information">热门职位7</option>
+						<option value="27" class="information">热门职位8</option>
+						<option value="28" class="information">维修报价1</option>
+						<option value="29" class="information">维修报价2</option>
+						<option value="30" class="information">维修报价3</option>
+						<option value="31" class="information">维修报价4</option>
+						<option value="32" class="information">维修报价5</option>
+						<option value="33" class="information">维修报价6</option>
+						<option value="34" class="information">维修报价7</option>
+						<option value="35" class="information">维修报价8</option>
+						<option value="36" class="information">材料采购1</option>
+						<option value="37" class="information">材料采购2</option>
+						<option value="38" class="information">材料采购3</option>
+						<option value="39" class="information">材料采购4</option>
+						<option value="40" class="information">材料采购5</option>
+						<option value="41" class="information">材料采购6</option>
+						<option value="42" class="information">材料采购7</option>
+						<option value="43" class="information">材料采购8</option>
+						<option value="44" class="information">材料推广1</option>
+						<option value="45" class="information">材料推广2</option>
+						<option value="46" class="information">材料推广3</option>
+						<option value="47" class="information">材料推广4</option>
+						<option value="48" class="information">材料推广5</option>
+						<option value="49" class="information">材料推广6</option>
+						<option value="50" class="information">材料推广7</option>
+						<option value="51" class="information">材料推广8</option>
 						<option value="">···</option>
 					</select>
 					<div style="position:absolute;width:500px;height:auto;overflow:hidden;" id="explain"></div>
@@ -110,9 +142,17 @@
 		if($('#show_type').val() == 1 || $('#show_type').val() == 2 || $('#show_type').val() == 3){
 			$('#explain').html('在首页上面显示大广告');
 		}else if($('#show_type').val() == 4 || $('#show_type').val() == 5 || $('#show_type').val() == 6 || $('#show_type').val() == 7 || $('#show_type').val() == 8 || $('#show_type').val() == 9){
-			$('#explain').html('<img src="/Public/images/header_gg.jpg" width="400"/>');
+			$('#explain').html('<a href="/Public/images/header_gg.jpg" target="_blank"><img src="/Public/images/header_gg.jpg" width="400"/></a>');
 		}else if($('#show_type').val() == 10 || $('#show_type').val() == 11 || $('#show_type').val() == 12 || $('#show_type').val() == 13 || $('#show_type').val() == 14 || $('#show_type').val() == 15 || $('#show_type').val() == 16 || $('#show_type').val() == 17 || $('#show_type').val() == 18){
-			$('#explain').html('<img src="/Public/images/message_gg.png" width="400"/>');
+			$('#explain').html('<a href="/Public/images/message_gg.png" target="_blank"><img src="/Public/images/message_gg.png" width="400"/></a>');
+		}else if($('#show_type').val() == 20 || $('#show_type').val() == 21 || $('#show_type').val() == 22 || $('#show_type').val() == 23 || $('#show_type').val() == 24 || $('#show_type').val() == 25 || $('#show_type').val() == 26 || $('#show_type').val() == 27){
+			$('#explain').html('<a href="/Public/images/zhaopin_gg.png" target="_blank"><img src="/Public/images/zhaopin_gg.png" width="400"/></a>');
+		}else if($('#show_type').val() == 28 || $('#show_type').val() == 29 || $('#show_type').val() == 30 || $('#show_type').val() == 31 || $('#show_type').val() == 32 || $('#show_type').val() == 33 || $('#show_type').val() == 34 || $('#show_type').val() == 35){
+			$('#explain').html('<a href="/Public/images/weixiu_gg.png" target="_blank"><img src="/Public/images/weixiu_gg.png" width="400"/></a>');
+		}else if($('#show_type').val() == 36 || $('#show_type').val() == 37 || $('#show_type').val() == 38 || $('#show_type').val() == 39 || $('#show_type').val() == 40 || $('#show_type').val() == 41 || $('#show_type').val() == 42 || $('#show_type').val() == 43){
+			$('#explain').html('<a href="/Public/images/cailiaocaigou_gg.png" target="_blank"><img src="/Public/images/cailiaocaigou_gg.png" width="400"/></a>');
+		}else if($('#show_type').val() == 44 || $('#show_type').val() == 45 || $('#show_type').val() == 46 || $('#show_type').val() == 47 || $('#show_type').val() == 48 || $('#show_type').val() == 49 || $('#show_type').val() == 50 || $('#show_type').val() == 51){
+			$('#explain').html('<a href="/Public/images/cailiaotuiguang.png" target="_blank"><img src="/Public/images/cailiaotuiguang.png" width="400"/></a>');
 		}else{
 			$('#explain').html('');
 		}

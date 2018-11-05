@@ -66,7 +66,61 @@
 						<td><img src="{$v['pic']}" width="120" height="50"/></td>
 						
 						<td>{$v['company_url']}</td>
-						<td>{$v['show_type']}</td>
+						<td>
+							<if condition="($v['show_type'] eq 1)"> banner1
+								<elseif condition="($v['show_type'] eq 2)"/>banner2
+								<elseif condition="($v['show_type'] eq 3)"/>banner3
+								<elseif condition="($v['show_type'] eq 4)"/>首页广告1
+								<elseif condition="($v['show_type'] eq 5)"/>首页广告2
+								<elseif condition="($v['show_type'] eq 6)"/>首页广告3
+								<elseif condition="($v['show_type'] eq 7)"/>首页广告4
+								<elseif condition="($v['show_type'] eq 8)"/>首页广告5
+								<elseif condition="($v['show_type'] eq 9)"/>首页广告6
+								<elseif condition="($v['show_type'] eq 10)"/>行业资讯1
+								<elseif condition="($v['show_type'] eq 11)"/>行业资讯2
+								<elseif condition="($v['show_type'] eq 12)"/>行业资讯3
+								<elseif condition="($v['show_type'] eq 13)"/>行业资讯4
+								<elseif condition="($v['show_type'] eq 14)"/>行业资讯5
+								<elseif condition="($v['show_type'] eq 15)"/>行业资讯6
+								<elseif condition="($v['show_type'] eq 16)"/>行业资讯7
+								<elseif condition="($v['show_type'] eq 17)"/>行业资讯8
+								<elseif condition="($v['show_type'] eq 18)"/>行业资讯9
+								<elseif condition="($v['show_type'] eq 19)"/>行业资讯10
+								<elseif condition="($v['show_type'] eq 20)"/>热门职位1
+								<elseif condition="($v['show_type'] eq 21)"/>热门职位2
+								<elseif condition="($v['show_type'] eq 22)"/>热门职位3
+								<elseif condition="($v['show_type'] eq 23)"/>热门职位4
+								<elseif condition="($v['show_type'] eq 24)"/>热门职位5
+								<elseif condition="($v['show_type'] eq 25)"/>热门职位6
+								<elseif condition="($v['show_type'] eq 26)"/>热门职位7
+								<elseif condition="($v['show_type'] eq 27)"/>热门职位8
+								<elseif condition="($v['show_type'] eq 28)"/>维修报价1
+								<elseif condition="($v['show_type'] eq 29)"/>维修报价2
+								<elseif condition="($v['show_type'] eq 30)"/>维修报价3
+								<elseif condition="($v['show_type'] eq 31)"/>维修报价4
+								<elseif condition="($v['show_type'] eq 32)"/>维修报价5
+								<elseif condition="($v['show_type'] eq 33)"/>维修报价6
+								<elseif condition="($v['show_type'] eq 34)"/>维修报价7
+								<elseif condition="($v['show_type'] eq 35)"/>维修报价8
+								<elseif condition="($v['show_type'] eq 36)"/>材料采购1
+								<elseif condition="($v['show_type'] eq 37)"/>材料采购2
+								<elseif condition="($v['show_type'] eq 38)"/>材料采购3
+								<elseif condition="($v['show_type'] eq 39)"/>材料采购4
+								<elseif condition="($v['show_type'] eq 40)"/>材料采购5
+								<elseif condition="($v['show_type'] eq 41)"/>材料采购6
+								<elseif condition="($v['show_type'] eq 42)"/>材料采购7
+								<elseif condition="($v['show_type'] eq 43)"/>材料采购8
+								<elseif condition="($v['show_type'] eq 44)"/>材料推广1
+								<elseif condition="($v['show_type'] eq 45)"/>材料推广2
+								<elseif condition="($v['show_type'] eq 46)"/>材料推广3
+								<elseif condition="($v['show_type'] eq 47)"/>材料推广4
+								<elseif condition="($v['show_type'] eq 48)"/>材料推广5
+								<elseif condition="($v['show_type'] eq 49)"/>材料推广6
+								<elseif condition="($v['show_type'] eq 50)"/>材料推广7
+								<elseif condition="($v['show_type'] eq 51)"/>材料推广8
+								<else /> 其他
+							</if>
+						</td>
 						<td>
 							<if condition="($v['show'] eq 1)"> 显示
 								<else /> 不显示
