@@ -4,7 +4,7 @@
 <meta http-equiv="Access-Control-Allow-Origin" content="*">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=8"/>
-<title>用户中心-我的网盘-我的图片</title>
+<title>用户中心-我的网盘-我的文档</title>
 <meta name="description" content="微工程，微工程APP，装修、材料、家具、饰品一站式服务，让装修更简单，价格更透明！！" />
 <meta name="keywords" content="微工程，微工程，家居商城，微工程家居商城，微工程家居装修商城，办公室装修，写字楼装修，材料，装修材料，家居，办公家具，家居，家具，装修，装饰" />
 <link rel="stylesheet" type="text/css" href="http://wgc2013.com/themes/mall/jiaju/css/api.css"/>
@@ -162,11 +162,11 @@ body{background:url('') no-repeat center top }
 		<div class="budget base_ui_public" style="/*display: none;*/position: relative;">
 			<ul class="budget_ul user_public_ul">
  				<li style="margin-right: 10px;">我的文档</li>
- 				<li class="change_bg_li" style="margin-right: 10px;">图片</li>
+ 				<li style="margin-right: 10px;">图片</li>
 				<li style="margin-right: 10px;display: none;">笔记</li>
 				<li style="margin-right: 10px;">视频</li>
 				<li style="margin-right: 10px;">PDF</li>
-				<li style="margin-right: 10px;">压缩包</li>
+				<li class="change_bg_li" style="margin-right: 10px;">压缩包</li>
 				<!--<li style="margin-right: 10px;">分享列表</li>-->
 				<li id="addwenjian" style="float: right;background-color: #0092d2;color: #fff;cursor: pointer;">新建文件夹</li>
  			</ul>
@@ -256,6 +256,8 @@ body{background:url('') no-repeat center top }
 
 			</div>
 			</div>
+	
+ 			</div>
 <!--_footer 作为公共模版分离出去-->
 <script type="text/javascript" src="http://wgc2013.com/Public/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="http://wgc2013.com/Public/static/h-ui/js/H-ui.min.js"></script> 
@@ -276,7 +278,7 @@ body{background:url('') no-repeat center top }
 <!-- 多图片上传 -->
 <script type="text/javascript" src="http://wgc2013.com/themes/mall/jiaju/js/JTimer_1.3.js"></script>
 <script type="text/javascript">
-$(function(){
+	$(function(){
 	$('.skin-minimal input').iCheck({
 		checkboxClass: 'icheckbox-blue',
 		radioClass: 'iradio-blue',
@@ -1081,13 +1083,17 @@ $(function(){
 </script>
 <script type="text/javascript">
 	$(document).ready(function() {
-	
-	$("#ftype").val(1)
-	list();
-	messagelist(spage,0);
-});
-var sindex = 1;
-//列表切换
+		
+		$("#ftype").val(2)
+		list();
+		messagelist(spage,0);
+		$(".user_yun_li").children().eq(1).css({
+			"color" : "red"
+		})
+
+	});
+	var sindex = '';
+	//列表切换
 	$(".budget_ul li:first").click(function(){
 		window.location.href = "/index.php/Admin/Wangpanpc/document.html";
 		// $("#ftype").val(2)
@@ -1142,7 +1148,6 @@ var page =1,upage =1;;
 	function share(){
 		//获取选择的内容的id值
 		var $list = $("input[type='checkbox']");
-		console.log($list)
 	}
 	
 	//分享选择接收人
@@ -1162,8 +1167,6 @@ var page =1,upage =1;;
 				crossDomain: true == !(document.all),
 				dataType: "JSON",
 				success:function(ret){
-					console.log("成功");
-					console.log(ret)
 					var html = '';
 					var datas = ret.data;
 					$('.getUserList').html("")
@@ -1204,7 +1207,6 @@ var page =1,upage =1;;
 				                    arr[i] = $(this).val();
 				                });
 				                var vals = arr.join(",");
-				                console.log(vals);
 					}else {
 						alert('数据加载失败，请检查网络!');
 					}
@@ -1276,133 +1278,127 @@ var page =1,upage =1;;
 
 	//确认分享
 	function sharebox(){
-								//获取数据id
-								var arr = new Array();
-								var tarry = new Array();
-				                $('input[name="id"]:checked').each(function(i){
-				                    arr[i] = $(this).val();
-				                });
-				                var vals = arr.join(",");
+		//获取数据id
+		var arr = new Array();
+		var tarry = new Array();
+        $('input[name="id"]:checked').each(function(i){
+            arr[i] = $(this).val();
+        });
+        var vals = arr.join(",");
 
-				                console.log(vals);
+        //获取通讯录id
+  		$('input[name="tid"]:checked').each(function(j){
+            tarry[j] = $(this).val();
+        });
+        var tvals = tarry.join(",");
 
-				                //获取通讯录id
-				          		$('input[name="tid"]:checked').each(function(j){
-				                    tarry[j] = $(this).val();
-				                });
-				                var tvals = tarry.join(",");
-				                console.log(tvals)
-
-				                $.post('http://wgcapp.wgc2013.com/jingyi.php/Home/index/share',{
-				                	"type":10,
-				                	"arr":arr,
-				                	"tarry":tarry
-				                },function(ret){
-				                	console.log(ret)
-				                	if(ret.code == 200){
-
-				                		window.location.reload();
-				                	}
-				                },'json')
+        $.post('http://wgcapp.wgc2013.com/jingyi.php/Home/index/share',{
+        	"type":10,
+        	"arr":arr,
+        	"tarry":tarry
+        },function(ret){
+        	if(ret.code == 200){
+        		window.location.reload();
+        	}
+        },'json')
 	}
 	
-//通讯录分页控制
+	//通讯录分页控制
 
-function pageindexUser(pindex){
-		//console.log(index)
-		if(pindex < 1){
-			pindex = 1;
-			upage=1;
-		}
-	$('.getUserList').html("");
-		uid= '<?php echo $_SESSION["user_info"]["user_id"];?>';
-		$.ajax({
-				type:"POST",
-				url:'http://wgcapp.wgc2013.com/jingyi.php/Home/index/getAllMyRelative',
-				data:{
-						uid:'<?php echo $_SESSION["user_info"]["user_id"];?>',
-		            	type:'PRIVATE',
-		            	types:'user_list',
-		            	page : pindex,
-				},
-				cache:false,
-				crossDomain: true == !(document.all),
-				dataType: "JSON",
-				success:function(ret){
-					console.log("成功");
-					console.log(ret)
-					var html = '';
-					var datas = ret.data;
-					$('.getUserList').html("")
-					if(ret.code == 200){
-						page ++;
-						for(var j in datas){
-							var data = datas[j];
-							var message = datas[j].message;
-							html += '<div class="tel_list">'+data.zhiwei+'</div>';
-							for(var i in message){
-								var zhiwei = message[i].zhiwei,
-									id     = message[i].id,
-									touid = message[i].touid,
-									name = message[i].name,
-									names = message[i].user_name, 
-									imgUrl = message[i].userphoto;
-								html += '<ul>';
-									html += '<li class="tel_li">';
-										html += '<div class="check">';
-											html += '<input name="tid" type="checkbox" value="'+touid+'" name="checkbox" />';
-										html += '</div>';
-										html += '<div class="head_img">';
-											html += '<img src="'+url+imgUrl+'" alt=""/>';
-										html += '</div>';
-										html += '<div class="tel_data">';
-											html += '<span>'+name+'</span>';
-											html += '<span>'+names+'</span>';
-										html += '</div>';
-									html += '</li>';
-								html += '</ul>';
+	function pageindexUser(pindex){
+			//console.log(index)
+			if(pindex < 1){
+				pindex = 1;
+				upage=1;
+			}
+		$('.getUserList').html("");
+			uid= '<?php echo $_SESSION["user_info"]["user_id"];?>';
+			$.ajax({
+					type:"POST",
+					url:'http://wgcapp.wgc2013.com/jingyi.php/Home/index/getAllMyRelative',
+					data:{
+							uid:'<?php echo $_SESSION["user_info"]["user_id"];?>',
+			            	type:'PRIVATE',
+			            	types:'user_list',
+			            	page : pindex,
+					},
+					cache:false,
+					crossDomain: true == !(document.all),
+					dataType: "JSON",
+					success:function(ret){
+						console.log("成功");
+						console.log(ret)
+						var html = '';
+						var datas = ret.data;
+						$('.getUserList').html("")
+						if(ret.code == 200){
+							page ++;
+							for(var j in datas){
+								var data = datas[j];
+								var message = datas[j].message;
+								html += '<div class="tel_list">'+data.zhiwei+'</div>';
+								for(var i in message){
+									var zhiwei = message[i].zhiwei,
+										id     = message[i].id,
+										touid = message[i].touid,
+										name = message[i].name,
+										names = message[i].user_name, 
+										imgUrl = message[i].userphoto;
+									html += '<ul>';
+										html += '<li class="tel_li">';
+											html += '<div class="check">';
+												html += '<input name="tid" type="checkbox" value="'+touid+'" name="checkbox" />';
+											html += '</div>';
+											html += '<div class="head_img">';
+												html += '<img src="'+url+imgUrl+'" alt=""/>';
+											html += '</div>';
+											html += '<div class="tel_data">';
+												html += '<span>'+name+'</span>';
+												html += '<span>'+names+'</span>';
+											html += '</div>';
+										html += '</li>';
+									html += '</ul>';
+								}
 							}
+
+							$('.getUserList').append(html);
+							//获取数据id
+									var arr = new Array();
+					                $('input[name="id"]:checked').each(function(i){
+					                    arr[i] = $(this).val();
+					                });
+					                var vals = arr.join(",");
+					                console.log(vals);
+						}else {
+							alert('数据加载失败，请检查网络!');
 						}
-
-						$('.getUserList').append(html);
-						//获取数据id
-								var arr = new Array();
-				                $('input[name="id"]:checked').each(function(i){
-				                    arr[i] = $(this).val();
-				                });
-				                var vals = arr.join(",");
-				                console.log(vals);
-					}else {
-						alert('数据加载失败，请检查网络!');
+					},
+					error:function(err){
+						console.log("错误是");
+						console.log(err);
 					}
-				},
-				error:function(err){
-					console.log("错误是");
-					console.log(err);
-				}
-			});
+				});
 
-	}
-//下一页
-function nextpageUser(){
-	
-	pageindexUser(++upage);
+		}
+	//下一页
+	function nextpageUser(){
+		
+		pageindexUser(++upage);
 
-	}
-//上一页
-function prepageUser(){
+		}
+	//上一页
+	function prepageUser(){
 		pageindexUser(--upage);
 	}
-$(".quxiao").click(function(){
-	$(this).parent().parent().hide();
-})
-//返回检索列表
+	$(".quxiao").click(function(){
+		$(this).parent().parent().hide();
+	})
+	//返回检索列表
 	function back(){
 		$('#back_btn').hide();
 		$('#search_text').val('');
 		showUserList();
 	}
-
 
 	//日历插件
 	   //获取当前日期
@@ -1466,7 +1462,7 @@ $("#sure").click(function(){
 	}
 	
 })
-function list(){
+	function list(){
 		var types = $("#ftype").val();
 		var page = 1;
 		uid= '<?php echo $_SESSION["user_info"]["user_id"];?>';
@@ -1474,16 +1470,14 @@ function list(){
 				type:"POST",
 				url:'http://wgcapp.wgc2013.com/jingyi.php/Home/Wangpan/Folder_list',
 				data:{
-						userid:'<?php echo $_SESSION["user_info"]["user_id"];?>',
-		            	page : page,
-		            	type : types
+					userid:'<?php echo $_SESSION["user_info"]["user_id"];?>',
+	            	page : page,
+	            	type : types
 				},
 				cache:false,
 				crossDomain: true == !(document.all),
 				dataType: "JSON",
 				success:function(ret){
-					//console.log("成功");
-					//console.log(ret)
 					var listHtml = "";
 					if(ret.code == 200){
 						$(".nulls").hide();
@@ -1504,14 +1498,35 @@ function list(){
 							listHtml += '<div class="renamebox" style="display: none;"><input type="hidden" value="'+id+'"/><input class="rename" type="text" value="'+filename+'" style="width:75px;"/></div>';
 							listHtml += '</div>';
 						}
-
-						$(".filelist .filesmore").html(listHtml);
 						
+						if(types == 2){
+							$(".filelist .filesmore").html(listHtml);
+						}else if(types == 1){
+							$(".filelist_pic .filesmore").html(listHtml);
+						}else if(types == 4){
+							$(".filelist_txt .filesmore").html(listHtml);
+						}else if(types == 5){
+							$(".filelist_vedio .filesmore").html(listHtml);
+						}else if(types == 3){
+							$(".filelist_pdf .filesmore").html(listHtml);
+						}else if(types == 6){
+							$(".filelist_tar .filesmore").html(listHtml);
+						}
 					}else if(ret.code == 202){
-
-						$(".filelist .filesmore").html('<div class="nulls" style="font-size: 20px;color: #9e9e9e;width: 100%;text-align: center;margin-top:20px;">暂无列表</div>');
-						
-						
+						$(".filelist").html('<div class="nulls" style="font-size: 20px;color: #9e9e9e;width: 100%;text-align: center;margin-top:20px;">暂无列表</div>');
+						if(types == 2){
+							$(".filelist").html('<div class="nulls" style="font-size: 20px;color: #9e9e9e;width: 100%;text-align: center;margin-top:20px;">暂无列表</div>');
+						}else if(types == 1){
+							$(".filelist_pic").html('<div class="nulls" style="font-size: 20px;color: #9e9e9e;width: 100%;text-align: center;margin-top:20px;">暂无列表</div>');
+						}else if(types == 4){
+							$(".filelist_txt").html('<div class="nulls" style="font-size: 20px;color: #9e9e9e;width: 100%;text-align: center;margin-top:20px;">暂无列表</div>');
+						}else if(types == 5){
+							$(".filelist_vedio").html('<div class="nulls" style="font-size: 20px;color: #9e9e9e;width: 100%;text-align: center;margin-top:20px;">暂无列表</div>');
+						}else if(types == 3){
+							$(".filelist_pdf").html('<div class="nulls" style="font-size: 20px;color: #9e9e9e;width: 100%;text-align: center;margin-top:20px;">暂无列表</div>');
+						}else if(types == 6){
+							$(".filelist_tar").html('<div class="nulls" style="font-size: 20px;color: #9e9e9e;width: 100%;text-align: center;margin-top:20px;">暂无列表</div>');
+						}
 					}
 					},
 					
@@ -1520,7 +1535,7 @@ function list(){
 					console.log(err);
 				}
 			});
-}
+	}	
 //分享列表
 var spage =1;
 function messagelist(spage,typesindex){
@@ -1535,17 +1550,13 @@ function messagelist(spage,typesindex){
 				type:"POST",
 				url:'http://wgcapp.wgc2013.com/jingyi.php/Home/Wangpan/file_share_list',
 				data:{
-						userid:'<?php echo $_SESSION["user_info"]["user_id"];?>',
-		            	page : spage,
-		            	
-
+					userid:'<?php echo $_SESSION["user_info"]["user_id"];?>',
+	            	page : spage,
 				},
 				cache:false,
 				crossDomain: true == !(document.all),
 				dataType: "JSON",
 				success:function(ret){
-					// console.log("成功");
-					// console.log(ret)
 					var listHtml = "";
 					if(ret.code == 200){
 						$("#next").show();
@@ -1569,13 +1580,12 @@ function messagelist(spage,typesindex){
 						$(".filelist_share .filesmore").html(listHtml);
 					}else if(ret.code == 202){
 						if(types == 0){
-
-						$(".filelist_share").html('<div class="nulls" style="font-size: 20px;color: #9e9e9e;width: 100%;text-align: center;margin-top:20px;">暂无列表</div>');
+							$(".filelist_share").html('<div class="nulls" style="font-size: 20px;color: #9e9e9e;width: 100%;text-align: center;margin-top:20px;">暂无列表</div>');
 						}
 						if(types == 1){
 							$("#next").hide();
-						$(".filelist_share .filesmore").html();	
-						$(".filelist_share").html('<div class="nulls" style="font-size: 20px;color: #9e9e9e;width: 100%;text-align: center;margin-top:20px;">暂无列表</div>');
+							$(".filelist_share .filesmore").html();	
+							$(".filelist_share").html('<div class="nulls" style="font-size: 20px;color: #9e9e9e;width: 100%;text-align: center;margin-top:20px;">暂无列表</div>');
 						}
 						
 					}
@@ -1597,7 +1607,6 @@ function prepage(){
 }
 
 function nextpage(){
-
 	messagelist(++spage,1)
 }
 
@@ -1611,7 +1620,6 @@ function enterfile(id,types){
 	window.location.href = surl;
 }
 function download(url,types){
-	
 	window.location.href = "http://wgcapp.wgc2013.com/jingyi.php/Home/Wangpan/file_download/path"+url+"/type/"+types;
 }
 //重命名
@@ -1621,8 +1629,6 @@ $(".filesmore").on('click','.renamefile',function(e){
 	event.stopPropagation();
 	var id = $(this).children().first().val();
 	var vals = $(this).next().next().children().eq(1).val();
-	// alert(vals)
-
 })
 $(".filesmore").on('blur','.rename',function(){
 	var id = $(this).prev().val();
@@ -1631,26 +1637,25 @@ $(".filesmore").on('blur','.rename',function(){
 	$(this).parent().prev().children().eq(1).show();
 	$(this).parent().prev().children().eq(1).text(vals);
 	$.ajax({
-				type:"POST",
-				url:'http://wgcapp.wgc2013.com/jingyi.php/Home/Wangpan/Folder_setField',
-				data:{
-						userid:'<?php echo $_SESSION["user_info"]["user_id"];?>',
-		            	filename : vals,
-		            	id  : id
-				},
-				cache:false,
-				crossDomain: true == !(document.all),
-				dataType: "JSON",
-				success:function(ret){
-					
-					
-					},
-					
-				error:function(err){
-					console.log("错误是");
-					console.log(err);
-				}
-			});
+		type:"POST",
+		url:'http://wgcapp.wgc2013.com/jingyi.php/Home/Wangpan/Folder_setField',
+		data:{
+			userid:'<?php echo $_SESSION["user_info"]["user_id"];?>',
+			filename : vals,
+			id  : id
+		},
+		cache:false,
+		crossDomain: true == !(document.all),
+		dataType: "JSON",
+		success:function(ret){
+			
+		},
+			
+		error:function(err){
+			console.log("错误是");
+			console.log(err);
+		}
+	});
 })
 //鼠标移动背景更换
 $(".filelist").on('mouseenter','.filelistson',function(){
