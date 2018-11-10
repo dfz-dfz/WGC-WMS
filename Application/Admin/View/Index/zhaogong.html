@@ -22,20 +22,15 @@
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<style>
-	#yuwu_list tr td {
-		text-align:center;
-	}
-</style>
-<title>业务信息</title>
+<title>材料采购</title>
 </head>
 <body>
 
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 业务信息 <span class="c-gray en">&gt;</span> 业务信息列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 材料采购 <span class="c-gray en">&gt;</span> 材料采购列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
-	<div class="text-c">
+	<div class="text-c"> 
 		<input type="text" name="key" id="key" value="" placeholder="关键词名称" style="width:250px" class="input-text">
-		<button name="" id="" class="btn btn-success" type="submit" onclick="list()"><i class="Hui-iconfont">&#xe665;</i> 查找</button>
+		<button name="" id="" class="btn btn-success" type="submit" onclick="cai_select()"><i class="Hui-iconfont">&#xe665;</i> 查找</button>
 	</div>
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
 	<span class="l">
@@ -47,23 +42,18 @@
 			<thead>
 				<tr class="text-c">
 					<th width="40">ID</th>
-					<th width="150">公司名称</th>
-					<th width="60">类别</th>
-					<th width="60">职位</th>
-					<th width="120">联系电话</th>
-					<th width="60">他人联系</th>
-					<th width="120">公司电话</th>
-					<th width="120">QQ</th>
-					<th width="120">地址</th>
-					<th width="120">跟进人</th>
-					<th width="120">备注</th>
-					<th width="120">发布时间</th>
+					<th width="120">材料名称</th>
+					<th width="60">材料品牌</th>
+					<th width="60">型号</th>
+					<th width="120">材料描述</th>
+					<th width="120">公司名称</th>
+					<th width="40">添加时间</th>
 					<th width="120">操作</th>
 				</tr>
 			</thead>
 		
-			<tbody id="yuwu_list">
-			
+			<tbody id="weixiuMain">
+				
 			</tbody>
 		</table>
 		<div class="unpages" id="unpage" style="margin:50px auto;width: 200px;text-align: center;">
@@ -78,86 +68,98 @@
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript">
-	var page = 1;
+	var serverUrl = "http://wgcapp.59jiaju.com/",
+		page = 1;
+
 	$(function(){
-		list();
+		jQuery.support.cors = true;
+		cai_select(page);
 	});
-	function list(page){
-		var key = $('#key').val();
-		$.post('http://wgcapp.wgc2013.com/jingyi.php/Home/yewu/yewu_list_admin',{
-			page : page,
-			key : key
-		},function(ret){
-			var listHtml = "";
-			$("#search_back").hide();
-			if(ret.status == 200){
-				$("#listnext").show();
-				$("#nullslist").hide();
-				var data = ret.retData;
-				for(var i in data){
-				
-					var addtime = _trans_php_time_to_str(data[i].addtime,2),
-						company = data[i].company,
-						companytel = data[i].companytel,
-						dizhi   = data[i].dizhi,
-						genjinren = data[i].genjinren,
-						id      = data[i].id,
-						othertel= data[i].othertel,
-						ps      = data[i].ps,
-						qq      = data[i].qq,
-						tel     = data[i].tel,
-						type    = data[i].type,
-						userid  = data[i].userid,
-						zhiwei  = data[i].zhiwei,
-						userid = data[i].userid;
-						
-						listHtml +=		'<tr class="thead" style="background-color: #fff;">';
-						listHtml +=		'<td><span>'+id+'</span></td>';
-						listHtml +=		'<td><span>'+company+'</span></td>';
-						listHtml +=		'<td><span>'+type+'</span></td>';
-						listHtml +=		'<td><span>'+zhiwei+'</span></td>';
-						listHtml +=		'<td><span>'+tel+'</span></td>';
-						listHtml +=		'<td><span>'+othertel+'</span></td>';
-						listHtml +=		'<td><span>'+companytel+'</span></td>';
-						listHtml +=		'<td><span>'+qq+'</span></td>';
-						listHtml +=		'<td><span>'+dizhi+'</span></td>';
-						listHtml +=		'<td><span>'+genjinren+'</span></td>';
-						listHtml +=		'<td><span>'+ps+'</span></td>';
-						listHtml +=		'<td><span>'+addtime+'</span></td>';
-						listHtml +=		'<td><a title="删除" href="http://wgcapp.wgc2013.com/jingyi.php/Home/yewu/yewu_list_del/id/'+id+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a></td>';
-						listHtml +=		'</tr>';
-				}
-				$("#yuwu_list").html(listHtml);
-				$('#nextpage').show();
-			}else if(ret.status == 202){
-				$('#nextpage').hide();
-				$("#yuwu_list").html('暂无消息');
-				if(types == 1){
-					$("#listnext").hide();
-					$("#yuwu_list").html("")
-				}else if(types == 0){
-					$("#yuwu_list").html("")
-					$("#nullslist").show();
-				}
-			}
-		},'json')
-	}
-	
+
+	//分页
 	function uppage(){
-		page--;
-		if(page<=1){
+		if(page<1){
 			page=1;
 		}
-		list(page);
+		page--;
+		cai_select(page);
 	}
 
 	function nextpage(){
 		page++;
-		list(page);
+		cai_select(page);
+	}
+
+	//材料列表
+	function cai_select(page){
+		var key = $('#key').val();
+		if(page == 1){
+			$('#uppage').hide();
+		}else{
+			$('#uppage').show();
+		}
+
+		$.post("http://wgcapp.wgc2013.com/jingyi.php/Home/Material/addmaterials_list_index",{
+			page : page,
+			cai_type :2,
+			key : key
+		},function(ret){
+			var listHtml = '';
+			if(ret.status == 200){
+					page++;
+					var data = ret.retData;
+					   for(var i in data){
+					var j = parseInt(i)+1;
+							var pid = data[i].pid,
+								m_name = (data[i].m_name == '' || data[i].m_name == null)?'-':data[i].m_name,
+								brand  = (data[i].brand == '' || data[i].brand == null)?'-':data[i].brand,
+								size   = (data[i].size == '' || data[i].size == null) ? '-':data[i].size,
+								expire_time = data[i].expire_time,
+								number = data[i].number,
+								danwei = data[i].danwei,
+								danjia = (data[i].danjia == '' || data[i].danjia == null) ? '-':data[i].danjia,
+								heji   = (data[i].heji == '' || isNaN(data[i].heji)) ? '无':data[i].heji,
+								introduce = data[i].introduce,
+								office_name = (data[i].office_name == '' || data[i].office_name == null)?'-':data[i].office_name,
+								introduce = data[i].introduce,
+								addtime = _trans_php_time_to_str(data[i].atime,2),
+								userid = data[i].userid,
+								id = data[i].id;
+
+								listHtml += '<tr class="text-c">';
+									listHtml += '<td>'+id+'</td>';
+									listHtml += '<td>'+m_name+'</td>';
+									listHtml += '<td class="text-l">'+brand+'</td>';
+									listHtml += '<td class="text-l">'+size+'</td>';
+									listHtml += '<td class="text-l">'+introduce+'</td>';
+									listHtml += '<td class="text-l">'+office_name+'</td>';
+									listHtml += '<td class="text-l">'+addtime+'</td>';
+									listHtml += '<td class="f-14 td-manage">';
+										listHtml += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Material/addmaterials_list_del/pid/'+pid+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
+									listHtml += '</td>';
+								listHtml += '</tr>';
+				   
+						 }
+				
+				$("#weixiuMain").html(listHtml);
+				$('#nextpage').show();
+				
+			}else if(ret.status == 202){
+				$('#nextpage').hide();
+				$("#weixiuMain").html('<div style="border: none;width:100px;height:100px;margin:50px auto;font-size:20px;color:#999;line-height:50px;" class="empty">暂无数据</div>');
+			}else{
+				return false;
+			
+			}
+			
+		
+		},"json");
+
 	}
 	
 	function _trans_php_time_to_str(timestamp, n) {
 		update = new Date(timestamp * 1000);
+		//鏃堕棿鎴宠涔�1000
 		year = update.getFullYear();
 		month = (update.getMonth() + 1 < 10) ? ('0' + (update.getMonth() + 1)) : (update.getMonth() + 1);
 		day = (update.getDate() < 10) ? ('0' + update.getDate()) : (update.getDate());
