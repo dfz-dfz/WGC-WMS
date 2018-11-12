@@ -26,7 +26,7 @@
 <![endif]-->
 <!--/meta 作为公共模版分离出去-->
 
-<title>新增广告</title>
+<title>新增工程头条</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 </head>
@@ -34,9 +34,9 @@
       
 <article class="page-container">
   
-	<form class="form form-horizontal" enctype="multipart/form-data" action="__MODULE__/Advertisement/addForm" method="post" id="form-article-add">
+	<form class="form form-horizontal" enctype="multipart/form-data" action="__MODULE__/Headline/addForms" method="post" id="form-article-add">
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>广告标题:</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>标题:</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="text" class="input-text" name="title">
 			</div>
@@ -47,37 +47,99 @@
 				<input type="text" class="input-text" id="describe" name="describe">
 			</div>
 		</div>
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">发布城市：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<select name="province"></select>
+				<select name="city"></select>
+				<select name="area"></select>
+			</div>
+		</div>
+		
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>类型：</label>
-			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
-			
-				<select name="type" id="type" class="select" >
-				
-					 <if condition="$type eq 0">   
-							<option value="0">工程案例</option>
-								<elseif condition="$type eq 1"/>
-							<option value="1">广告</option>
-					<elseif condition="$type eq 2"/>
-						  <option value = "2">公众号新闻</option>
-								
-					 </if> 
-				   
-				 </select>
+			<div class="formControls col-xs-8 col-sm-9"> 
+				<span class="select-box">
+					<select name="type" id="type" class="select" >
+							
+						<if condition="($_SESSION['wgcadmininfo']['kehu'] eq '微工程')">
+							<option value="10">机电安装</option>
+							<option value="11">建筑装修</option>
+							<option value="12">消防</option>
+							<option value="13">环保</option>
+							<option value="14">材料</option>
+							<option value="15">家具</option>
+							<option value="52">资讯</option>
+						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '经艺装饰')"/>
+							<option value="33">公司资质</option>
+							<option value="34">设计师团队</option>
+							<option value="35">项目管理团队</option>
+							<option value="36">餐饮</option>
+							<option value="37">写字楼</option>
+							<option value="38">酒店</option>
+							<option value="39">超市</option>
+							<option value="40">汽车</option>
+							<option value="41">房地产</option>
+							<option value="42">家居</option>
+							<option value="43">专卖店</option>
+							<option value="44">政府</option>
+							<option value="45">外资</option>
+							<option value="52">公司案例</option>
+							<option value="53">公司简介</option>
+						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '鸿森工程')"/>
+							<option value="10">机电安装</option>
+							<option value="11">建筑装修</option>
+							<option value="12">消防</option>
+							<option value="13">环保</option>
+							<option value="14">材料</option>
+							<option value="15">家具</option>
+						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '汉堡王') or ($_SESSION['wgcadmininfo']['kehu'] eq '九毛九')"/>
+							<option value="27">设计规范</option>
+							<option value="28">施工规范</option>
+							<option value="29">2.0R1版</option>
+							<option value="30">2020版</option>
+							<option value="31">装饰定额</option>
+							<option value="32">常见问题</option>
+						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '公装网') or ($_SESSION['wgcadmininfo']['kehu'] eq '九毛九')"/>
+							<option value="33">公司资质</option>
+							<option value="34">设计师团队</option>
+							<option value="35">项目管理团队</option>
+							<option value="36">餐饮</option>
+							<option value="37">写字楼</option>
+							<option value="38">酒店</option>
+							<option value="39">超市</option>
+							<option value="40">汽车</option>
+							<option value="41">房地产</option>
+							<option value="42">家居</option>
+							<option value="43">专卖店</option>
+							<option value="44">政府</option>
+							<option value="45">外资</option>
+						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '家装网')"/>
+							<option value="46">公司资质</option>
+							<option value="47">设计师团队</option>
+							<option value="48">项目管理团队</option>
+							<option value="49">家居</option>
+							<option value="50">别墅</option>
+							<option value="51">其它</option>
+						</if>
+						<option value="54">猜你喜欢</option>
+					 </select>
 				</span> 
 			</div>
 		</div>
 		
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">广告作者：</label>
+			<label class="form-label col-xs-4 col-sm-2">作者：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="text" class="input-text" value="admin" placeholder="" id="" name="">
 			</div>
 		</div>
-		<input type="hidden" name="kehu" value="{$_SESSION['wgcadmininfo']['kehu']}"/>
+		
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">广告来源：</label>
+			<label class="form-label col-xs-4 col-sm-2">来源：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="{$_SESSION['wgcadmininfo']['kehu']}" placeholder="" id="" name="">
+				<input type="text" class="input-text" value="微工程" placeholder="" id="" name="laiyuan">
 			</div>
 		</div>
 		
@@ -96,6 +158,7 @@
 				<script id="editor" name="content" type="text/plain" style="width:100%; height:0 auto;"></script> 
 			</div>
 		</div>
+		<input type="hidden" name="kehu" value="{$_SESSION['wgcadmininfo']['kehu']}"/>
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
 				<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 提交发布</button>
@@ -118,7 +181,7 @@
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
 <!--/_footer /作为公共模版分离出去-->
-
+<script type="text/javascript" src="__PUBLIC__/admin/lib/PCASClass.js"></script>
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="__PUBLIC__/admin/lib/My97DatePicker/WdatePicker.js"></script>  
 <script type="text/javascript" src="__PUBLIC__/admin/lib/webuploader/0.1.5/webuploader.min.js"></script> 
@@ -134,6 +197,7 @@ $(function(){
 		increaseArea: '20%'
 	});
 	
+	new PCAS("province","city","area","---请选择---","---请选择---","---请选择---");
 	
 	$list = $("#fileList"),
 	$btn = $("#btn-star"),
