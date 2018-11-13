@@ -107,10 +107,14 @@
 						</select>
 						<input type='hidden' id='userids' value='{$row.userid}' />
 					</td>
-					<th width="160"><span style='font-size:35px;'>
-					<i class="Hui-iconfont" onclick="huifu({$row.id})" >&#xe68a;</i>&nbsp;&nbsp;
-				    
-					</span></th>
+					<th width="160">
+						<span style='font-size:35px;'>
+							<i class="Hui-iconfont" onclick="huifu({$row.id})" >&#xe68a;</i>&nbsp;&nbsp;
+						</span>
+						<span style='font-size:35px;'>
+							<i class="Hui-iconfont" onclick="deletes({$row.id})" >&#xe609;</i>&nbsp;&nbsp;
+						</span>
+					</th>
 				</tr>
 			</foreach>
 		</tbody>
@@ -168,6 +172,18 @@ function setjieshouren(id){
 function tianjiachuliren(id){
     var url = '__MODULE__/Weixiumsg/listtt/id/'+id+'';
 	member_add('设置处理人',url,'','510');
+}
+
+//删除
+function deletes(id){
+	var r=confirm("是否确定删除!");
+    if (r==true){
+        x="你选择了\"确定\"!";
+		window.location.href = '__MODULE__/Budgetoffer/deletes/id/'+id+'';
+    }
+    else{
+        x="你选择了\"取消\"!";
+    }
 }
 
 //回复

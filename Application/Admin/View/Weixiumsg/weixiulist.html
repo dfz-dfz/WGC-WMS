@@ -115,14 +115,14 @@
 							<span style='color:blue;' onclick="xmmanage({$row.id})">项目管理</span>
 						</if>
 					</td>-->
-					<th width="160"><span style='font-size:35px;'>
-					<i class="Hui-iconfont" onclick="huifu({$row.id})" >&#xe68a;</i>&nbsp;&nbsp;
+					<th width="160"><span style='font-size:30px;cursor:pointer;'>
+					<i class="Hui-iconfont" onclick="huifu({$row.id})" >&#xe68a;</i>
 					<if condition="$row['p_id'] eq 0 ">
 						<i class="Hui-iconfont" onclick="addproject({$row.id})" >&#xe600;</i>
 					<else />
 						<i class="Hui-iconfont" onclick="xmmanage({$row.id})" >&#xe61d;</i>
 					</if>
-					
+					<i class="Hui-iconfont" onclick="deletes({$row.id})">&#xe609;</i>
 					</span></th>
 				</tr>
 			</foreach>
@@ -170,6 +170,19 @@ $(document).ready(function(){
 		$('#userids').val(myvalue);
 	});
 });
+
+//删除
+function deletes(id){
+	var r=confirm("是否确定删除!");
+    if (r==true){
+        x="你选择了\"确定\"!";
+		window.location.href = '__MODULE__/Weixiumsg/deletes/id/'+id+'';
+    }
+    else{
+        x="你选择了\"取消\"!";
+    }
+}
+
 /*用户-添加*/
 function member_add(title,url,w,h){
 	layer_show(title,url,w,h);

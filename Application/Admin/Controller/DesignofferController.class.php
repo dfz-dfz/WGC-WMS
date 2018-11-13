@@ -149,6 +149,18 @@ class DesignofferController extends CommonController {
 		$this->assign('list',$data);
 	    $this->display('list');
 	}
+	//删除
+	public function deletes(){
+		if(!IS_GET){die;}
+		$id = I('get.id');
+		$sql = M('designoffer')->where(array('id'=>$id))->delete();
+		if($sql){
+			$this->success('删除成功!');
+		}else{
+			$this->error('删除失败!');
+		}
+	}
+	
 	public function revlist(){
 		$id = I('get.id',0,'intval');
 		$this->assign('id',$id);

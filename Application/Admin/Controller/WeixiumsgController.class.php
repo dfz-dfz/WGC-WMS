@@ -126,6 +126,17 @@ class WeixiumsgController extends CommonController{
 		$this->display('weixiulist');
 	}
 	
+	//删除
+	public function deletes(){
+		if(!IS_GET){die;}
+		$id = I('get.id');
+		$sql = M('weixiumsg')->where(array('id'=>$id))->delete();
+		if($sql){
+			$this->success('删除成功!');
+		}else{
+			$this->error('删除失败!');
+		}
+	}
 	
 	//展示图片列表
 	public function showpic(){
