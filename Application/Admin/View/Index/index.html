@@ -196,9 +196,12 @@
 			<dt><i class="Hui-iconfont">&#xe613;</i> 资讯管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="{:U('Ad/index')}" data-title="广告列表" href="javascript:void(0)">广告列表</a></li>
-					<li><a _href="{:U('Projectcase/index')}" data-title="工程案例" href="javascript:void(0)">工程案例</a></li>
+					<!--<li><a _href="{:U('Ad/index')}" data-title="广告列表" href="javascript:void(0)">广告列表</a></li>
+					<li><a _href="{:U('Projectcase/index')}" data-title="工程案例" href="javascript:void(0)">工程案例</a></li>-->
 					<li><a _href="{:U('Headline/index')}" data-title="工程头条" href="javascript:void(0)">工程头条</a></li>
+					<if condition="($_SESSION['wgcadmininfo']['kehu'] eq '材料商')">
+						<li><a _href="{:U('Headline/index_cls')}" data-title="产品推荐" href="javascript:void(0)">产品推荐</a></li>
+					</if>
 				</ul>
 			</dd>
 		</dl>
