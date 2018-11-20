@@ -54,17 +54,32 @@
 					<select name="type" id="type" class="select" >
 							
 						<if condition="($_SESSION['wgcadmininfo']['kehu'] eq '微工程')">
-							<option value="11">建筑装修</option>
 							<option value="10">机电安装</option>
+							<option value="11">建筑装修</option>
 							<option value="12">消防</option>
 							<option value="13">环保</option>
 							<option value="14">材料</option>
 							<option value="15">家具</option>
 							<option value="52">资讯</option>
-							<option value="53">招聘</option>
+						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '经艺装饰')"/>
+							<option value="33">公司资质</option>
+							<option value="34">设计师团队</option>
+							<option value="35">项目管理团队</option>
+							<option value="36">餐饮</option>
+							<option value="37">写字楼</option>
+							<option value="38">酒店</option>
+							<option value="39">超市</option>
+							<option value="40">汽车</option>
+							<option value="41">房地产</option>
+							<option value="42">家居</option>
+							<option value="43">专卖店</option>
+							<option value="44">政府</option>
+							<option value="45">外资</option>
+							<option value="52">公司案例</option>
+							<option value="53">公司简介</option>
 						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '鸿森工程')"/>
-							<option value="11">建筑装修</option>
 							<option value="10">机电安装</option>
+							<option value="11">建筑装修</option>
 							<option value="12">消防</option>
 							<option value="13">环保</option>
 							<option value="14">材料</option>
@@ -97,8 +112,15 @@
 							<option value="49">家居</option>
 							<option value="50">别墅</option>
 							<option value="51">其它</option>
+						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '材料商')"/>
+							<option value="55">行业资讯</option>
+							<option value="56">公司简介</option>
+						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '馨品装饰')"/>
+							<option value="57">行业资讯</option>
+							<option value="58">公司简介</option>
+							<option value="59">公司案例</option>
 						</if>
-						
+						<option value="54">猜你喜欢</option>
 					 </select>
 				</span> 
 			</div>

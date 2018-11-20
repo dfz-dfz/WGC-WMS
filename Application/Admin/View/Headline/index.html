@@ -55,8 +55,8 @@
 					<tr class="text-c">
 						<td><input type="checkbox" value="" name=""></td>
 						<td>{$v['id']}</td>
-						<td><img src="__ROOT__{$v['pic']}" style="width:100px;height:100px;"/></td>
 						<td class="text-l"><u style="cursor:pointer" class="text-primary" title="查看">{$v['title']}</u></td>
+						<td><img src="__ROOT__{$v['pic']}" style="width:100px;height:100px;"/></td>
 						<td>
 						
 							<a href="{:U('Headline/listas',array('id'=>$v['id']))}">
@@ -70,8 +70,66 @@
 									环保
 								<elseif condition="$v['type'] eq 14"/>
 									材料
-							   <elseif condition="$v['type'] eq 15"/>
+								<elseif condition="$v['type'] eq 15"/>
 							       家具
+								<elseif condition="$v['type'] eq 52"/>
+							       资讯
+								<elseif condition="$v['type'] eq 33"/>
+							       公司资质
+							    <elseif condition="$v['type'] eq 34"/>
+							       设计师团队
+								<elseif condition="$v['type'] eq 35"/>
+							       项目管理团队
+								<elseif condition="$v['type'] eq 36"/>
+							       餐饮
+								<elseif condition="$v['type'] eq 37"/>
+							       写字楼
+								<elseif condition="$v['type'] eq 38"/>
+							       酒店
+								<elseif condition="$v['type'] eq 40"/>
+							       汽车
+								<elseif condition="$v['type'] eq 41"/>
+							       房地产
+								<elseif condition="$v['type'] eq 42"/>
+							       家居
+								<elseif condition="$v['type'] eq 43"/>
+							       专卖店
+								<elseif condition="$v['type'] eq 44"/>
+							       政府
+								<elseif condition="$v['type'] eq 45"/>
+							       外资
+								<elseif condition="$v['type'] eq 52"/>
+							       公司案例
+								<elseif condition="$v['type'] eq 53"/>
+							       公司简介
+								<elseif condition="$v['type'] eq 27"/>
+							       设计规范
+								<elseif condition="$v['type'] eq 28"/>
+							       施工规范
+								<elseif condition="$v['type'] eq 29"/>
+									2.0R1版
+								<elseif condition="$v['type'] eq 30"/>
+							       2020版
+								<elseif condition="$v['type'] eq 31"/>
+							       装饰定额
+								<elseif condition="$v['type'] eq 32"/>
+							       常见问题
+								<elseif condition="$v['type'] eq 46"/>
+							       公司资质
+								<elseif condition="$v['type'] eq 47"/>
+							       设计师团队
+								<elseif condition="$v['type'] eq 48"/>
+							       项目管理团队
+								<elseif condition="$v['type'] eq 49"/>
+							       家居
+								<elseif condition="$v['type'] eq 50"/>
+							       别墅
+								<elseif condition="$v['type'] eq 51"/>
+							       其他
+								<elseif condition="$v['type'] eq 55"/>
+							       行业资讯
+								<elseif condition="$v['type'] eq 56"/>
+							       猜你喜欢
 								</if>
 							</a>
 						

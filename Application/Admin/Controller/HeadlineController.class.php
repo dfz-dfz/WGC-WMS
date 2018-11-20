@@ -71,7 +71,7 @@ class HeadlineController extends CommonController {
    public function bianji_cls(){
 		header("Content-type: text/html; charset=utf-8"); 
 	   $id=$_GET['id'];
-	   $bianji_cls = M('chanpingtuijian')->where(array('id'=>$id))->getField('id , m_name , shopname , shopaddress , price , pic , content, describe');
+	   $bianji_cls = M('chanpingtuijian')->where(array('id'=>$id))->getField('id , m_name , shopname , shopaddress , price , pic ,tel, content, describe');
 	   if(empty($bianji_cls)){
 		exit('404'); 
 	   }
@@ -159,6 +159,7 @@ class HeadlineController extends CommonController {
 		$shopaddress = I('shopaddress');	//商家地址
 		$describe = I('describe');//描述
 		$price = I('price');	//产品价格
+		$tel = I('tel');	//联系方式
 		$type     = I('type');		//类型
 		$laiyuan  = I('laiyuan');   //来源
 		$content  = I('content');   //内容
@@ -181,7 +182,9 @@ class HeadlineController extends CommonController {
 		if(empty($content)){
 			$this->error('请输入内容');exit;
 		}
-		
+		if(empty($tel)){
+			$this->error('请输入联系方式');exit;
+		}
 		if(empty($area)){
 			$this->error('请选择城市');exit;
 		}
@@ -213,6 +216,7 @@ class HeadlineController extends CommonController {
 		$data['shopname']  = $shopname;
 		$data['shopaddress']  = $shopaddress;
 		$data['price']  = $price;
+		$data['tel']  = $tel;
 		
 		if(!empty($_SESSION['wgcadmininfo']['fenxiaoshang_name'])){
 			if($_SESSION['wgcadmininfo']['fenxiaoshang_userid'] > 0){
@@ -295,6 +299,7 @@ class HeadlineController extends CommonController {
 		$describe = I('post.describe');
 		$content = I('post.content');
 		$type = I('post.type');
+		$tel = I('post.tel');
 		
 		$data['m_name']    =  $m_name;
 		$data['shopname']    =  $shopname;
@@ -304,6 +309,7 @@ class HeadlineController extends CommonController {
 		$data['pic']      =  $pic;
 		$data['describe'] =  $describe;
 		$data['type']     =  $type;
+		$data['tel']     =  $tel;
 
 	   $chanpingtuijian = M('chanpingtuijian')->where(array('id'=>$id))->save($data);
 		

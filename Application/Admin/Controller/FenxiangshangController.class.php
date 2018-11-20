@@ -121,7 +121,7 @@ class FenxiangshangController extends CommonController {
 	
 	//取消分销商权限
 	public function del(){
-		header("Content-type: text/html; charset=utf-8"); exit;
+		header("Content-type: text/html; charset=utf-8");
 		$id = I('id');
 		if(M('advertisement') -> delete($id)){
 			$data = array(
