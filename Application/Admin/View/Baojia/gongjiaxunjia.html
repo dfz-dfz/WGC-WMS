@@ -69,7 +69,8 @@
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript">
 	var serverUrl = "http://wgcapp.59jiaju.com/",
-		page = 1;
+		page = 1,
+		kehus = '<?php echo $_SESSION['wgcadmininfo']['kehu'];?>';
 
 	$(function(){
 		jQuery.support.cors = true;
@@ -108,8 +109,10 @@
 						office_name = data[i].office_name,//公司名称
 						unit = data[i].unit,//计价单位
 						endtime = data[i].endtime,
-						userid = data[i].userid;
-
+						userid = data[i].userid,
+						kehu = data[i].kehu;
+					
+					if(kehus = kehu){
 						html += '<tr>';
 							html += '<td>'+id+'</td>';
 							html += '<td>'+office_name+'</td>';
@@ -122,9 +125,28 @@
 								html += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/User/xunjia_lists_del/id/'+id+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
 							html += '</td>';
 						html += '</tr>';
+					}else if(kehus == '微工程'){
+						html += '<tr>';
+							html += '<td>'+id+'</td>';
+							html += '<td>'+office_name+'</td>';
+							html += '<td>'+title+'</td>';
+							html += '<td>'+tel+'</td>';
+							html += '<td>'+address+'</td>';
+							html += '<td>'+addtime+'</td>';
+							html += '<td>'+endtime+'</td>';
+							html += '<td class="f-14 td-manage">';
+								html += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/User/xunjia_lists_del/id/'+id+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
+							html += '</td>';
+						html += '</tr>';
+					}
 				}
 				$('#gongjiaxunjia').html(html);
 				$('#nextpage').show();
+				
+				if($('tbody tr').length == 0){
+					$('#nextpage').hide();
+					$("#gongjiaxunjia").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');
+				}
 			}else if(ret.code == 201){
 				$('#nextpage').hide();
 				$("#gongjiaxunjia").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');
@@ -156,8 +178,10 @@
 						office_name = data[i].office_name,//公司名称
 						unit = data[i].unit,//计价单位
 						endtime = data[i].endtime,
-						userid = data[i].userid;
-
+						userid = data[i].userid,
+						kehu = data[i].kehu;
+					
+					if(kehus == kehu){
 						html += '<tr>';
 							html += '<td>'+id+'</td>';
 							html += '<td>'+office_name+'</td>';
@@ -170,9 +194,28 @@
 								html += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/User/xunjia_lists_del/id/'+id+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
 							html += '</td>';
 						html += '</tr>';
+					}else if(kehus == '微工程'){
+						html += '<tr>';
+							html += '<td>'+id+'</td>';
+							html += '<td>'+office_name+'</td>';
+							html += '<td>'+title+'</td>';
+							html += '<td>'+tel+'</td>';
+							html += '<td>'+address+'</td>';
+							html += '<td>'+addtime+'</td>';
+							html += '<td>'+endtime+'</td>';
+							html += '<td class="f-14 td-manage">';
+								html += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/User/xunjia_lists_del/id/'+id+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
+							html += '</td>';
+						html += '</tr>';
+					}
 				}
 				$('#gongjiaxunjia').html(html);
 				$('#nextpage').show();
+				
+				if($('tbody tr').length == 0){
+					$('#nextpage').hide();
+					$("#gongjiaxunjia").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');
+				}
 			}else if(ret.code == 201){
 				$('#nextpage').hide();
 				$("#gongjiaxunjia").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');

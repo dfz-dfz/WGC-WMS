@@ -70,7 +70,8 @@
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript">
-	var page = 1;
+	var page = 1,
+		kehus = '<?php echo $_SESSION['wgcadmininfo']['kehu'];?>';
 	
 	$().ready(function(){
 		repair_list();
@@ -101,11 +102,13 @@
 		            	autoaddress = data[i].autoaddress,
 		            	id = data[i].id,
 						user_id = data[i].user_id,
-						img = data[i].img;
+						img = data[i].img,
+						kehu = data[i].kehu;
 						
 					var photoArr = new Array();
 		            	photoArr = img.split(',');
-
+					
+					if(kehus == kehu){
 						listHtml += '<tr class="text-c">';
 							listHtml += '<td>'+id+'</td>';
 							listHtml += '<td>'+project_name+'</td>';
@@ -128,10 +131,39 @@
 								listHtml += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/index.php/Home/Designoffer/getList_del/id/'+id+'/user_id/'+user_id+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
 							listHtml += '</td>';
 						listHtml += '</tr>';
+					}else if(kehus == '微工程'){
+						listHtml += '<tr class="text-c">';
+							listHtml += '<td>'+id+'</td>';
+							listHtml += '<td>'+project_name+'</td>';
+							listHtml += '<td class="text-l">'+name+'</td>';
+							listHtml += '<td>'+address+'</td>';
+							listHtml += '<td>';
+							if(img != ''){
+								for(var i in photoArr){
+									listHtml += '<a href="http://wgcapp.wgc2013.com'+photoArr[i]+'" target="_blank">';
+									listHtml += '<img src="http://wgcapp.wgc2013.com'+photoArr[i]+'" width="120" height="80" style="margin-right:10px;margin-bottom:10px;">';	
+									listHtml += '</a>';
+								}
+							}else{
+								listHtml += '<span>暂无缩略图</span>';
+							}
+							listHtml += '</td>';
+							listHtml += '<td class="td-status">'+addtime+'</td>';
+							listHtml += '<td class="td-status">'+deadline+'</td>';
+							listHtml += '<td class="f-14 td-manage">';
+								listHtml += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/index.php/Home/Designoffer/getList_del/id/'+id+'/user_id/'+user_id+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
+							listHtml += '</td>';
+						listHtml += '</tr>';
+					}
 					
 				}
 				$('#shejiMain').html(listHtml);
 				$('#nextpage').show();
+				
+				if($('tbody tr').length == 0){
+					$('#nextpage').hide();
+					$("#shejiMain").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');
+				}
 			}else if(ret.code == 202){
 				$('#nextpage').hide();
 				$("#shejiMain").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');
@@ -168,11 +200,13 @@
 		            	autoaddress = data[i].autoaddress,
 		            	id = data[i].id,
 						user_id = data[i].user_id,
-						img = data[i].img;
+						img = data[i].img,
+						kehu = data[i].kehu;
 						
 					var photoArr = new Array();
 		            	photoArr = img.split(',');
-
+					
+					if(kehus = kehu){
 						listHtml += '<tr class="text-c">';
 							listHtml += '<td>'+id+'</td>';
 							listHtml += '<td>'+project_name+'</td>';
@@ -195,10 +229,39 @@
 								listHtml += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/index.php/Home/Designoffer/getList_del/id/'+id+'/user_id/'+user_id+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
 							listHtml += '</td>';
 						listHtml += '</tr>';
+					}else if(kehus == '微工程'){
+						listHtml += '<tr class="text-c">';
+							listHtml += '<td>'+id+'</td>';
+							listHtml += '<td>'+project_name+'</td>';
+							listHtml += '<td class="text-l">'+name+'</td>';
+							listHtml += '<td>'+address+'</td>';
+							listHtml += '<td>';
+							if(img != ''){
+								for(var i in photoArr){
+									listHtml += '<a href="http://wgcapp.wgc2013.com'+photoArr[i]+'" target="_blank">';
+									listHtml += '<img src="http://wgcapp.wgc2013.com'+photoArr[i]+'" width="120" height="80" style="margin-right:10px;margin-bottom:10px;">';	
+									listHtml += '</a>';
+								}
+							}else{
+								listHtml += '<span>暂无缩略图</span>';
+							}
+							listHtml += '</td>';
+							listHtml += '<td class="td-status">'+addtime+'</td>';
+							listHtml += '<td class="td-status">'+deadline+'</td>';
+							listHtml += '<td class="f-14 td-manage">';
+								listHtml += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/index.php/Home/Designoffer/getList_del/id/'+id+'/user_id/'+user_id+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
+							listHtml += '</td>';
+						listHtml += '</tr>';
+					}
 					
 				}
 				$('#shejiMain').html(listHtml);
 				$('#nextpage').show();
+				
+				if($('tbody tr').length == 0){
+					$('#nextpage').hide();
+					$("#shejiMain").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');
+				}
 			}else if(ret.code == 202){
 				$('#nextpage').hide();
 				$("#shejiMain").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');

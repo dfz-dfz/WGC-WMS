@@ -69,7 +69,8 @@
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript">
 	var serverUrl = "http://wgcapp.59jiaju.com/",
-		page = 1;
+		page = 1,
+		kehus = '<?php echo $_SESSION['wgcadmininfo']['kehu'];?>';
 
 	$(function(){
 		jQuery.support.cors = true;
@@ -124,8 +125,10 @@
 								introduce = data[i].introduce,
 								addtime = _trans_php_time_to_str(data[i].atime,2),
 								userid = data[i].userid,
-								id = data[i].id;
-
+								id = data[i].id,
+								kehu = data[i].kehu;
+							
+							if(kehus == kehu){
 								listHtml += '<tr class="text-c">';
 									listHtml += '<td>'+id+'</td>';
 									listHtml += '<td>'+m_name+'</td>';
@@ -138,12 +141,30 @@
 										listHtml += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Material/addmaterials_list_del/pid/'+pid+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
 									listHtml += '</td>';
 								listHtml += '</tr>';
+							}else if(kehus == '微工程'){
+								listHtml += '<tr class="text-c">';
+									listHtml += '<td>'+id+'</td>';
+									listHtml += '<td>'+m_name+'</td>';
+									listHtml += '<td class="text-l">'+brand+'</td>';
+									listHtml += '<td class="text-l">'+size+'</td>';
+									listHtml += '<td class="text-l">'+introduce+'</td>';
+									listHtml += '<td class="text-l">'+office_name+'</td>';
+									listHtml += '<td class="text-l">'+addtime+'</td>';
+									listHtml += '<td class="f-14 td-manage">';
+										listHtml += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Material/addmaterials_list_del/pid/'+pid+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
+									listHtml += '</td>';
+								listHtml += '</tr>';
+							}
 				   
 						 }
 				
 				$("#weixiuMain").html(listHtml);
 				$('#nextpage').show();
 				
+				if($('tbody tr').length == 0){
+					$('#nextpage').hide();
+					$("#weixiuMain").html('<div style="border: none;width:100px;height:100px;margin:50px auto;font-size:20px;color:#999;line-height:50px;" class="empty">暂无数据</div>');
+				}
 			}else if(ret.status == 202){
 				$('#nextpage').hide();
 				$("#weixiuMain").html('<div style="border: none;width:100px;height:100px;margin:50px auto;font-size:20px;color:#999;line-height:50px;" class="empty">暂无数据</div>');

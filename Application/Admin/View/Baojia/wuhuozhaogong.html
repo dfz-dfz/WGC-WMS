@@ -29,8 +29,10 @@
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 无活找工 <span class="c-gray en">&gt;</span> 无活找工列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
 	<div class="text-c"> 
-		<input type="text" name="key" id="key" value="" placeholder="关键词名称" style="width:250px" class="input-text">
-		<button name="" id="" class="btn btn-success" type="submit" onclick="searchList()"><i class="Hui-iconfont">&#xe665;</i> 查找</button>
+		<form action="{:U('Baojia/wuhuozhaogong')}" method="post">
+		<input type="text" name="key" id="key" value="{$key}" placeholder="关键词名称" style="width:250px" class="input-text">
+		<button class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 查找</button>
+		</form>
 	</div>
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
 	<span class="l">
@@ -53,13 +55,24 @@
 			</thead>
 		
 			<tbody id="wuhuozhaogong">
+				<foreach name="list" item="v">
+					<tr class="text-c">
+					<td>{$v['id']}</td>
+					<td style="color:red;font-weight:600;">{$v['name']}</td>
+					<td>{$v['age']}</td>
+					<td>{$v['postion']}</td>
+					<td>{$v['xiangxi']}</td>
+					<td>{$v['phone_tel']}</td>
+					<td>{$v['addtime']|date='Y-m-d : H:i:s',###}</td>
+					<td class="f-14 td-manage">
+					<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Jymember/getqiuzhi_del/id/{$v['id']}/user_id/{$v['user_id']}" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>
+					</td>
+					</tr>
 				
+				</foreach>
 			</tbody>
 		</table>
-		<div class="unpages" id="unpage" style="margin:50px auto;width: 200px;text-align: center;">
-			<a id="uppage" style="background:red;color:#fff;width: 70px;height: 30px;line-height: 30px;padding:4px 5px;cursor:pointer;margin-right: 20px;" onclick="uppage()">上一页</a>
-			<a id="nextpage" style="background:red;color:#fff;width: 70px;height: 30px;line-height: 30px;padding:4px 5px;cursor:pointer;" onclick="nextpage()">下一页</a>
-		</div>
+		<div class="page b-page">{$page}</div>
 	</div>
 </div>
 
@@ -67,152 +80,6 @@
 <script type="text/javascript" src="__PUBLIC__/admin/lib/layer/2.1/layer.js"></script>  
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
-<script type="text/javascript">
-	var serverUrl = "http://wgcapp.59jiaju.com/",
-		page = 1;
 
-	$(function(){
-		jQuery.support.cors = true;
-		repair_list(page);
-	});
-
-	//分页
-	function uppage(){
-		if(page<1){
-			page=1;
-		}
-		page--;
-		repair_list(page);
-	}
-
-	function nextpage(){
-		page++;
-		repair_list(page);
-	}
-
-	function repair_list(page){
-		var list=['施工队长','水电工长','空调安装工长','空调安装工','泥水工','水电工','电焊工','家具安装工','木工','扇灰工','保洁工','杂工','设计师','预算员','其它','维修工','网络维修', '实习预结算员','室内设计师','工程经理','机电工程师','暖通设计师','采购经理','文案','平面设计','效果图设计师','客服专员','行政助理','软件销售经理','业务员','项目经理','水电维修','空调维修','装饰维修','设备维修','分销商','工匠','公司','材料商','前端开发','后端开发'];
-		$.post('http://wgcapp.wgc2013.com/jingyi.php/Home/Jymember/getqiuzhi', {
-			page   :page,
-			type : 1,
-			s_city : "广州市",
-			s_area : "白云区",
-			user_id : ""
-		}, function(ret) {
-			
-			if(ret.status == 200){
-				var data = ret.retData;
-				var html = '';
-				for(var i in data){
-					var id = data[i].id,
-						uid = data[i].user_id,
-						postion = (parseInt(data[i].postion) > 0)?list[parseInt(data[i].postion)]:'无工种',
-						title = data[i].title,
-						is_show = (data[i].is_show == 1)?"有活":"无活",
-						xiangxi = data[i].xiangxi,
-						addtime = _trans_php_time_to_str(data[i].addtime,2),
-						name = data[i].name,
-						age = data[i].age,
-						phone_tel = data[i].phone_tel,
-						user_id = data[i].user_id;
-
-						html += '<tr class="text-c">';
-							html += '<td>'+id+'</td>';
-							html += '<td style="color:red;font-weight:600;">'+name+'</td>';
-							html += '<td>'+age+'</td>';
-							html += '<td>'+postion+'</td>';
-							html += '<td>'+xiangxi+'</td>';
-							html += '<td>'+phone_tel+'</td>';
-							html += '<td>'+addtime+'</td>';
-							html += '<td class="f-14 td-manage">';
-								html += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Jymember/getqiuzhi_del/id/'+id+'/user_id/'+user_id+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
-							html += '</td>';
-						html += '</tr>';
-					
-				}
-				$('#wuhuozhaogong').html(html);
-				$('#nextpage').show();
-			}else if(ret.status == 202){
-				$('#nextpage').hide();
-				$("#wuhuozhaogong").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');
-			}else{
-				return false;
-			}
-		},'json');
-	}
-
-	function searchList(){
-		key = $('#key').val();
-		var list=['施工队长','水电工长','空调安装工长','空调安装工','泥水工','水电工','电焊工','家具安装工','木工','扇灰工','保洁工','杂工','设计师','预算员','其它','维修工','网络维修', '实习预结算员','室内设计师','工程经理','机电工程师','暖通设计师','采购经理','文案','平面设计','效果图设计师','客服专员','行政助理','软件销售经理','业务员','项目经理','水电维修','空调维修','装饰维修','设备维修','分销商','工匠','公司','材料商','前端开发','后端开发'];
-		$.post('http://wgcapp.wgc2013.com/jingyi.php/Home/Jymember/searchqiuzhi', {
-			keywords  : key,
-			s_city : "广州市",
-			s_county : "白云区",
-			type     : 1
-		}, function(ret) {
-			if(ret.status == 200){
-				var data = ret.retData;
-				var html = '';
-				for(var i in data){
-					var id = data[i].id,
-						uid = data[i].user_id,
-						postion = (parseInt(data[i].postion) > 0)?list[parseInt(data[i].postion)]:'无工种',
-						title = data[i].title,
-						is_show = (data[i].is_show == 1)?"有活":"无活",
-						xiangxi = data[i].xiangxi,
-						addtime = _trans_php_time_to_str(data[i].addtime,2),
-						name = data[i].name,
-						age = data[i].age,
-						phone_tel = data[i].phone_tel,
-						user_id = data[i].user_id;
-
-						html += '<tr class="text-c">';
-							html += '<td>'+id+'</td>';
-							html += '<td style="color:red;font-weight:600;">'+name+'</td>';
-							html += '<td>'+age+'</td>';
-							html += '<td>'+postion+'</td>';
-							html += '<td>'+xiangxi+'</td>';
-							html += '<td>'+phone_tel+'</td>';
-							html += '<td>'+addtime+'</td>';
-							html += '<td class="f-14 td-manage">';
-								html += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Jymember/getqiuzhi_del/id/'+id+'/user_id/'+user_id+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
-							html += '</td>';
-						html += '</tr>';
-				}
-				$('#wuhuozhaogong').html(html);
-				$('#nextpage').show();
-			}else if(ret.status == 202){
-				$('#nextpage').hide();
-				$("#wuhuozhaogong").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');
-			}else{
-				return false;
-			}
-		},'json');
-	}
-
-	
-	function _trans_php_time_to_str(timestamp, n) {
-		update = new Date(timestamp * 1000);
-		year = update.getFullYear();
-		month = (update.getMonth() + 1 < 10) ? ('0' + (update.getMonth() + 1)) : (update.getMonth() + 1);
-		day = (update.getDate() < 10) ? ('0' + update.getDate()) : (update.getDate());
-		hour = (update.getHours() < 10) ? ('0' + update.getHours()) : (update.getHours());
-		minute = (update.getMinutes() < 10) ? ('0' + update.getMinutes()) : (update.getMinutes());
-		second = (update.getSeconds() < 10) ? ('0' + update.getSeconds()) : (update.getSeconds());
-		if (n == 1) {
-			return (year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second);
-		} else if (n == 2) {
-			return (year + '-' + month + '-' + day);
-		} else if (n == 3) {
-			return (month + '-' + day);
-		} else if (n == 4) {
-			return (hour + ':' + minute + ':' + second);
-		} else if (n == 5) {
-			return (year + '-' + month + '-' + day + ' ' + hour + ':' + minute );
-		} else {
-			return 0;
-		}
-	}
-</script> 
 </body>
 </html>

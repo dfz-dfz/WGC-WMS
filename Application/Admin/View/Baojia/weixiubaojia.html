@@ -22,17 +22,14 @@
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<title>招工</title>
+<title>维修报价</title>
 </head>
 <body>
-
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 招工 <span class="c-gray en">&gt;</span> 招工列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 维修报价 <span class="c-gray en">&gt;</span> 报价列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
-	<div class="text-c"> 
-		<form action="{:U('Baojia/zhaogong')}" method="post">
+	<div class="text-c">
 		<input type="text" name="key" id="key" value="" placeholder="关键词名称" style="width:250px" class="input-text">
-		<button name="" id="" class="btn btn-success" type="submit" onclick="searchList()"><i class="Hui-iconfont">&#xe665;</i> 查找</button>
-		</form>
+		<button name="" id="" class="btn btn-success" type="submit" onclick="search_list()"><i class="Hui-iconfont">&#xe665;</i> 查找</button>
 	</div>
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
 	<span class="l">
@@ -44,32 +41,42 @@
 			<thead>
 				<tr class="text-c">
 					<th width="40">ID</th>
-					<th width="60">姓名</th>
-					<th width="60">年龄</th>
-					<th width="60">工种</th>
-					<th width="180">目前所在地</th>
-					<th width="120">联系方式</th>
+					<th width="150">公司名称</th>
+					<th width="60">维修报价</th>
+					<th width="120">维修地址</th>
+					<th width="120">故障内容</th>
+					<th width="60">联系电话</th>
+					<!--<th width="60">缩略图</th>-->
+					<th width="60">截止时间</th>
 					<th width="40">发布时间</th>
+					<th width="60">缩略图</th>
 					<th width="120">操作</th>
 				</tr>
 			</thead>
 		
-			<tbody id="wuhuozhaogong">
+			<tbody id="baojia_list">
 				<foreach name="list" item="v">
-					<tr class="text-c">
-					<td>{$v['id']}</td>
-					<td style="color:red;font-weight:600;">{$v['name']}</td>
-					<td>{$v['age']}</td>
-					<td>{$v['postion']}</td>
-					<td>{$v['xiangxi']}</td>
-					<td>{$v['phone_tel']}</td>
-					<td>{$v['addtime']|date='Y-m-d : H:i:s',###}</td>
-					<td class="f-14 td-manage">
-					<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Jymember/getqiuzhi_del/id/{$v['id']}/user_id/{$v['user_id']}" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>
-					</td>
-					</tr>
-				
-				</foreach>
+							<tr class="text-c">
+							<td>{$v['id']}</td>
+							<td>{$v['office_name']}</td>
+							<td class="text-l">{$v['weixiu_price']}</td>
+							<td>{$v['worker_address']}</td>
+							<td>{$v['content']}</td>
+							<td>{$v['restaurant_phone']}</td>
+							<td>{$v['come_time']}</td>
+							<td class="td-status">{$v['endtime']}</td>
+							<td>
+							<foreach name="v['m_photo']" item="i">
+								<a href="http://wgcapp.wgc2013.com{$i}" target="_blank">
+									<img onerror="src='http://wgcapp.wgc2013.com/Public/Uploads/nopic.png'" src="http://wgcapp.wgc2013.com{$i}" width="120" height="80" style="margin-right:10px;margin-bottom:10px;">	
+									</a>
+							</foreach>
+							</td>
+							<td class="f-14 td-manage">
+								<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Jymember/lonAndlatss_del/id/{$v['id']}/user_id/{$v['user_id']}" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>
+							</td>
+						</tr>
+			</foreach>
 			</tbody>
 		</table>
 		<div class="page b-page">{$page}</div>
@@ -80,6 +87,6 @@
 <script type="text/javascript" src="__PUBLIC__/admin/lib/layer/2.1/layer.js"></script>  
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
-<script type="text/javascript">
+
 </body>
 </html>

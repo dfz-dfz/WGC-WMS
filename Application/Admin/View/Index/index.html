@@ -37,7 +37,7 @@
 				<if condition="$wgcadmininfo['fenxiaoshang_name'] eq '' ">
 					微工程
 				<else />
-					{$wgcadmininfo.fenxiaoshang_name}-(分销商)
+					{$wgcadmininfo.fenxiaoshang_name}
 				</if>管理系统
 			</a> 
 		<span class="logo navbar-slogan f-l mr-10 hidden-xs">v1.0</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
@@ -153,9 +153,11 @@
 					<li><a _href="/index.php/Admin/Designoffer/getList.html" data-title="报价列表" href="javascript:void(0)">报价列表</a></li>
 				</ul>
 			</dd>
+			<if condition="($_SESSION['wgcadmininfo']['kehu'] eq '微工程')">
 			<dt class="">
 				<i class="Hui-iconfont Hui-iconfont-money"></i> 预算报价<i class="Hui-iconfont menu_dropdown-arrow"></i>
 			</dt>
+			</if>
 			<dd style="display: none;">
 				<ul>
 					<li><a _href="/index.php/Admin/Budgetoffer/getList.html" data-title="预算列表" href="javascript:void(0)">预算列表</a></li>
@@ -213,6 +215,7 @@
 				</ul>
 			</dd>
 		</dl>
+		<if condition="($_SESSION['wgcadmininfo']['kehu'] eq '微工程')">
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i> 材料询价管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -221,6 +224,7 @@
 				</ul>
 			</dd>
 		</dl>
+		</if>
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i> 招聘管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -229,6 +233,7 @@
 				</ul>
 			</dd>
 		</dl>
+		<if condition="($_SESSION['wgcadmininfo']['kehu'] eq '微工程')">
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i> 案例管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -237,6 +242,7 @@
 				</ul>
 			</dd>
 		</dl>
+		</if>
 		<if condition="$wgcadmininfo['fenxiaoshang_name'] eq '' ">
 			<dl id="menu-picture">
 				<dt><i class="Hui-iconfont">&#xe613;</i> 分销商管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
@@ -323,6 +329,7 @@
 			</dd>
 			
 		</dl>
+		<if condition="$_SESSION['wgcadmininfo']['fenxiaoshang_name'] eq '微工程' ">
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>维修派单<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -332,6 +339,7 @@
 			</dd>
 			
 		</dl>
+		</if>
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>维修项目管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -370,7 +378,7 @@
 				</ul>
 			</dd>
 		</dl>
-		
+		<if condition="$_SESSION['wgcadmininfo']['fenxiaoshang_name'] eq '微工程' ">
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>主材定价管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -388,7 +396,7 @@
 				</ul>
 			</dd>
 		</dl>
-		
+		</if>
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>材料采购管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -398,7 +406,7 @@
 				</ul>
 			</dd>
 		</dl>
-		
+		<if condition="$_SESSION['wgcadmininfo']['fenxiaoshang_name'] eq '微工程' ">
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>业务信息管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -407,7 +415,7 @@
 				</ul>
 			</dd>
 		</dl>
-		
+		</if>
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>设计分包管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -425,7 +433,7 @@
 				</ul>
 			</dd>
 		</dl>
-		
+		<if condition="$_SESSION['wgcadmininfo']['fenxiaoshang_name'] eq '微工程' ">
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>广告管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -435,7 +443,7 @@
 				</ul>
 			</dd>
 		</dl>
-		
+		</if>
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>无活找工管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -471,7 +479,7 @@
 				</ul>
 			</dd>
 		</dl>
-		
+		<if condition="$_SESSION['wgcadmininfo']['fenxiaoshang_name'] eq '微工程' ">
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>工价询价管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -480,6 +488,7 @@
 				</ul>
 			</dd>
 		</dl>
+		</if>
 		<!---管理工具end-->
 		
 		

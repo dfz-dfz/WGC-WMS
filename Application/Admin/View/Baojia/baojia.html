@@ -25,7 +25,6 @@
 <title>维修报价</title>
 </head>
 <body>
-
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 维修报价 <span class="c-gray en">&gt;</span> 报价列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
 	<div class="text-c">
@@ -50,18 +49,37 @@
 					<!--<th width="60">缩略图</th>-->
 					<th width="60">截止时间</th>
 					<th width="40">发布时间</th>
+					<th width="60">缩略图</th>
 					<th width="120">操作</th>
 				</tr>
 			</thead>
 		
 			<tbody id="baojia_list">
-				
+				<foreach name="list" item="v">
+							<tr class="text-c">
+							<td>{$v['id']}</td>
+							<td>{$v['office_name']}</td>
+							<td class="text-l">{$v['weixiu_price']}</td>
+							<td>{$v['worker_address']}</td>
+							<td>{$v['content']}</td>
+							<td>{$v['restaurant_phone']}</td>
+							<td>{$v['come_time']}</td>
+							<td class="td-status">{$v['endtime']}</td>
+							<td>
+							<foreach name="v['UserPhoto']" item="i">
+								<a href="http://wgcapp.wgc2013.com{$i}" target="_blank">
+									<img onerror="src='http://wgcapp.wgc2013.com/Public/Uploads/nopic.png'" src="http://wgcapp.wgc2013.com{$i}" width="120" height="80" style="margin-right:10px;margin-bottom:10px;">	
+									</a>
+							</foreach>
+							</td>
+							<td class="f-14 td-manage">
+								<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Jymember/lonAndlatss_del/id/{$v['id']}/user_id/{$v['send_uid']}" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>
+							</td>
+						</tr>
+			</foreach>
 			</tbody>
 		</table>
-		<div class="unpages" id="unpage" style="margin:50px auto;width: 200px;text-align: center;">
-			<a id="uppage" style="background:red;color:#fff;width: 70px;height: 30px;line-height: 30px;padding:4px 5px;cursor:pointer;margin-right: 20px;" onclick="uppage()">上一页</a>
-			<a id="nextpage" style="background:red;color:#fff;width: 70px;height: 30px;line-height: 30px;padding:4px 5px;cursor:pointer;" onclick="nextpage()">下一页</a>
-		</div>
+		<div class="page b-page">{$page}</div>
 	</div>
 </div>
 
@@ -69,175 +87,6 @@
 <script type="text/javascript" src="__PUBLIC__/admin/lib/layer/2.1/layer.js"></script>  
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
-<script type="text/javascript">
-	var servermsg = 'http://wgcapp.wgc2013.com/',
-		page = 1;
-		
-	$(function(){
-		weixiulist(page);
-	});
-	
-	function weixiulist(page){
-		var url = servermsg+"jingyi.php/Home/Jymember/lonAndlats";
-		$.post(url,{
-			status : 2,
-			page : page,
-			ptype : 2
-		},function(ret){
-			var listHtml  = '';
-			if(ret.code == 200){
-				page++;
-				var retData = ret.message;
-				for(var i in retData){
-					var office_name = (retData[i].office_name == null || retData[i].office_name == '') ? '未设定':retData[i].office_name,
-						id = retData[i].id,
-						weixiu_price = retData[i].weixiu_price,
-						worker_address = (retData[i].worker_address == null || retData[i].worker_address == '') ? '未设定':retData[i].worker_address,
-						addtime = retData[i].addtime,
-						end_time = (retData[i].end_time == null || retData[i].end_time == '') ? '未设定':retData[i].end_time,
-						content = retData[i].content,
-						restaurant_phone = retData[i].restaurant_phone,
-						img = retData[i].img,
-						endtime = retData[i].endtime,
-						addtime = retData[i].addtime,
-						send_uid = retData[i].send_uid;
-					//if(img != '' || img != null){
-						//var photoArr = new Array();
-							//photoArr = img.split(',');
-					//}
-					
-					listHtml += '<tr class="tmain">';
-					listHtml +=		'<td>'+id+'</td>';
-					listHtml +=		'<td><span>'+office_name+'</span></td>';
-					listHtml +=		'<td><span>'+weixiu_price+'</span></td>';
-					listHtml +=		'<td><span>'+worker_address+'</span></td>';
-					listHtml +=		'<td><span>'+content+'</span></td>';
-					listHtml +=		'<td><span>'+restaurant_phone+'</span></td>';
-					//listHtml += '<td>';
-					//if(img != ''){
-						//for(var i in photoArr){
-							//listHtml += '<a href="http://wgcapp.wgc2013.com'+photoArr[i]+'" target="_blank">';
-							//listHtml += '<img src="http://wgcapp.wgc2013.com'+photoArr[i]+'" width="120" height="80" style="margin-right:10px;margin-bottom:10px;">';	
-							//listHtml += '</a>';
-						//}
-					//}else{
-						//listHtml += '<span>暂无缩略图</span>';
-					//}
-					//listHtml += '</td>';
-					listHtml +=		'<td>'+endtime+'</td>';
-					listHtml += '<td>'+addtime+'</td>';
-					listHtml +=		'<td><a title="删除" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Jymember/lonAndlatss_del/id/'+id+'/user_id/'+send_uid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a></td>';
-					listHtml +=		'</tr>';
-					
-				}
-				$('#baojia_list').html(listHtml);
-				$('#nextpage').show();
-			}else if(ret.code == 202){
-				$('#nextpage').hide();
-				$("#baojia_list").html('<div style="border: none;width:100px;height:100px;margin:50px auto;font-size:20px;color:#999;line-height:50px;" class="empty">暂无数据</div>');
-			}else{
-				
-			}
-		},'json')
-	}
-	
-	function uppage(){
-		page--;
-		if(page<=1){
-			page=1;
-		}
-		weixiulist(page);
-	}
 
-	function nextpage(){
-		page++;
-		weixiulist(page);
-	}
-	
-	function search_list(){
-		var key = $('#key').val();
-		$.post(servermsg+'jingyi.php/Home/Jymember/lonAndlats_key', {
-			status   : 2,
-			ptype    : 2,
-			key      : key
-		}, function(ret) {
-			if(ret.code == 200){
-				var retData = ret.message;
-				var listHtml = '';
-				for(var i in retData){
-					var office_name = (retData[i].office_name == null || retData[i].office_name == '') ? '未设定':retData[i].office_name,
-						id = retData[i].id,
-						weixiu_price = retData[i].weixiu_price,
-						worker_address = (retData[i].worker_address == null || retData[i].worker_address == '') ? '未设定':retData[i].worker_address,
-						addtime = retData[i].addtime,
-						end_time = (retData[i].end_time == null || retData[i].end_time == '') ? '未设定':retData[i].end_time,
-						content = retData[i].content,
-						restaurant_phone = retData[i].restaurant_phone,
-						img = retData[i].img,
-						endtime = retData[i].endtime,
-						addtime = retData[i].addtime,
-						send_uid = retData[i].send_uid;
-					//if(img != '' || img != null){
-						//var photoArr = new Array();
-							//photoArr = img.split(',');
-					//}
-					
-					listHtml += '<tr class="tmain">';
-					listHtml +=		'<td>'+id+'</td>';
-					listHtml +=		'<td><span>'+office_name+'</span></td>';
-					listHtml +=		'<td><span>'+weixiu_price+'</span></td>';
-					listHtml +=		'<td><span>'+worker_address+'</span></td>';
-					listHtml +=		'<td><span>'+content+'</span></td>';
-					listHtml +=		'<td><span>'+restaurant_phone+'</span></td>';
-					//listHtml += '<td>';
-					//if(img != ''){
-						//for(var i in photoArr){
-							//listHtml += '<a href="http://wgcapp.wgc2013.com'+photoArr[i]+'" target="_blank">';
-							//listHtml += '<img src="http://wgcapp.wgc2013.com'+photoArr[i]+'" width="120" height="80" style="margin-right:10px;margin-bottom:10px;">';	
-							//listHtml += '</a>';
-						//}
-					//}else{
-						//listHtml += '<span>暂无缩略图</span>';
-					//}
-					//listHtml += '</td>';
-					listHtml +=		'<td>'+endtime+'</td>';
-					listHtml += '<td>'+addtime+'</td>';
-					listHtml +=		'<td><a title="删除" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Jymember/lonAndlatss_del/id/'+id+'/user_id/'+send_uid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a></td>';
-					listHtml +=		'</tr>';
-					
-				}
-				$('#baojia_list').html(listHtml);
-			}else if(ret.code == 202){	
-				$("#baojia_list").html('<div style="text-align:center;color:#999;font-size:20px;line-height:50px;">暂无数据</div>');
-			}else{
-				alert('网络连接失败，请检查网络');
-				return false;
-			}
-		},'json');
-	}
-	
-	function _trans_php_time_to_str(timestamp, n) {
-		update = new Date(timestamp * 1000);
-		year = update.getFullYear();
-		month = (update.getMonth() + 1 < 10) ? ('0' + (update.getMonth() + 1)) : (update.getMonth() + 1);
-		day = (update.getDate() < 10) ? ('0' + update.getDate()) : (update.getDate());
-		hour = (update.getHours() < 10) ? ('0' + update.getHours()) : (update.getHours());
-		minute = (update.getMinutes() < 10) ? ('0' + update.getMinutes()) : (update.getMinutes());
-		second = (update.getSeconds() < 10) ? ('0' + update.getSeconds()) : (update.getSeconds());
-		if (n == 1) {
-			return (year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second);
-		} else if (n == 2) {
-			return (year + '-' + month + '-' + day);
-		} else if (n == 3) {
-			return (month + '-' + day);
-		} else if (n == 4) {
-			return (hour + ':' + minute + ':' + second);
-		} else if (n == 5) {
-			return (year + '-' + month + '-' + day + ' ' + hour + ':' + minute );
-		} else {
-			return 0;
-		}
-	}
-</script> 
 </body>
 </html>

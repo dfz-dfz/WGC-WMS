@@ -40,26 +40,44 @@
 		<table class="table table-border table-bordered table-bg table-hover table-sort">
 			
 			<thead>
-				<tr class="text-c">
-					<th width="40">ID</th>
-					<th width="120">公司名称</th>
-					<th width="60">材料名称</th>
+				<th width="40">ID</th>
+					<th width="90">材料名称</th>
+					<th width="60">发布地址</th>
 					<th width="60">材料品牌</th>
-					<th width="120">材料描述</th>
-					<th width="120">联系电话</th>
-					<th width="120">图片</th>
-					<th width="40">操作</th>
-				</tr>
+					<th width="60">材料描述</th>
+					<th width="60">送货地址</th>
+					<th width="60">公司名称</th>
+					<th width="60">缩略图</th>
+					<th width="90">发布时间</th>
+					<th width="120">操作</th>
 			</thead>
 		
 			<tbody id="cailiaoxunjia">
-				
+				<foreach name="list" item="v">
+							<tr class="text-c">
+							<td>{$v['id']}</td>
+							<td>{$v['m_name']}</td>
+							<td class="text-l">{$v['address']}</td>
+							<td>{$v['brand']}</td>
+							<td>{$v['m_introduce']}</td>
+							<td>{$v['worker_address']}</td>
+							<td>{$v['office_name']}</td>
+							<td>
+							<foreach name="v['m_photo']" item="i">
+								<a href="http://wgcapp.wgc2013.com{$i}" target="_blank">
+									<img onerror="src='http://wgcapp.wgc2013.com/Public/Uploads/nopic.png'" src="http://wgcapp.wgc2013.com{$i}" width="120" height="80" style="margin-right:10px;margin-bottom:10px;">	
+									</a>
+							</foreach>
+							</td>
+							<td class="td-status">{$v['addtime']|date='Y-m-d : H:i:s',###}</td>
+							<td class="f-14 td-manage">
+								<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/Material/materialListe_user_del/id/{$v['id']}/user_id/{$v['user_id']}" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>
+							</td>
+						</tr>
+			</foreach>
 			</tbody>
 		</table>
-		<div class="unpages" id="unpage" style="margin:50px auto;width: 200px;text-align: center;">
-			<a id="uppage" style="background:red;color:#fff;width: 70px;height: 30px;line-height: 30px;padding:4px 5px;cursor:pointer;margin-right: 20px;" onclick="uppage()">上一页</a>
-			<a id="nextpage" style="background:red;color:#fff;width: 70px;height: 30px;line-height: 30px;padding:4px 5px;cursor:pointer;" onclick="nextpage()">下一页</a>
-		</div>
+		<div class="page b-page">{$page}</div>
 	</div>
 </div>
 
@@ -67,194 +85,6 @@
 <script type="text/javascript" src="__PUBLIC__/admin/lib/layer/2.1/layer.js"></script>  
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
-<script type="text/javascript">
-	var serverUrl = "http://wgcapp.59jiaju.com/",
-		page = 1;
 
-	$(function(){
-		jQuery.support.cors = true;
-		cai_select(page);
-	});
-
-	//分页
-	function uppage(){
-		if(page<1){
-			page=1;
-		}
-		page--;
-		cai_select(page);
-	}
-
-	function nextpage(){
-		page++;
-		cai_select(page);
-	}
-
-	//材料列表
-	function cai_select(page){
-		var key = $('#key').val();
-		if(page == 1){
-			$('#uppage').hide();
-		}else{
-			$('#uppage').show();
-		}
-
-		$.post("http://wgcapp.59jiaju.com/jingyi.php/Home/Material/materialListe",{
-			s_city : '广州市',
-			page : page,
-			cai_type :2,
-			infotype : 'pc_caigou'
-		},function(ret){
-			var listHtml = '';
-			if(ret.code == 200){
-				page++;
-				var data = ret.message;
-				for (var i in data) {
-					var m_name=(data[i].m_name == '' || data[i].m_name == null)?'未填写':data[i].m_name,
-						cai_type=data[i].cai_type,
-						expire_time=data[i].expire_time,
-						m_introduce=data[i].m_introduce,
-						count=data[i].count,
-						addtime = _trans_php_time_to_str(data[i].addtime,1),
-						office_name = (data[i].office_name == '' || data[i].office_name == null)?'未填写':data[i].office_name,
-						brand = (data[i].brand == '' || data[i].brand == null)?'未填写':data[i].brand,
-						price = (data[i].price == null || data[i].price == '')?'未填写':data[i].price,
-						id = data[i].id,
-						tel = data[i].tel,
-						user_id = data[i].user_id;
-					var photo = data[i].m_photo;
-					var photoArr = new Array();
-					photoArr = photo.split(',');
-
-					listHtml += '<tr>';
-						listHtml += '<td>'+id+'</td>';
-						listHtml += '<td>'+office_name+'</td>';
-						listHtml += '<td>'+m_name+'</td>';
-						listHtml += '<td>'+brand+'</td>';
-						listHtml += '<td>'+m_introduce+'</td>';
-						listHtml += '<td>'+tel+'</td>';
-						listHtml += '<td>';
-						if(photo != ''){
-							for(var i in photoArr){
-								listHtml += '<a href="http://wgcapp.wgc2013.com'+photoArr[i]+'" target="_blank">';
-								listHtml += '<img src="http://wgcapp.wgc2013.com'+photoArr[i]+'" width="120" height="80" style="margin-right:10px;margin-bottom:10px;">';	
-								listHtml += '</a>';
-							}
-						}else{
-							listHtml += '<span>暂无缩略图</span>';
-						}
-						listHtml += '</td>';
-						listHtml += '<td class="f-14 td-manage">';
-							listHtml += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.59jiaju.com/jingyi.php/Home/Material/materialListe_user_del/id/'+id+'/user_id/'+user_id+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
-						listHtml += '</td>';
-					listHtml += '</tr>';
-				}
-				
-				$("#cailiaoxunjia").html(listHtml);
-				$('#nextpage').show();
-				
-			}else if(ret.code == 202){
-				$('#nextpage').hide();
-				$("#cailiaoxunjia").html('<div style="border: none;width:100px;height:100px;margin:50px auto;font-size:20px;color:#999;line-height:50px;" class="empty">暂无数据</div>');
-			}else{
-				return false;
-			}
-		},"json");
-
-	}
-	
-	function searchList(){
-		var key = $('#key').val();
-		if(page == 1){
-			$('#uppage').hide();
-		}else{
-			$('#uppage').show();
-		}
-
-		$.post("http://wgcapp.59jiaju.com/jingyi.php/Home/Material/materialListe_jicai_key",{
-			key : key,
-			cai_type :2
-		},function(ret){
-			var listHtml = '';
-			if(ret.code == 200){
-				page++;
-				var data = ret.message;
-				for (var i in data) {
-					var m_name=(data[i].m_name == '' || data[i].m_name == null)?'未填写':data[i].m_name,
-						cai_type=data[i].cai_type,
-						expire_time=data[i].expire_time,
-						m_introduce=data[i].m_introduce,
-						count=data[i].count,
-						addtime = _trans_php_time_to_str(data[i].addtime,1),
-						office_name = (data[i].office_name == '' || data[i].office_name == null)?'未填写':data[i].office_name,
-						brand = (data[i].brand == '' || data[i].brand == null)?'未填写':data[i].brand,
-						price = (data[i].price == null || data[i].price == '')?'未填写':data[i].price,
-						id = data[i].id,
-						tel = data[i].tel,
-						user_id = data[i].user_id;
-					var photo = data[i].m_photo;
-					var photoArr = new Array();
-					photoArr = photo.split(',');
-
-					listHtml += '<tr>';
-						listHtml += '<td>'+id+'</td>';
-						listHtml += '<td>'+office_name+'</td>';
-						listHtml += '<td>'+m_name+'</td>';
-						listHtml += '<td>'+brand+'</td>';
-						listHtml += '<td>'+m_introduce+'</td>';
-						listHtml += '<td>'+tel+'</td>';
-						listHtml += '<td>';
-						if(photo != ''){
-							for(var i in photoArr){
-								listHtml += '<a href="http://wgcapp.wgc2013.com'+photoArr[i]+'" target="_blank">';
-								listHtml += '<img src="http://wgcapp.wgc2013.com'+photoArr[i]+'" width="120" height="80" style="margin-right:10px;margin-bottom:10px;">';	
-								listHtml += '</a>';
-							}
-						}else{
-							listHtml += '<span>暂无缩略图</span>';
-						}
-						listHtml += '</td>';
-						listHtml += '<td class="f-14 td-manage">';
-							listHtml += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.59jiaju.com/jingyi.php/Home/Material/materialListe_user_del/id/'+id+'/user_id/'+user_id+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
-						listHtml += '</td>';
-					listHtml += '</tr>';
-				}
-				
-				$("#cailiaoxunjia").html(listHtml);
-				$('#nextpage').show();
-				
-			}else if(ret.code == 202){
-				$('#nextpage').hide();
-				$("#cailiaoxunjia").html('<div style="border: none;width:100px;height:100px;margin:50px auto;font-size:20px;color:#999;line-height:50px;" class="empty">暂无数据</div>');
-			}else{
-				return false;
-			}
-		},"json");
-
-	}
-	
-	function _trans_php_time_to_str(timestamp, n) {
-		update = new Date(timestamp * 1000);
-		year = update.getFullYear();
-		month = (update.getMonth() + 1 < 10) ? ('0' + (update.getMonth() + 1)) : (update.getMonth() + 1);
-		day = (update.getDate() < 10) ? ('0' + update.getDate()) : (update.getDate());
-		hour = (update.getHours() < 10) ? ('0' + update.getHours()) : (update.getHours());
-		minute = (update.getMinutes() < 10) ? ('0' + update.getMinutes()) : (update.getMinutes());
-		second = (update.getSeconds() < 10) ? ('0' + update.getSeconds()) : (update.getSeconds());
-		if (n == 1) {
-			return (year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second);
-		} else if (n == 2) {
-			return (year + '-' + month + '-' + day);
-		} else if (n == 3) {
-			return (month + '-' + day);
-		} else if (n == 4) {
-			return (hour + ':' + minute + ':' + second);
-		} else if (n == 5) {
-			return (year + '-' + month + '-' + day + ' ' + hour + ':' + minute );
-		} else {
-			return 0;
-		}
-	}
-</script> 
 </body>
 </html>
