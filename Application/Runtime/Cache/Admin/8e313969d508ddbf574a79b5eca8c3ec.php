@@ -225,4 +225,4 @@ function picture_edit(title,url,id){
 }
 </script> 
 </body>
-</html><!--
+</html>

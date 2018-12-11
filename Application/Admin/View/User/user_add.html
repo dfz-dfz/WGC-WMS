@@ -133,7 +133,8 @@ function tuijian(){
 	}else{
 
 		var url = serverUrl+"jingyi.php/Home/index/userreg";
-		$.post(url,{name : name.val(),user_name : mobile.val(),password : password.val(),user_photo : '/Public/logo.png',fenxiaoshang_userid : fenxiaoshang_userid.val()},function(ret){
+		var kehu = '<?php echo $_SESSION['wgcadmininfo']['kehu'];?>';
+		$.post(url,{name : name.val(),user_name : mobile.val(),password : password.val(),user_photo : '/Public/logo.png',kehu: kehu,fenxiaoshang_userid : fenxiaoshang_userid.val()},function(ret){
 			
 			if(ret.code == 200){
 				var data = ret.data;

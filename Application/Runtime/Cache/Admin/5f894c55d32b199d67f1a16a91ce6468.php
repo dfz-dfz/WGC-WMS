@@ -119,7 +119,7 @@
 						</td>
 						
 						<td class="f-14 td-manage">
-							<a style="text-decoration:none" href="<?php echo U('Advertisement/bianji_fxs_quxiao',array('id'=>$v['user_id']));?>" title="取消分销商"><i class="Hui-iconfont">&#xe631;</i></a>
+							<a style="text-decoration:none" href="<?php echo U('User/bianji_fxs_quxiao',array('id'=>$v['user_id']));?>" title="取消分销商"><i class="Hui-iconfont">&#xe631;</i></a>
 						</td>
 					</tr><?php endforeach; endif; ?>
 			</tbody>

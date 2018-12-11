@@ -91,10 +91,14 @@
 						</select>
 						<input type='hidden' id='userids' value='<?php echo ($row["userid"]); ?>' />
 					</td>
-					<th width="160"><span style='font-size:35px;'>
-					<i class="Hui-iconfont" onclick="huifu(<?php echo ($row["id"]); ?>)" >&#xe68a;</i>&nbsp;&nbsp;
-				    
-					</span></th>
+					<th width="160">
+						<span style='font-size:30px;cursor:pointer;'>
+							<i class="Hui-iconfont" onclick="huifu(<?php echo ($row["id"]); ?>)" >&#xe68a;</i>&nbsp;&nbsp;
+						</span>
+						<span style='font-size:30px;cursor:pointer;'>
+							<i class="Hui-iconfont" onclick="deletes(<?php echo ($row["id"]); ?>)">&#xe609;</i>
+						</span>
+					</th>
 				</tr><?php endforeach; endif; ?>
 		</tbody>
 	</table>
@@ -163,6 +167,20 @@ function huifu(id){
 		member_add('回复',url,'','610');
 	}
 }
+
+//删除
+function deletes(id){
+	var r=confirm("是否确定删除!");
+    if (r==true){
+        x="你选择了\"确定\"!";
+		window.location.href = '/index.php/Admin/Designoffer/deletes/id/'+id+'';
+    }
+    else{
+        x="你选择了\"取消\"!";
+		alert(1)
+    }
+}
+
 //添加项目
 function addproject(id){
 	var url = '/index.php/Admin/Weixiumsg/addproject/id/'+id+'';

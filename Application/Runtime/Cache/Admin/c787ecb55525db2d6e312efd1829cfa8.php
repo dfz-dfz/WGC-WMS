@@ -188,4 +188,4 @@ function article_shenqing(obj,id){
 
 </script> 
 </body>
-</html><!--Mu
+</html>

@@ -36,7 +36,7 @@
 			<a class="logo navbar-logo f-l mr-10 hidden-xs" href="javascript:;">
 				<?php if($wgcadmininfo['fenxiaoshang_name'] == '' ): ?>微工程
 				<?php else: ?>
-					<?php echo ($wgcadmininfo["fenxiaoshang_name"]); ?>-(分销商)<?php endif; ?>管理系统
+					<?php echo ($wgcadmininfo["fenxiaoshang_name"]); endif; ?>管理系统
 			</a> 
 		<span class="logo navbar-slogan f-l mr-10 hidden-xs">v1.0</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
 			
@@ -123,10 +123,10 @@
 			</dt>
 			<dd style="display: none;">
 				<ul>
-					<li><a _href="/index.php/Admin/Wangpanpc/document.html" data-title="文档" href="javascript:void(0)">文档</a></li>
-					<li><a _href="/index.php/Admin/Wangpanpc/picture.html" data-title="图片" href="javascript:void(0)">图片</a></li>
+					<li><a _href="/index.php/Admin/Wangpanpc/document.html" data-title="网盘管理" href="javascript:void(0)">网盘管理</a></li>
+					<!--<li><a _href="/index.php/Admin/Wangpanpc/picture.html" data-title="图片" href="javascript:void(0)">图片</a></li>
 					<li><a _href="/index.php/Admin/Wangpanpc/video.html" data-title="视频" href="javascript:void(0)">视频</a></li>
-					<li><a _href="/index.php/Admin/Wangpanpc/note.html" data-title="笔记" href="javascript:void(0)">笔记</a></li>
+					<li><a _href="/index.php/Admin/Wangpanpc/note.html" data-title="笔记" href="javascript:void(0)">笔记</a></li>-->
 				</ul>
 			</dd>
 			
@@ -135,7 +135,7 @@
 			</dt>
 			<dd style="display: none;">
 				<ul>
-					<li><a _href="<?php echo U('Advertisement/gongjia');?>" data-title="工价管理" href="javascript:void(0)">工价管理</a></li>
+					<li><a _href="<?php echo U('Laborprice/index');?>" data-title="工价管理" href="javascript:void(0)">工价管理</a></li>
 				</ul>
 			</dd>
 			
@@ -149,9 +149,9 @@
 					<li><a _href="/index.php/Admin/Designoffer/getList.html" data-title="报价列表" href="javascript:void(0)">报价列表</a></li>
 				</ul>
 			</dd>
-			<dt class="">
+			<?php if(($_SESSION['wgcadmininfo']['kehu'] == '微工程')): ?><dt class="">
 				<i class="Hui-iconfont Hui-iconfont-money"></i> 预算报价<i class="Hui-iconfont menu_dropdown-arrow"></i>
-			</dt>
+			</dt><?php endif; ?>
 			<dd style="display: none;">
 				<ul>
 					<li><a _href="/index.php/Admin/Budgetoffer/getList.html" data-title="预算列表" href="javascript:void(0)">预算列表</a></li>
@@ -172,9 +172,10 @@
 			<dt><i class="Hui-iconfont">&#xe613;</i> 资讯管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="<?php echo U('Advertisement/listS');?>" data-title="广告列表" href="javascript:void(0)">广告列表</a></li>
-					<li><a _href="<?php echo U('Advertisement/news');?>" data-title="工程案例" href="javascript:void(0)">工程案例</a></li>
-					<li><a _href="<?php echo U('Advertisement/toutiao');?>" data-title="工程头条" href="javascript:void(0)">工程头条</a></li>
+					<!--<li><a _href="<?php echo U('Ad/index');?>" data-title="广告列表" href="javascript:void(0)">广告列表</a></li>
+					<li><a _href="<?php echo U('Projectcase/index');?>" data-title="工程案例" href="javascript:void(0)">工程案例</a></li>-->
+					<li><a _href="<?php echo U('Headline/index');?>" data-title="工程头条" href="javascript:void(0)">工程头条</a></li>
+					<?php if(($_SESSION['wgcadmininfo']['kehu'] == '材料商')): ?><li><a _href="<?php echo U('Headline/index_cls');?>" data-title="产品推荐" href="javascript:void(0)">产品推荐</a></li><?php endif; ?>
 				</ul>
 			</dd>
 		</dl>
@@ -186,14 +187,14 @@
 				</ul>
 			</dd>
 		</dl>
-		<dl id="menu-picture">
-			<dt><i class="Hui-iconfont">&#xe613;</i> 集采管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+		<?php if(($_SESSION['wgcadmininfo']['kehu'] == '微工程')): ?><dl id="menu-picture">
+			<dt><i class="Hui-iconfont">&#xe613;</i> 材料询价管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="<?php echo U('Jicai/index');?>" data-title="集采管理" href="javascript:void(0)">集采列表</a></li>
+					<li><a _href="<?php echo U('Jicai/index');?>" data-title="材料询价管理" href="javascript:void(0)">材料询价列表</a></li>
 				</ul>
 			</dd>
-		</dl>
+		</dl><?php endif; ?>
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i> 招聘管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -202,14 +203,14 @@
 				</ul>
 			</dd>
 		</dl>
-		<dl id="menu-picture">
+		<?php if(($_SESSION['wgcadmininfo']['kehu'] == '微工程')): ?><dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i> 案例管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
 					<li><a _href="<?php echo U('Gallery/listss');?>" data-title="效果图列表" href="javascript:void(0)">效果图</a></li>
 				</ul>
 			</dd>
-		</dl>
+		</dl><?php endif; ?>
 		<?php if($wgcadmininfo['fenxiaoshang_name'] == '' ): ?><dl id="menu-picture">
 				<dt><i class="Hui-iconfont">&#xe613;</i> 分销商管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 				<dd>
@@ -291,7 +292,7 @@
 			</dd>
 			
 		</dl>
-		<dl id="menu-picture">
+		<?php if($_SESSION['wgcadmininfo']['fenxiaoshang_name'] == '微工程' ): ?><dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>维修派单<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
@@ -299,7 +300,7 @@
 				</ul>
 			</dd>
 			
-		</dl>
+		</dl><?php endif; ?>
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>维修项目管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -338,12 +339,11 @@
 				</ul>
 			</dd>
 		</dl>
-		
-		<dl id="menu-picture">
+		<?php if($_SESSION['wgcadmininfo']['fenxiaoshang_name'] == '微工程' ): ?><dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>主材定价管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="<?php echo U('Baojia/zhucai');?>" data-title="=主材列表" href="javascript:void(0)">主材列表</a></li>
+					<li><a _href="<?php echo U('Baojia/zhucai');?>" data-title="主材列表" href="javascript:void(0)">主材列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -355,8 +355,7 @@
 					<li><a _href="<?php echo U('Baojia/fucai');?>" data-title="辅材列表" href="javascript:void(0)">辅材列表</a></li>
 				</ul>
 			</dd>
-		</dl>
-		
+		</dl><?php endif; ?>
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>材料采购管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -366,16 +365,14 @@
 				</ul>
 			</dd>
 		</dl>
-		
-		<dl id="menu-picture">
+		<?php if($_SESSION['wgcadmininfo']['fenxiaoshang_name'] == '微工程' ): ?><dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>业务信息管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
 					<li><a _href="<?php echo U('Baojia/yewuxinxi');?>" data-title="业务信息列表" href="javascript:void(0)">业务信息列表</a></li>
 				</ul>
 			</dd>
-		</dl>
-		
+		</dl><?php endif; ?>
 		<dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>设计分包管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
@@ -393,8 +390,7 @@
 				</ul>
 			</dd>
 		</dl>
-		
-		<dl id="menu-picture">
+		<?php if($_SESSION['wgcadmininfo']['fenxiaoshang_name'] == '微工程' ): ?><dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>广告管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
@@ -402,8 +398,51 @@
 					<li><a _href="<?php echo U('Advertising/index');?>" data-title="广告管理" href="javascript:void(0)">广告管理</a></li>
 				</ul>
 			</dd>
+		</dl><?php endif; ?>
+		<dl id="menu-picture">
+			<dt><i class="Hui-iconfont">&#xe613;</i>无活找工管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a _href="<?php echo U('Baojia/wuhuozhaogong');?>" data-title="无活找工列表" href="javascript:void(0)">无活找工列表</a></li>
+				</ul>
+			</dd>
 		</dl>
-		<!---管理工具and-->
+		
+		<dl id="menu-picture">
+			<dt><i class="Hui-iconfont">&#xe613;</i>招工管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a _href="<?php echo U('Baojia/zhaogong');?>" data-title="招工列表" href="javascript:void(0)">招工列表</a></li>
+				</ul>
+			</dd>
+		</dl>
+		
+		<dl id="menu-picture">
+			<dt><i class="Hui-iconfont">&#xe613;</i>项目分包管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a _href="<?php echo U('Baojia/xiangmufenbao');?>" data-title="项目分包列表" href="javascript:void(0)">项目分包列表</a></li>
+				</ul>
+			</dd>
+		</dl>
+		
+		<dl id="menu-picture">
+			<dt><i class="Hui-iconfont">&#xe613;</i>集采价格管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a _href="<?php echo U('Baojia/cailiaoxunjia');?>" data-title="集采价格列表" href="javascript:void(0)">集采价格列表</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<?php if($_SESSION['wgcadmininfo']['fenxiaoshang_name'] == '微工程' ): ?><dl id="menu-picture">
+			<dt><i class="Hui-iconfont">&#xe613;</i>工价询价管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a _href="<?php echo U('Baojia/gongjiaxunjia');?>" data-title="工价询价列表" href="javascript:void(0)">工价询价列表</a></li>
+				</ul>
+			</dd>
+		</dl><?php endif; ?>
+		<!---管理工具end-->
 		
 		
 		

@@ -133,11 +133,12 @@ function tuijian(){
 	}else{
 
 		var url = serverUrl+"jingyi.php/Home/index/userreg";
-		$.post(url,{name : name.val(),user_name : mobile.val(),password : password.val(),user_photo : '/Public/logo.png',fenxiaoshang_userid : fenxiaoshang_userid.val()},function(ret){
+		var kehu = '<?php echo $_SESSION['wgcadmininfo']['kehu'];?>';
+		$.post(url,{name : name.val(),user_name : mobile.val(),password : password.val(),user_photo : '/Public/logo.png',kehu: kehu,fenxiaoshang_userid : fenxiaoshang_userid.val()},function(ret){
 			
 			if(ret.code == 200){
 				var data = ret.data;
-				window.location.href = "/index.php/Admin/User/userCate.html";	
+				window.location.href = "/index.php/Admin/User/index.html";	
 			}else if(ret.code == 203){
 			
 				alert('注册失败,账号已存在');

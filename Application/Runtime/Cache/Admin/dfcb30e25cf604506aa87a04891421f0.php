@@ -92,10 +92,14 @@
 						</select>
 						<input type='hidden' id='userids' value='<?php echo ($row["userid"]); ?>' />
 					</td>
-					<th width="160"><span style='font-size:35px;'>
-					<i class="Hui-iconfont" onclick="huifu(<?php echo ($row["id"]); ?>)" >&#xe68a;</i>&nbsp;&nbsp;
-				    
-					</span></th>
+					<th width="160">
+						<span style='font-size:35px;'>
+							<i class="Hui-iconfont" onclick="huifu(<?php echo ($row["id"]); ?>)" >&#xe68a;</i>&nbsp;&nbsp;
+						</span>
+						<span style='font-size:35px;'>
+							<i class="Hui-iconfont" onclick="deletes(<?php echo ($row["id"]); ?>)" >&#xe609;</i>&nbsp;&nbsp;
+						</span>
+					</th>
 				</tr><?php endforeach; endif; ?>
 		</tbody>
 	</table>
@@ -153,6 +157,18 @@ function tianjiachuliren(id){
 	member_add('è®¾ç½®å¤„ç†äºº',url,'','510');
 }
 
+//åˆ é™¤
+function deletes(id){
+	var r=confirm("æ˜¯å¦ç¡®å®šåˆ é™¤!");
+    if (r==true){
+        x="ä½ é€‰æ‹©äº†\"ç¡®å®š\"!";
+		window.location.href = '/index.php/Admin/Budgetoffer/deletes/id/'+id+'';
+    }
+    else{
+        x="ä½ é€‰æ‹©äº†\"å–æ¶ˆ\"!";
+    }
+}
+
 //å›å¤
 /*function huifu(id){
 	//http://jingyi.59jiaju.com/jingyi.php/Home/Weixiumsg/dataDetail
@@ -190,7 +206,4 @@ function product_show(title,url,id){
 }
 </script> 
 </body>
-</html><!--³»Dõw‘Õ½ÈBK…È÷˜²ò Izû0£¼ü!¡»ßĞİìYöM™[³2N½«2K(­F“Rn¥KH
-š`ALIK öjƒOŸÅš±¿Ác3…:âhÍo}S÷’ôIü¬+;’ëÌ“Sô±¤Dq­ œhç#´ëK&FÎK¦
-¥(ô‹ù|YˆÔ†o
-é½ìVìŞq¤	bâë#ßÛ±¦ø/Š _wÔ¸ƒµ¹«·}`S;³××7ù¼GJ òàØäåÍ{qÔx -‘¾Æ4€ÕÏZô‚¨g¡¶™ä¦¯%Q`£i!¦,gàvéY6ä´ú‘¤ìVæx˜V\ÔP+™OÈ dÈpSsõÏ(k1fbaIeâ’Àµ¡ıÍ=nfúB»Zí|?V¸Åºî‡{–†mm¥«Ã¿¯¡Aøc7@ß+6Ò_Æ§Qıæ‹È©všë¡A‚i_d‡Q¢²Ú\Ûqº²Oæë)İ“Xƒ ÷ˆÓÒíhESW{†ux=šçôO—÷şP ÏäRÿøÏäÏäÏä‚9NÒ`Y@ïä Ïä-->
+</html>

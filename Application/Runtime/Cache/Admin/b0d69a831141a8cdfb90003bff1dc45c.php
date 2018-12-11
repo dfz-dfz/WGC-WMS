@@ -132,4 +132,4 @@ function admin_start(obj,id){
 }
 </script>
 </body>
-</html><!--
+</html>

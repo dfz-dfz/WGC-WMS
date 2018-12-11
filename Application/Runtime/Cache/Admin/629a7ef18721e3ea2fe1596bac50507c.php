@@ -104,12 +104,12 @@
 						<?php else: ?>
 							<span style='color:blue;' onclick="xmmanage(<?php echo ($row["id"]); ?>)">项目管理</span><?php endif; ?>
 					</td>-->
-					<th width="160"><span style='font-size:35px;'>
-					<i class="Hui-iconfont" onclick="huifu(<?php echo ($row["id"]); ?>)" >&#xe68a;</i>&nbsp;&nbsp;
+					<th width="160"><span style='font-size:30px;cursor:pointer;'>
+					<i class="Hui-iconfont" onclick="huifu(<?php echo ($row["id"]); ?>)" >&#xe68a;</i>
 					<?php if($row['p_id'] == 0 ): ?><i class="Hui-iconfont" onclick="addproject(<?php echo ($row["id"]); ?>)" >&#xe600;</i>
 					<?php else: ?>
 						<i class="Hui-iconfont" onclick="xmmanage(<?php echo ($row["id"]); ?>)" >&#xe61d;</i><?php endif; ?>
-					
+					<i class="Hui-iconfont" onclick="deletes(<?php echo ($row["id"]); ?>)">&#xe609;</i>
 					</span></th>
 				</tr><?php endforeach; endif; ?>
 		</tbody>
@@ -155,6 +155,19 @@ $(document).ready(function(){
 		$('#userids').val(myvalue);
 	});
 });
+
+//删除
+function deletes(id){
+	var r=confirm("是否确定删除!");
+    if (r==true){
+        x="你选择了\"确定\"!";
+		window.location.href = '/index.php/Admin/Weixiumsg/deletes/id/'+id+'';
+    }
+    else{
+        x="你选择了\"取消\"!";
+    }
+}
+
 /*用户-添加*/
 function member_add(title,url,w,h){
 	layer_show(title,url,w,h);
