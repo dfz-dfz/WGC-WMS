@@ -1,0 +1,99 @@
+<?php if (!defined('THINK_PATH')) exit();?><!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="/favicon.ico" >
+<LINK rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/Public/admin/lib/html5.js"></script>
+<script type="text/javascript" src="/Public/admin/lib/respond.min.js"></script>
+<script type="text/javascript" src="/Public/admin/lib/PIE_IE678.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/Public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/Public/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/Public/admin/static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<!--/meta 作为公共模版分离出去-->
+
+<title>功能添加状态</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+</head>
+<body>
+
+<article class="page-container">
+      
+	  
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>功能名称：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="hidden" value="<?php echo ($types); ?>" id="type">
+				<input type="text" class="input-text"id="name" name="name">
+			</div>
+		</div>
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>状态 ：</label>
+			<div class="mt-20 skin-minimal">
+				  <div class="radio-box">
+					<input type="radio" class="status" name="status" checked value="0">
+					<label for="radio-1">开启</label>
+				  </div>
+				  <div class="radio-box">
+					<input type="radio" class="status" name="status" value="1">
+					<label for="radio-2">关闭</label>
+				  </div>
+			</div>
+		</div>
+		<div class="row cl" style="margin-top:10px">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+				<button onClick="tuijian()" class="btn btn-primary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+			</div>
+		</div>
+	 
+		<!-- 底部跳转 -->
+		
+	
+	
+</article>
+<script type="text/javascript" src="/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript">
+<!--/请在上方写此页面业务相关的脚本-->
+	function tuijian(){
+	var name = $("#name").val();
+	if(name == ''){
+		alert('请选择功能名称！');
+		return false;
+	}else{
+		var types=$("#type").val();
+		var status = $(".status:checked").val();
+		$.post('<?php echo U("Status/addinfo");?>',{types:types,name : name,status : status},function(ret){
+			
+			if(ret.info=="添加成功！"){
+				alert(ret.info);
+				window.parent.location.reload();
+				parent.layer.close(index);
+			}else{
+				alert(ret.info);
+				return false;
+			}
+			
+		
+		});
+	}
+	
+}
+</script>
+</body>
+</html>

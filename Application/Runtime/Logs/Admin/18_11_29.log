@@ -1,0 +1,2278 @@
+[ 2018-11-29T09:12:35+08:00 ] 116.21.94.213 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:12:36+08:00 ] 116.21.94.213 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:12:59+08:00 ] 116.21.94.213 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `ecm_gongsi` [ RunTime:0.000000s ]
+SQL: SELECT member.user_id AS user_id,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name FROM ecm_member member LEFT JOIN ecm_gongsi gongsi ON member.user_id=gongsi.muid WHERE member.user_name = '1000007' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_id` FROM `ecm_member` WHERE `user_name` = '1000007' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `isadmin` FROM `ecm_member` WHERE `isadmin` = 1 AND `user_id` = 1473405980 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 67 行.
+SQL: SELECT m.user_id,m.roleid,m.user_name,m.kehu,m.fenxiaoshang_userid,m.userphoto,g.name,g.zhiwei,r.rolename,m.storeid FROM ecm_member m LEFT JOIN ecm_gongyingshang g ON m.user_id = g.user_id LEFT JOIN ecm_role r ON m.roleid = r.id  WHERE m.user_id = '1473405980' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_name` FROM `ecm_member` WHERE `user_id` = 1473405980 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_userid` FROM `ecm_member` WHERE `user_id` = 1473405980 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pwd D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 72 行.
+
+[ 2018-11-29T09:13:01+08:00 ] 116.21.94.213 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 7 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\CategoryController.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ecm_category` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`catname`,`caticon`,`m`,`c`,`a`,`orderlist` FROM `ecm_category` WHERE `display` = 1 AND `storeid` = 'b65e2727ec76202a16d7fd77dfa8a2de'  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:01+08:00 ] 116.21.94.213 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `user_id` > 4474 AND `fenxiaoshang_userid` = '6387801543051852' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543420800' and user_id >4474 and fenxiaoshang_userid = 6387801543051852 ) LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 6387801543051852 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 6387801543051852 ) LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1540742400' and user_id >4474 and fenxiaoshang_userid = 6387801543051852 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `position_type` = 1 AND `fenxiaoshang_userid` = '6387801543051852' LIMIT 1   [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:04+08:00 ] 116.21.94.213 /index.php/Admin/maillist/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON gongyingshang.user_id=member.user_id WHERE `fenxiaoshang_userid` = '6387801543051852' AND member.user_id > 1473404044 LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT member.user_id AS user_id,member.user_name AS user_name,member.email AS email,member.userphoto AS userphoto,member.regtime AS regtime,gongyingshang.name AS name,gongyingshang.zhiwei AS zhiwei,gongyingshang.beizhu AS beizhu FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON gongyingshang.user_id=member.user_id WHERE `fenxiaoshang_userid` = '6387801543051852' AND member.user_id > 1473404044 ORDER BY member.regtime desc LIMIT 0,15   [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:06+08:00 ] 116.21.94.213 /index.php/Admin/Homedecoration/getList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\HomedecorationController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `ecm_homedecoration` [ RunTime:0.000000s ]
+SQL: SELECT w.*,g.name,m.user_name FROM ecm_homedecoration w INNER JOIN ecm_gongyingshang g ON w.send_uid = g.user_id INNER JOIN ecm_member m ON m.user_id = g.user_id  WHERE `fenxiaoshang_userid` = '6387801543051852' ORDER BY w.id desc LIMIT 0,100   [ RunTime:0.000000s ]
+ERR: 1052:Column 'fenxiaoshang_userid' in where clause is ambiguous
+ [ SQL语句 ] : SELECT w.*,g.name,m.user_name FROM ecm_homedecoration w INNER JOIN ecm_gongyingshang g ON w.send_uid = g.user_id INNER JOIN ecm_member m ON m.user_id = g.user_id  WHERE `fenxiaoshang_userid` = '6387801543051852' ORDER BY w.id desc LIMIT 0,100  
+NOTIC: [2] Invalid argument supplied for foreach() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\HomedecorationController.class.php 第 68 行.
+SQL: SHOW COLUMNS FROM `ecm_homedecoration` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_homedecoration homedecoration LEFT JOIN ecm_member member ON homedecoration.user_id=member.user_id LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE homedecoration.fenxiaoshang_userid = '6387801543051852' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT homedecoration.id AS id,homedecoration.user_id AS user_id,homedecoration.lianxiren AS lianxiren,homedecoration.autoaddress AS autoaddress,homedecoration.address AS address,homedecoration.tel AS tel,homedecoration.budget AS budget,homedecoration.jobtime AS jobtime,homedecoration.jobsize AS jobsize,homedecoration.status AS status,homedecoration.fortime AS fortime,homedecoration.addtime AS addtime,homedecoration.rev_name AS rev_name,homedecoration.operator AS operator,homedecoration.content AS content,homedecoration.publishingarea AS publishingarea,homedecoration.s_province AS s_province,homedecoration.s_city AS s_city,homedecoration.s_county AS s_county,homedecoration.region AS region,homedecoration.fenxiaoshang_userid AS fenxiaoshang_userid,homedecoration.ok AS ok,homedecoration.kehu AS kehu,member.userphoto AS userphoto,gongyingshang.name AS name,gongyingshang.zhiwei AS zhiwei FROM ecm_homedecoration homedecoration LEFT JOIN ecm_member member ON homedecoration.user_id=member.user_id LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE homedecoration.fenxiaoshang_userid = '6387801543051852' ORDER BY homedecoration.id desc LIMIT 0,20   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_homedecoration homedecoration LEFT JOIN ecm_member member ON homedecoration.user_id=member.user_id LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE homedecoration.fenxiaoshang_userid = '6387801543051852' LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\HomedecorationController.class.php 第 125 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2018-11-29T09:13:08+08:00 ] 116.21.94.213 /index.php/Admin/Workdecoration/getList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.015625s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\WorkdecorationController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `ecm_ecm_workdecoration` [ RunTime:0.218750s ]
+ERR: 1146:Table 'wgc_db.ecm_ecm_workdecoration' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ecm_ecm_workdecoration`
+SQL: SELECT w.*,g.name,m.user_name FROM ecm_ecm_workdecoration w INNER JOIN ecm_gongyingshang g ON w.send_uid = g.user_id INNER JOIN ecm_member m ON m.user_id = g.user_id  WHERE `fenxiaoshang_userid` = '6387801543051852' ORDER BY w.id desc LIMIT 0,100   [ RunTime:0.000000s ]
+ERR: 1146:Table 'wgc_db.ecm_ecm_workdecoration' doesn't exist
+ [ SQL语句 ] : SELECT w.*,g.name,m.user_name FROM ecm_ecm_workdecoration w INNER JOIN ecm_gongyingshang g ON w.send_uid = g.user_id INNER JOIN ecm_member m ON m.user_id = g.user_id  WHERE `fenxiaoshang_userid` = '6387801543051852' ORDER BY w.id desc LIMIT 0,100  
+NOTIC: [2] Invalid argument supplied for foreach() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\WorkdecorationController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `ecm_workdecoration` [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_workdecoration workdecoration LEFT JOIN ecm_member member ON workdecoration.user_id=member.user_id LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE workdecoration.fenxiaoshang_userid = '6387801543051852' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT workdecoration.id AS id,workdecoration.user_id AS user_id,workdecoration.lianxiren AS lianxiren,workdecoration.autoaddress AS autoaddress,workdecoration.address AS address,workdecoration.tel AS tel,workdecoration.content AS content,workdecoration.budget AS budget,workdecoration.jobtime AS jobtime,workdecoration.jobsize AS jobsize,workdecoration.addtime AS addtime,workdecoration.rev_name AS rev_name,workdecoration.fortime AS fortime,workdecoration.operator AS operator,workdecoration.s_province AS s_province,workdecoration.s_city AS s_city,workdecoration.s_county AS s_county,workdecoration.region AS region,workdecoration.fenxiaoshang_userid AS fenxiaoshang_userid,workdecoration.img AS img,workdecoration.ok AS ok,workdecoration.kehu AS kehu,member.userphoto AS userphoto,gongyingshang.name AS name,gongyingshang.zhiwei AS zhiwei FROM ecm_workdecoration workdecoration LEFT JOIN ecm_member member ON workdecoration.user_id=member.user_id LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE workdecoration.fenxiaoshang_userid = '6387801543051852' ORDER BY workdecoration.id desc LIMIT 0,20   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_workdecoration workdecoration LEFT JOIN ecm_member member ON workdecoration.user_id=member.user_id LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE workdecoration.fenxiaoshang_userid = '6387801543051852' LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\WorkdecorationController.class.php 第 119 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:09+08:00 ] 116.21.94.213 /index.php/Admin/Instantmsg/getList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:09+08:00 ] 116.21.94.213 /index.php/Admin/Instantmsg/searchman
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:10+08:00 ] 116.21.94.213 /index.php/Admin/Instantmsg/userone
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\InstantmsgController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.015625s ]
+SQL: SELECT m.user_id,m.user_name as mobile,g.name,g.email,g.zhiwei,m.have_job,m.utype,g.sex,g.nianling as age,g.bumen,g.huji,g.shenfenzheng as id_card,g.gz_jingyan as experience,g.intension,g.skill,m.balance,m.frozen,m.authentication,m.userphoto,m.regtime,m.token,m.lon,m.lat,m.push_id,m.renzheng FROM ecm_member m INNER JOIN ecm_gongyingshang g ON m.user_id = g.user_id  WHERE m.user_id IN ('1473405980') ORDER BY m.user_id desc  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:13+08:00 ] 116.21.94.213 /index.php/Admin/Headline/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '6387801543051852' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '6387801543051852' ORDER BY times desc LIMIT 0,200   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 523 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:17+08:00 ] 116.21.94.213 /index.php/Admin/Cailiaoshang/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_cailiaoshang_mianpian` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_cailiaoshang_mianpian cailiaoshang_mianpian LEFT JOIN ecm_member member ON member.user_id=cailiaoshang_mianpian.userid LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE cailiaoshang_mianpian.fenxiaoshang_userid = '6387801543051852' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT cailiaoshang_mianpian.id AS id,cailiaoshang_mianpian.userid AS userid,cailiaoshang_mianpian.name AS cname,cailiaoshang_mianpian.title AS title,cailiaoshang_mianpian.office_name AS office_name,cailiaoshang_mianpian.mobile AS mobile,cailiaoshang_mianpian.tel AS tel,cailiaoshang_mianpian.email AS cemail,cailiaoshang_mianpian.businessscope AS businessscope,cailiaoshang_mianpian.fenxiaoshang_userid AS fenxiaoshang_userid,cailiaoshang_mianpian.description AS description,cailiaoshang_mianpian.web AS web,cailiaoshang_mianpian.fax AS fax,cailiaoshang_mianpian.addr AS addr,cailiaoshang_mianpian.type AS type,cailiaoshang_mianpian.addtime AS addtime,member.user_name AS user_name,member.userphoto AS userphoto,member.postion AS postion,gongyingshang.name AS name,gongyingshang.sex AS sex,gongyingshang.nianling AS nianling,gongyingshang.email AS email FROM ecm_cailiaoshang_mianpian cailiaoshang_mianpian LEFT JOIN ecm_member member ON member.user_id=cailiaoshang_mianpian.userid LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE cailiaoshang_mianpian.fenxiaoshang_userid = '6387801543051852' ORDER BY cailiaoshang_mianpian.id desc LIMIT 0,20   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 523 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2018-11-29T09:13:19+08:00 ] 116.21.94.213 /index.php/Admin/Zhaopin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_recruit` [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_recruit` WHERE `fenxiaoshang_userid` = '6387801543051852' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_recruit` WHERE `fenxiaoshang_userid` = '6387801543051852' ORDER BY id desc LIMIT 0,20   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473406009' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT `userphoto` FROM `ecm_member` WHERE `user_id` = 1473406009 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:25+08:00 ] 116.21.94.213 /index.php/Admin/Kaoqing/qingjia.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_leaves` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_leaves` WHERE `addtime` < 1541001600 AND `id` <> 81 AND `fenxiaoshang_userid` = '6387801543051852' ORDER BY id desc  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\KaoqingController.class.php 第 160 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\KaoqingController.class.php 第 168 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:27+08:00 ] 116.21.94.213 /index.php/Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE `fenxiaoshang_userid` = '6387801543051852' AND gongyingshang.name <> '' LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT member.user_id AS user_id,member.user_name AS user_name,member.shenfen AS shenfen,member.shenfentype AS shenfentype,member.balance AS balance,member.userphoto AS userphoto,member.xiangxi AS xiangxi,member.regtime AS regtime,member.token AS token,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name,member.fenxiaoshang_time AS fenxiaoshang_time,member.postion AS postion,member.type AS type,member.is_user AS is_user,member.pai AS pai,gongyingshang.name AS name,gongyingshang.sex AS sex,gongyingshang.bumen AS bumen,gongyingshang.nianling AS nianling,gongyingshang.huji AS huji,gongyingshang.zhiwei AS zhiwei,gongyingshang.user_id AS uid FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE `fenxiaoshang_userid` = '6387801543051852' AND gongyingshang.name <> '' ORDER BY member.user_id desc LIMIT 0,20   [ RunTime:0.031250s ]
+SQL: SHOW COLUMNS FROM `ecm_capital` [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406009 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473405999 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 523 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: wgcadmininfo D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:30+08:00 ] 116.21.94.213 /index.php/Admin/Zhaopin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_recruit` [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_recruit` WHERE `fenxiaoshang_userid` = '6387801543051852' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_recruit` WHERE `fenxiaoshang_userid` = '6387801543051852' ORDER BY id desc LIMIT 0,20   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473406009' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT `userphoto` FROM `ecm_member` WHERE `user_id` = 1473406009 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:31+08:00 ] 116.21.94.213 /index.php/Admin/Zhaopin/del/id/339.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_recruit` [ RunTime:0.000000s ]
+SQL: DELETE FROM `ecm_recruit` WHERE `id` = '339' [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/head.html): failed to open stream: No such file or directory D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 692 行.
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/wei.html): failed to open stream: No such file or directory D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 692 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:32+08:00 ] 116.21.94.213 /index.php/Admin/Zhaopin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_recruit` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_recruit` WHERE `fenxiaoshang_userid` = '6387801543051852' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_recruit` WHERE `fenxiaoshang_userid` = '6387801543051852' ORDER BY id desc LIMIT 0,20   [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\ZhaopinController.class.php 第 40 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:13:36+08:00 ] 101.89.239.230 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:14:01+08:00 ] 101.89.19.149 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:14:04+08:00 ] 101.91.60.110 /index.php/Admin/maillist/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+
+[ 2018-11-29T09:14:06+08:00 ] 101.89.19.149 /index.php/Admin/Homedecoration/getList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:14:08+08:00 ] 101.91.62.89 /index.php/Admin/Workdecoration/getList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:14:09+08:00 ] 61.129.6.145 /index.php/Admin/Instantmsg/getList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:14:09+08:00 ] 101.227.139.171 /index.php/Admin/Instantmsg/searchman
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+
+[ 2018-11-29T09:14:10+08:00 ] 61.129.6.225 /index.php/Admin/Instantmsg/userone
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:14:17+08:00 ] 61.151.178.165 /index.php/Admin/Cailiaoshang/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:14:19+08:00 ] 101.89.239.230 /index.php/Admin/Zhaopin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:14:28+08:00 ] 61.151.178.165 /index.php/Admin/Kaoqing/qingjia.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:14:28+08:00 ] 223.166.222.109 /index.php/Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:14:31+08:00 ] 61.129.6.251 /index.php/Admin/Zhaopin/del/id/339.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:52:33+08:00 ] 42.236.10.106 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:52:53+08:00 ] 113.10.244.210 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T09:53:45+08:00 ] 180.163.220.66 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T10:09:25+08:00 ] 116.21.94.213 /index.php/Admin/maillist/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T10:09:26+08:00 ] 116.21.94.213 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T10:09:35+08:00 ] 116.21.94.213 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongsi` [ RunTime:0.000000s ]
+SQL: SELECT member.user_id AS user_id,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name FROM ecm_member member LEFT JOIN ecm_gongsi gongsi ON member.user_id=gongsi.muid WHERE member.user_name = '10000' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_id` FROM `ecm_member` WHERE `user_name` = '10000' AND `password` = '83aaf4349db4d0c7c868de859710a53d' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `isadmin` FROM `ecm_member` WHERE `isadmin` = 1 AND `user_id` = 10000 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 67 行.
+SQL: SELECT m.user_id,m.roleid,m.user_name,m.kehu,m.fenxiaoshang_userid,m.userphoto,g.name,g.zhiwei,r.rolename,m.storeid FROM ecm_member m LEFT JOIN ecm_gongyingshang g ON m.user_id = g.user_id LEFT JOIN ecm_role r ON m.roleid = r.id  WHERE m.user_id = '10000' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_name` FROM `ecm_member` WHERE `user_id` = 10000 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_userid` FROM `ecm_member` WHERE `user_id` = 10000 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pwd D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 72 行.
+
+[ 2018-11-29T10:09:36+08:00 ] 116.21.94.213 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 7 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\CategoryController.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ecm_category` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`catname`,`caticon`,`m`,`c`,`a`,`orderlist` FROM `ecm_category` WHERE `display` = 1 AND `storeid` = 'b65e2727ec76202a16d7fd77dfa8a2de'  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T10:09:36+08:00 ] 116.21.94.213 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `user_id` > 4474 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `position_type` = 1 LIMIT 1   [ RunTime:0.015626s ]
+NOTIC: [8] Undefined variable: jinri D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 100 行.
+NOTIC: [8] Undefined variable: zuori D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: benzhou D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 102 行.
+NOTIC: [8] Undefined variable: benyue D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 103 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T10:11:42+08:00 ] 116.21.94.213 /index.php/Admin/maillist/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON gongyingshang.user_id=member.user_id WHERE member.user_id > 1473404044 LIMIT 1   [ RunTime:0.437506s ]
+SQL: SELECT member.user_id AS user_id,member.user_name AS user_name,member.email AS email,member.userphoto AS userphoto,member.regtime AS regtime,gongyingshang.name AS name,gongyingshang.zhiwei AS zhiwei,gongyingshang.beizhu AS beizhu FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON gongyingshang.user_id=member.user_id WHERE member.user_id > 1473404044 ORDER BY member.regtime desc LIMIT 0,15   [ RunTime:0.703134s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T10:11:48+08:00 ] 116.21.94.213 /index.php/Admin/Instantmsg/getList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015625s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T10:11:48+08:00 ] 116.21.94.213 /index.php/Admin/Instantmsg/searchman
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T10:11:48+08:00 ] 116.21.94.213 /index.php/Admin/Instantmsg/userone
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\InstantmsgController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT m.user_id,m.user_name as mobile,g.name,g.email,g.zhiwei,m.have_job,m.utype,g.sex,g.nianling as age,g.bumen,g.huji,g.shenfenzheng as id_card,g.gz_jingyan as experience,g.intension,g.skill,m.balance,m.frozen,m.authentication,m.userphoto,m.regtime,m.token,m.lon,m.lat,m.push_id,m.renzheng FROM ecm_member m INNER JOIN ecm_gongyingshang g ON m.user_id = g.user_id  WHERE m.user_id IN ('10000') ORDER BY m.user_id desc  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T10:11:58+08:00 ] 116.21.94.213 /index.php/Admin/Systemmsg/sendSysMsg.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\SystemmsgController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `zhiwei` FROM `ecm_gongyingshang` WHERE ( `zhiwei` <> '' AND `zhiwei` is not null  )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `ecm_internal_management`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T10:12:18+08:00 ] 116.21.94.213 /index.php/Admin/maillist/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON gongyingshang.user_id=member.user_id WHERE member.user_id > 1473404044 LIMIT 1   [ RunTime:0.437506s ]
+SQL: SELECT member.user_id AS user_id,member.user_name AS user_name,member.email AS email,member.userphoto AS userphoto,member.regtime AS regtime,gongyingshang.name AS name,gongyingshang.zhiwei AS zhiwei,gongyingshang.beizhu AS beizhu FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON gongyingshang.user_id=member.user_id WHERE member.user_id > 1473404044 ORDER BY member.regtime desc LIMIT 0,15   [ RunTime:0.718759s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2018-11-29T10:12:24+08:00 ] 116.21.94.213 /index.php/Admin/Systemmsg/sendSysMsg.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\SystemmsgController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `zhiwei` FROM `ecm_gongyingshang` WHERE ( `zhiwei` <> '' AND `zhiwei` is not null  )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `ecm_internal_management`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T10:36:29+08:00 ] 101.199.121.77 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T14:26:59+08:00 ] 101.132.156.172 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T14:51:06+08:00 ] 47.92.38.53 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:01:00+08:00 ] 218.20.4.112 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:01:49+08:00 ] 101.91.60.11 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:01:49+08:00 ] 218.20.4.112 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongsi` [ RunTime:0.000000s ]
+SQL: SELECT member.user_id AS user_id,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name FROM ecm_member member LEFT JOIN ecm_gongsi gongsi ON member.user_id=gongsi.muid WHERE member.user_name = '10001' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_id` FROM `ecm_member` WHERE `user_name` = '10001' AND `password` = '6b2d265a9de8503a8f54ae837935b7af' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `isadmin` FROM `ecm_member` WHERE `isadmin` = 1 AND `user_id` = 10001 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 67 行.
+SQL: SELECT m.user_id,m.roleid,m.user_name,m.kehu,m.fenxiaoshang_userid,m.userphoto,g.name,g.zhiwei,r.rolename,m.storeid FROM ecm_member m LEFT JOIN ecm_gongyingshang g ON m.user_id = g.user_id LEFT JOIN ecm_role r ON m.roleid = r.id  WHERE m.user_id = '10001' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_name` FROM `ecm_member` WHERE `user_id` = 10001 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_userid` FROM `ecm_member` WHERE `user_id` = 10001 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pwd D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 72 行.
+
+[ 2018-11-29T15:01:52+08:00 ] 218.20.4.112 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 7 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\CategoryController.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ecm_category` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`catname`,`caticon`,`m`,`c`,`a`,`orderlist` FROM `ecm_category` WHERE `display` = 1 AND `storeid` = 'b65e2727ec76202a16d7fd77dfa8a2de'  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:01:52+08:00 ] 218.20.4.112 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `user_id` > 4474 AND `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543420800' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.031251s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1540742400' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `position_type` = 1 AND `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:01:55+08:00 ] 218.20.4.112 /index.php/Admin/Headline/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '9800611541647779' ORDER BY times desc LIMIT 0,200   [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 523 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:01:57+08:00 ] 218.20.4.112 /index.php/Admin/Headline/adds
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:06:02+08:00 ] 218.20.4.112 /index.php/Admin/Headline/addForms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/head.html): failed to open stream: No such file or directory D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 692 行.
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/wei.html): failed to open stream: No such file or directory D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 692 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:07:40+08:00 ] 218.20.4.112 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:07:42+08:00 ] 218.20.4.112 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:08:45+08:00 ] 218.20.4.112 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongsi` [ RunTime:0.000000s ]
+SQL: SELECT member.user_id AS user_id,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name FROM ecm_member member LEFT JOIN ecm_gongsi gongsi ON member.user_id=gongsi.muid WHERE member.user_name = '1000007' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_id` FROM `ecm_member` WHERE `user_name` = '1000007' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `isadmin` FROM `ecm_member` WHERE `isadmin` = 1 AND `user_id` = 1473405980 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 67 行.
+SQL: SELECT m.user_id,m.roleid,m.user_name,m.kehu,m.fenxiaoshang_userid,m.userphoto,g.name,g.zhiwei,r.rolename,m.storeid FROM ecm_member m LEFT JOIN ecm_gongyingshang g ON m.user_id = g.user_id LEFT JOIN ecm_role r ON m.roleid = r.id  WHERE m.user_id = '1473405980' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `fenxiaoshang_name` FROM `ecm_member` WHERE `user_id` = 1473405980 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_userid` FROM `ecm_member` WHERE `user_id` = 1473405980 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pwd D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 72 行.
+
+[ 2018-11-29T15:08:47+08:00 ] 218.20.4.112 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 7 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\CategoryController.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ecm_category` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`catname`,`caticon`,`m`,`c`,`a`,`orderlist` FROM `ecm_category` WHERE `display` = 1 AND `storeid` = 'b65e2727ec76202a16d7fd77dfa8a2de'  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:08:48+08:00 ] 218.20.4.112 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `user_id` > 4474 AND `fenxiaoshang_userid` = '6387801543051852' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543420800' and user_id >4474 and fenxiaoshang_userid = 6387801543051852 ) LIMIT 1   [ RunTime:0.031251s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 6387801543051852 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 6387801543051852 ) LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1540742400' and user_id >4474 and fenxiaoshang_userid = 6387801543051852 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `position_type` = 1 AND `fenxiaoshang_userid` = '6387801543051852' LIMIT 1   [ RunTime:0.015626s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:08:50+08:00 ] 218.20.4.112 /index.php/Admin/maillist/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON gongyingshang.user_id=member.user_id WHERE `fenxiaoshang_userid` = '6387801543051852' AND member.user_id > 1473404044 LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT member.user_id AS user_id,member.user_name AS user_name,member.email AS email,member.userphoto AS userphoto,member.regtime AS regtime,gongyingshang.name AS name,gongyingshang.zhiwei AS zhiwei,gongyingshang.beizhu AS beizhu FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON gongyingshang.user_id=member.user_id WHERE `fenxiaoshang_userid` = '6387801543051852' AND member.user_id > 1473404044 ORDER BY member.regtime desc LIMIT 0,15   [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:18:49+08:00 ] 42.236.10.84 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:18:52+08:00 ] 218.20.4.112 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:18:53+08:00 ] 218.20.4.112 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:19:47+08:00 ] 218.20.4.112 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:19:49+08:00 ] 218.20.4.112 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:20:23+08:00 ] 218.20.4.112 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:20:24+08:00 ] 218.20.4.112 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:20:32+08:00 ] 218.20.4.112 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.015626s ]
+SQL: SHOW COLUMNS FROM `ecm_gongsi` [ RunTime:0.000000s ]
+SQL: SELECT member.user_id AS user_id,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name FROM ecm_member member LEFT JOIN ecm_gongsi gongsi ON member.user_id=gongsi.muid WHERE member.user_name = '10000' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_id` FROM `ecm_member` WHERE `user_name` = '10000' AND `password` = '83aaf4349db4d0c7c868de859710a53d' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `isadmin` FROM `ecm_member` WHERE `isadmin` = 1 AND `user_id` = 10000 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 67 行.
+SQL: SELECT m.user_id,m.roleid,m.user_name,m.kehu,m.fenxiaoshang_userid,m.userphoto,g.name,g.zhiwei,r.rolename,m.storeid FROM ecm_member m LEFT JOIN ecm_gongyingshang g ON m.user_id = g.user_id LEFT JOIN ecm_role r ON m.roleid = r.id  WHERE m.user_id = '10000' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_name` FROM `ecm_member` WHERE `user_id` = 10000 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_userid` FROM `ecm_member` WHERE `user_id` = 10000 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pwd D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 72 行.
+
+[ 2018-11-29T15:20:33+08:00 ] 218.20.4.112 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 7 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\CategoryController.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ecm_category` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`catname`,`caticon`,`m`,`c`,`a`,`orderlist` FROM `ecm_category` WHERE `display` = 1 AND `storeid` = 'b65e2727ec76202a16d7fd77dfa8a2de'  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:20:33+08:00 ] 218.20.4.112 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `user_id` > 4474 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `position_type` = 1 LIMIT 1   [ RunTime:0.015626s ]
+NOTIC: [8] Undefined variable: jinri D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 100 行.
+NOTIC: [8] Undefined variable: zuori D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: benzhou D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 102 行.
+NOTIC: [8] Undefined variable: benyue D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 103 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:20:36+08:00 ] 218.20.4.112 /index.php/Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE gongyingshang.name <> '' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT member.user_id AS user_id,member.user_name AS user_name,member.shenfen AS shenfen,member.shenfentype AS shenfentype,member.balance AS balance,member.userphoto AS userphoto,member.xiangxi AS xiangxi,member.regtime AS regtime,member.token AS token,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name,member.fenxiaoshang_time AS fenxiaoshang_time,member.postion AS postion,member.type AS type,member.is_user AS is_user,member.pai AS pai,gongyingshang.name AS name,gongyingshang.sex AS sex,gongyingshang.bumen AS bumen,gongyingshang.nianling AS nianling,gongyingshang.huji AS huji,gongyingshang.zhiwei AS zhiwei,gongyingshang.user_id AS uid FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE gongyingshang.name <> '' ORDER BY member.user_id desc LIMIT 0,20   [ RunTime:0.046875s ]
+SQL: SHOW COLUMNS FROM `ecm_capital` [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406022 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406021 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406020 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406019 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406018 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406017 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406016 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406015 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406014 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406013 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406012 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406011 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406010 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406009 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406008 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406007 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406006 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406005 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406004 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406003 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 523 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: wgcadmininfo D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:20:42+08:00 ] 218.20.4.112 /index.php/Admin/User/jifen/user_id/1473406022.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT `user_id` FROM `ecm_member` WHERE `user_id` = 1473406022 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\6c593eac7e3c61b021c468858f30b577.php 第 35 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:20:43+08:00 ] 218.20.4.112 /index.php/Admin/User/jifens.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_capital` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_capital` WHERE `user_id` = 1473406022 LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `ecm_capital` SET `hasmoney`=999999999 WHERE `user_id` = 1473406022 [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/head.html): failed to open stream: No such file or directory D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 692 行.
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/wei.html): failed to open stream: No such file or directory D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 692 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:20:46+08:00 ] 218.20.4.112 /index.php/Admin/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE gongyingshang.name <> '' LIMIT 1   [ RunTime:0.015626s ]
+SQL: SELECT member.user_id AS user_id,member.user_name AS user_name,member.shenfen AS shenfen,member.shenfentype AS shenfentype,member.balance AS balance,member.userphoto AS userphoto,member.xiangxi AS xiangxi,member.regtime AS regtime,member.token AS token,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name,member.fenxiaoshang_time AS fenxiaoshang_time,member.postion AS postion,member.type AS type,member.is_user AS is_user,member.pai AS pai,gongyingshang.name AS name,gongyingshang.sex AS sex,gongyingshang.bumen AS bumen,gongyingshang.nianling AS nianling,gongyingshang.huji AS huji,gongyingshang.zhiwei AS zhiwei,gongyingshang.user_id AS uid FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE gongyingshang.name <> '' ORDER BY member.user_id desc LIMIT 0,20   [ RunTime:0.046875s ]
+SQL: SHOW COLUMNS FROM `ecm_capital` [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406022 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406021 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406020 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406019 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406018 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406017 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406016 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406015 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406014 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406013 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406012 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406011 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406010 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406009 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406008 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406007 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406006 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406005 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406004 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `hasmoney` FROM `ecm_capital` WHERE `user_id` = 1473406003 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 523 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: wgcadmininfo D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:23:09+08:00 ] 112.101.100.51 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:23:26+08:00 ] 112.101.100.51 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `ecm_gongsi` [ RunTime:0.000000s ]
+SQL: SELECT member.user_id AS user_id,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name FROM ecm_member member LEFT JOIN ecm_gongsi gongsi ON member.user_id=gongsi.muid WHERE member.user_name = '1000005' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_id` FROM `ecm_member` WHERE `user_name` = '1000005' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `isadmin` FROM `ecm_member` WHERE `isadmin` = 1 AND `user_id` = 1473405962 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 67 行.
+SQL: SELECT m.user_id,m.roleid,m.user_name,m.kehu,m.fenxiaoshang_userid,m.userphoto,g.name,g.zhiwei,r.rolename,m.storeid FROM ecm_member m LEFT JOIN ecm_gongyingshang g ON m.user_id = g.user_id LEFT JOIN ecm_role r ON m.roleid = r.id  WHERE m.user_id = '1473405962' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_name` FROM `ecm_member` WHERE `user_id` = 1473405962 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_userid` FROM `ecm_member` WHERE `user_id` = 1473405962 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pwd D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 72 行.
+
+[ 2018-11-29T15:23:28+08:00 ] 112.101.100.51 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 7 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\CategoryController.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ecm_category` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`catname`,`caticon`,`m`,`c`,`a`,`orderlist` FROM `ecm_category` WHERE `display` = 1 AND `storeid` = 'b65e2727ec76202a16d7fd77dfa8a2de'  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:23:29+08:00 ] 112.101.100.51 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `user_id` > 4474 AND `fenxiaoshang_userid` = '4787591543049868' LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543420800' and user_id >4474 and fenxiaoshang_userid = 4787591543049868 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 4787591543049868 ) LIMIT 1   [ RunTime:0.031251s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 4787591543049868 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1540742400' and user_id >4474 and fenxiaoshang_userid = 4787591543049868 ) LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `position_type` = 1 AND `fenxiaoshang_userid` = '4787591543049868' LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:23:56+08:00 ] 112.101.100.51 /index.php/Admin/Workdecoration/getList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\WorkdecorationController.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `ecm_ecm_workdecoration` [ RunTime:0.000000s ]
+ERR: 1146:Table 'wgc_db.ecm_ecm_workdecoration' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ecm_ecm_workdecoration`
+SQL: SELECT w.*,g.name,m.user_name FROM ecm_ecm_workdecoration w INNER JOIN ecm_gongyingshang g ON w.send_uid = g.user_id INNER JOIN ecm_member m ON m.user_id = g.user_id  WHERE `fenxiaoshang_userid` = '4787591543049868' ORDER BY w.id desc LIMIT 0,100   [ RunTime:0.000000s ]
+ERR: 1146:Table 'wgc_db.ecm_ecm_workdecoration' doesn't exist
+ [ SQL语句 ] : SELECT w.*,g.name,m.user_name FROM ecm_ecm_workdecoration w INNER JOIN ecm_gongyingshang g ON w.send_uid = g.user_id INNER JOIN ecm_member m ON m.user_id = g.user_id  WHERE `fenxiaoshang_userid` = '4787591543049868' ORDER BY w.id desc LIMIT 0,100  
+NOTIC: [2] Invalid argument supplied for foreach() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\WorkdecorationController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `ecm_workdecoration` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_workdecoration workdecoration LEFT JOIN ecm_member member ON workdecoration.user_id=member.user_id LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE workdecoration.fenxiaoshang_userid = '4787591543049868' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT workdecoration.id AS id,workdecoration.user_id AS user_id,workdecoration.lianxiren AS lianxiren,workdecoration.autoaddress AS autoaddress,workdecoration.address AS address,workdecoration.tel AS tel,workdecoration.content AS content,workdecoration.budget AS budget,workdecoration.jobtime AS jobtime,workdecoration.jobsize AS jobsize,workdecoration.addtime AS addtime,workdecoration.rev_name AS rev_name,workdecoration.fortime AS fortime,workdecoration.operator AS operator,workdecoration.s_province AS s_province,workdecoration.s_city AS s_city,workdecoration.s_county AS s_county,workdecoration.region AS region,workdecoration.fenxiaoshang_userid AS fenxiaoshang_userid,workdecoration.img AS img,workdecoration.ok AS ok,workdecoration.kehu AS kehu,member.userphoto AS userphoto,gongyingshang.name AS name,gongyingshang.zhiwei AS zhiwei FROM ecm_workdecoration workdecoration LEFT JOIN ecm_member member ON workdecoration.user_id=member.user_id LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE workdecoration.fenxiaoshang_userid = '4787591543049868' ORDER BY workdecoration.id desc LIMIT 0,20   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_workdecoration workdecoration LEFT JOIN ecm_member member ON workdecoration.user_id=member.user_id LEFT JOIN ecm_gongyingshang gongyingshang ON member.user_id=gongyingshang.user_id WHERE workdecoration.fenxiaoshang_userid = '4787591543049868' LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\WorkdecorationController.class.php 第 119 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:24:14+08:00 ] 112.101.100.51 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:24:26+08:00 ] 112.101.100.51 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongsi` [ RunTime:0.000000s ]
+SQL: SELECT member.user_id AS user_id,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name FROM ecm_member member LEFT JOIN ecm_gongsi gongsi ON member.user_id=gongsi.muid WHERE member.user_name = '1000005' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_id` FROM `ecm_member` WHERE `user_name` = '1000005' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `isadmin` FROM `ecm_member` WHERE `isadmin` = 1 AND `user_id` = 1473405962 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 67 行.
+SQL: SELECT m.user_id,m.roleid,m.user_name,m.kehu,m.fenxiaoshang_userid,m.userphoto,g.name,g.zhiwei,r.rolename,m.storeid FROM ecm_member m LEFT JOIN ecm_gongyingshang g ON m.user_id = g.user_id LEFT JOIN ecm_role r ON m.roleid = r.id  WHERE m.user_id = '1473405962' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_name` FROM `ecm_member` WHERE `user_id` = 1473405962 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_userid` FROM `ecm_member` WHERE `user_id` = 1473405962 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pwd D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 72 行.
+
+[ 2018-11-29T15:24:27+08:00 ] 101.91.60.110 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:24:31+08:00 ] 112.101.100.51 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 7 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\CategoryController.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ecm_category` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`catname`,`caticon`,`m`,`c`,`a`,`orderlist` FROM `ecm_category` WHERE `display` = 1 AND `storeid` = 'b65e2727ec76202a16d7fd77dfa8a2de'  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:24:31+08:00 ] 112.101.100.51 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `user_id` > 4474 AND `fenxiaoshang_userid` = '4787591543049868' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543420800' and user_id >4474 and fenxiaoshang_userid = 4787591543049868 ) LIMIT 1   [ RunTime:0.031251s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 4787591543049868 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 4787591543049868 ) LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1540742400' and user_id >4474 and fenxiaoshang_userid = 4787591543049868 ) LIMIT 1   [ RunTime:0.015626s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `position_type` = 1 AND `fenxiaoshang_userid` = '4787591543049868' LIMIT 1   [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:24:41+08:00 ] 112.101.100.51 /index.php/Admin/maillist/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON gongyingshang.user_id=member.user_id WHERE `fenxiaoshang_userid` = '4787591543049868' AND member.user_id > 1473404044 LIMIT 1   [ RunTime:0.031251s ]
+SQL: SELECT member.user_id AS user_id,member.user_name AS user_name,member.email AS email,member.userphoto AS userphoto,member.regtime AS regtime,gongyingshang.name AS name,gongyingshang.zhiwei AS zhiwei,gongyingshang.beizhu AS beizhu FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON gongyingshang.user_id=member.user_id WHERE `fenxiaoshang_userid` = '4787591543049868' AND member.user_id > 1473404044 ORDER BY member.regtime desc LIMIT 0,15   [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:24:56+08:00 ] 112.101.100.51 /index.php/Admin/maillist/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON gongyingshang.user_id=member.user_id WHERE `fenxiaoshang_userid` = '4787591543049868' AND member.user_id > 1473404044 LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT member.user_id AS user_id,member.user_name AS user_name,member.email AS email,member.userphoto AS userphoto,member.regtime AS regtime,gongyingshang.name AS name,gongyingshang.zhiwei AS zhiwei,gongyingshang.beizhu AS beizhu FROM ecm_member member LEFT JOIN ecm_gongyingshang gongyingshang ON gongyingshang.user_id=member.user_id WHERE `fenxiaoshang_userid` = '4787591543049868' AND member.user_id > 1473404044 ORDER BY member.regtime desc LIMIT 0,15   [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+NOTIC: [8] Undefined index: $select D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\741e7b641c0a9d47185d74c16f044a6b.php 第 107 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:25:31+08:00 ] 61.129.6.251 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:32:32+08:00 ] 218.20.4.112 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongsi` [ RunTime:0.000000s ]
+SQL: SELECT member.user_id AS user_id,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name FROM ecm_member member LEFT JOIN ecm_gongsi gongsi ON member.user_id=gongsi.muid WHERE member.user_name = '1000007' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_id` FROM `ecm_member` WHERE `user_name` = '1000007' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `isadmin` FROM `ecm_member` WHERE `isadmin` = 1 AND `user_id` = 1473405980 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 67 行.
+SQL: SELECT m.user_id,m.roleid,m.user_name,m.kehu,m.fenxiaoshang_userid,m.userphoto,g.name,g.zhiwei,r.rolename,m.storeid FROM ecm_member m LEFT JOIN ecm_gongyingshang g ON m.user_id = g.user_id LEFT JOIN ecm_role r ON m.roleid = r.id  WHERE m.user_id = '1473405980' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_name` FROM `ecm_member` WHERE `user_id` = 1473405980 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_userid` FROM `ecm_member` WHERE `user_id` = 1473405980 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pwd D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 72 行.
+
+[ 2018-11-29T15:32:34+08:00 ] 218.20.4.112 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015626s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 7 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\CategoryController.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ecm_category` [ RunTime:0.015625s ]
+SQL: SELECT `id`,`pid`,`catname`,`caticon`,`m`,`c`,`a`,`orderlist` FROM `ecm_category` WHERE `display` = 1 AND `storeid` = 'b65e2727ec76202a16d7fd77dfa8a2de'  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:32:34+08:00 ] 218.20.4.112 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `user_id` > 4474 AND `fenxiaoshang_userid` = '6387801543051852' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543420800' and user_id >4474 and fenxiaoshang_userid = 6387801543051852 ) LIMIT 1   [ RunTime:0.031251s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 6387801543051852 ) LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 6387801543051852 ) LIMIT 1   [ RunTime:0.015626s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1540742400' and user_id >4474 and fenxiaoshang_userid = 6387801543051852 ) LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `position_type` = 1 AND `fenxiaoshang_userid` = '6387801543051852' LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:32:38+08:00 ] 218.20.4.112 /index.php/Admin/Baojia/zhaogong.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `ecm_qiuzhi` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_qiuzhi` WHERE `fenxiaoshang_userid` = '6387801543051852' AND `type` = 2 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_qiuzhi` WHERE `fenxiaoshang_userid` = '6387801543051852' AND `type` = 2 ORDER BY id desc LIMIT 0,50   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:32:50+08:00 ] 218.20.4.112 /index.php/Admin/Baojia/zhaogong.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_qiuzhi` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_qiuzhi` WHERE `fenxiaoshang_userid` = '6387801543051852' AND `type` = 2 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_qiuzhi` WHERE `fenxiaoshang_userid` = '6387801543051852' AND `type` = 2 ORDER BY id desc LIMIT 0,50   [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\BaojiaController.class.php 第 169 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:33:40+08:00 ] 101.89.29.78 /index.php/Admin/Baojia/zhaogong.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T15:37:56+08:00 ] 42.236.10.124 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T16:04:45+08:00 ] 218.20.4.112 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T16:04:50+08:00 ] 218.20.4.112 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.015626s ]
+SQL: SHOW COLUMNS FROM `ecm_gongsi` [ RunTime:0.000000s ]
+SQL: SELECT member.user_id AS user_id,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name FROM ecm_member member LEFT JOIN ecm_gongsi gongsi ON member.user_id=gongsi.muid WHERE member.user_name = '10001' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_id` FROM `ecm_member` WHERE `user_name` = '10001' AND `password` = '6b2d265a9de8503a8f54ae837935b7af' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `isadmin` FROM `ecm_member` WHERE `isadmin` = 1 AND `user_id` = 10001 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 67 行.
+SQL: SELECT m.user_id,m.roleid,m.user_name,m.kehu,m.fenxiaoshang_userid,m.userphoto,g.name,g.zhiwei,r.rolename,m.storeid FROM ecm_member m LEFT JOIN ecm_gongyingshang g ON m.user_id = g.user_id LEFT JOIN ecm_role r ON m.roleid = r.id  WHERE m.user_id = '10001' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_name` FROM `ecm_member` WHERE `user_id` = 10001 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_userid` FROM `ecm_member` WHERE `user_id` = 10001 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pwd D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 72 行.
+
+[ 2018-11-29T16:04:51+08:00 ] 218.20.4.112 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 7 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\CategoryController.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ecm_category` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`catname`,`caticon`,`m`,`c`,`a`,`orderlist` FROM `ecm_category` WHERE `display` = 1 AND `storeid` = 'b65e2727ec76202a16d7fd77dfa8a2de'  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T16:04:52+08:00 ] 218.20.4.112 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `user_id` > 4474 AND `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.031251s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543420800' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.031251s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1543334400' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1540742400' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.031251s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `position_type` = 1 AND `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T16:05:02+08:00 ] 218.20.4.112 /index.php/Admin/Headline/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT * FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '9800611541647779' ORDER BY times desc LIMIT 0,200   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 523 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T16:05:05+08:00 ] 218.20.4.112 /index.php/Admin/Headline/adds
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T16:23:32+08:00 ] 218.20.4.112 /index.php/Admin/Headline/addForms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.000000s ]
+SQL: INSERT INTO `ecm_advertisement` (`title`,`content`,`pic`,`describe`,`type`,`laiyuan`,`province`,`city`,`district`,`kehu`,`times`,`fenxiaoshang_userid`) VALUES ('经艺装饰工程一部--11月份项目进场安排','&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;经艺装饰工程一部--11月份项目进场安排&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;①&lt;/span&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;项目名称：汉堡王阳光时代广场&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;工程面积：312M²&lt;br/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;项目情况：改造店&lt;br/&gt;&lt;/p&gt;&lt;p&gt;预算金额：100万元&lt;br/&gt;&lt;/p&gt;&lt;p&gt;进场时间：2018年11月15日&lt;br/&gt;&lt;/p&gt;&lt;p&gt;预计完工时间：2018年12月23日&lt;/p&gt;&lt;p&gt;施工周期：37天&lt;/p&gt;&lt;p&gt;项目经理：李和平&lt;br/&gt;&lt;/p&gt;&lt;p&gt;预算员：覃健宇&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543478896124822.png&quot; title=&quot;1543478896124822.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543478911116771.png&quot; title=&quot;1543478911116771.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;②&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;项目名称：汉堡王晋江御龙湾&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;工程面积：160M²&lt;br/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;项目情况：新店&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预算金额：58万元&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;进场时间：2018年11月15日&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预计完工时间：2018年12月15日&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;施工周期：30天&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;项目经理：李和平&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预算员：梁晓塱&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479000103216.png&quot; title=&quot;1543479000103216.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479012645777.png&quot; title=&quot;1543479012645777.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;③&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;项目名称：汉堡王厦门新领荟&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;工程面积：110M²&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;项目情况：新店&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预算金额：51万元&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;进场时间：2018年11月29日&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预计完工时间：2018年12月25日&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;施工周期：25天&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;项目经理：盛金虎&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预算员：李万生&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479132112872.png&quot; title=&quot;1543479132112872.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479143783737.png&quot; title=&quot;1543479143783737.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;④&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;项目名称：麦当劳三亚万悦城&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;工程面积：325M²&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;项目情况：新店&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预算金额：135万元&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;进场时间：2018年11月5日&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预计完工时间：2018年12月18日&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;施工周期：43天&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;项目经理：潘小胜&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预算员：易见&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479258135433.png&quot; title=&quot;1543479258135433.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479262246572.png&quot; title=&quot;1543479262246572.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;⑤&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;项目名称：汉堡王珠海港湾一号店&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;工程面积：240M²&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;项目情况：新店&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预算金额：81万元&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;进场时间：2018年11月21日&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预计完工时间：2018年12月23日&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;施工周期：33天&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;项目经理：汤孟祥&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预算员：张伟东&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479405124172.png&quot; title=&quot;1543479405124172.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479414449294.png&quot; title=&quot;1543479414449294.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;⑥&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;项目名称：汉堡王佛山奥园店&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;工程面积：220M²&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;项目情况：新店&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预算金额：79万元&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;进场时间：2018年11月1日&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预计完工时间：2018年12月1日&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;施工周期：30天&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;项目经理：盛金虎&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预算员：张伟东&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479508135933.png&quot; title=&quot;1543479508135933.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479518261977.png&quot; title=&quot;1543479518261977.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;⑥&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;项目名称：太平洋咖啡中海名都店&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;工程面积：190M²&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;项目情况：新店&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预算金额：75万元&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;进场时间：2018年12月5日&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预计完工时间：2019年1月5日&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;施工周期：30天&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;项目经理：罗德夫&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;预算员：李万生&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479639898847.png&quot; title=&quot;1543479639898847.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479645633298.png&quot; title=&quot;1543479645633298.png&quot; alt=&quot;image.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479806857107.png&quot; title=&quot;1543479806857107.png&quot; alt=&quot;795660788284699951.png&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181129/1543479724388146.jpg&quot; title=&quot;1543479724388146.jpg&quot; alt=&quot;615474634483052261.jpg&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;公司简介：经艺公司是一家专业设计施工连锁品牌,政府项目投标及互联网装修的公司，现有资质:建筑装修装饰工程专业承包一级,建筑装饰工程设计专项乙级,建筑机电安装工程三级， 2018年经艺新业务新人员，服务于肯德基，必胜客，麦当劳，汉堡王，太平洋咖啡，红树林五星度假酒店，万达地产等，经艺装饰经历二十几年的发展积累更多的经验，公司将在国内开展新的连锁经营模式，2018年广东省各个城市投资成立分公司和合作公司及品牌加盟公司，项目进行投标，工装家装套餐项目的推广，连锁品牌维保项目，扩大经营规模为员工创造提升机会，启动上市！&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;联系方式：400-467-9788&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;欢迎来电咨询！&lt;/p&gt;&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;br/&gt;&lt;/p&gt;','/Uploads/2018-11-29/5bffa204d1b61.png','案例','33','微工程','广东省','广州市','白云区','经艺装饰',1543479812,'9800611541647779') [ RunTime:0.000000s ]
+
+[ 2018-11-29T16:23:32+08:00 ] 218.20.4.112 /index.php/Admin/Headline/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '9800611541647779' ORDER BY times desc LIMIT 0,200   [ RunTime:0.015626s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 523 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T16:42:12+08:00 ] 218.20.4.112 /index.php/Admin/Headline/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T16:42:13+08:00 ] 218.20.4.112 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T16:43:12+08:00 ] 61.151.178.165 /index.php/Admin/Headline/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T18:12:45+08:00 ] 42.236.10.75 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-29T18:12:54+08:00 ] 180.163.220.4 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+

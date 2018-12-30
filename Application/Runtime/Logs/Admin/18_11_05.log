@@ -1,0 +1,876 @@
+[ 2018-11-05T15:57:55+08:00 ] 116.21.94.88 /index.php/Admin/Xiangmu/neibu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_internal_management` WHERE `mtype` = 1 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_internal_management` WHERE `mtype` = 1 ORDER BY id desc LIMIT 0,25   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405836' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405836' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404052' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405836' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405852' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405836' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404052' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405388' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405647' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405647' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405625' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405625' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405484' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405484' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405546' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405457' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405535' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405530' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405511' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405440' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404604' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405469' LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T15:58:07+08:00 ] 116.21.94.88 /index.php/Admin/Xiangmu/neibu_bianji/id/217.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_internal_management` WHERE ( id=217 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T15:58:28+08:00 ] 116.21.94.88 /index.php/Admin/Xiangmu/neibu_user/kid/217.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_usertointernalmanagement` [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_usertointernalmanagement` WHERE `intermid` = 217 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_usertointernalmanagement` WHERE `intermid` = 217 GROUP BY user_id ORDER BY id desc LIMIT 0,20   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404042 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404485 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404485' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404554 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404554' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `ecm_internal_management` WHERE `id` = 217 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T15:58:49+08:00 ] 116.21.94.88 /index.php/Admin/Xiangmu/neibu_user/kid/201.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_usertointernalmanagement` [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_usertointernalmanagement` WHERE `intermid` = 201 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_usertointernalmanagement` WHERE `intermid` = 201 GROUP BY user_id ORDER BY id desc LIMIT 0,20   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405535 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405535' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `ecm_internal_management` WHERE `id` = 201 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T15:59:00+08:00 ] 116.21.94.88 /index.php/Admin/Xiangmu/neibu/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_internal_management` WHERE `mtype` = 1 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_internal_management` WHERE `mtype` = 1 ORDER BY id desc LIMIT 25,25   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405457' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405498' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405498' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405498' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405440' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404604' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405410' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405410' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405410' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404052' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404554' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405242' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405175' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404121' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404050' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404627' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404909' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404133' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404102' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T15:59:12+08:00 ] 116.21.94.88 /index.php/Admin/Xiangmu/neibu/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_internal_management` WHERE `mtype` = 1 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_internal_management` WHERE `mtype` = 1 ORDER BY id desc LIMIT 50,25   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404627' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404133' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404133' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404133' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404133' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404133' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404133' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404133' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404133' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404133' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404133' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404133' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404094' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404748' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404745' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404736' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404095' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404649' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404648' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '100001' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404645' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '100001' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404628' LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T15:59:25+08:00 ] 116.21.94.88 /index.php/Admin/Xiangmu/neibu/p/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_internal_management` WHERE `mtype` = 1 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_internal_management` WHERE `mtype` = 1 ORDER BY id desc LIMIT 75,25   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404589' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404052' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404627' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404102' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404116' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404116' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404416' LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T15:59:31+08:00 ] 116.21.94.88 /index.php/Admin/Xiangmu/xiangmu_qingkuan/kid/56/gtype/1/type/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_shenpi` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_shenpi` WHERE `p_id` = 56 AND `type` = '审批' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_shenpi` WHERE `p_id` = 56 AND `type` = '审批' ORDER BY id desc LIMIT 0,25   [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `ecm_project` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404659' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404629','1473404269','1473405010','1473405350','1473404485')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405342' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404629','1473404042','1473404570','1473404269','1473405010','1473404485')  [ RunTime:0.015625s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404554' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404042','1473404269','1473405010','1473404100','1473405836')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405342' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404629','1473404570','1473405350','1473404485')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404629' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404042','1473404570','1473404269','1473405010')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404629' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404042')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405350' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404042','1473404570','1473404269','1473404764','1473405010','1473404485')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405342' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404629','1473404570','1473404269','1473404485')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405341' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404629','1473404570','1473404269','1473405010','1473405350')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405341' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404629','1473404570','1473404269','1473405350')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404611' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404629','1473404269','1473405350')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405059' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404629','1473404570','1473404269','1473405350')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404659' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404629','1473404570','1473404269','1473405350')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405342' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404629','1473404570','1473404269','1473405350')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404611' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404042','1473404629','1473404570','1473405350')  [ RunTime:0.015625s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405341' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404629','1473404570','1473404269','1473405350')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405341' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404629','1473404570','1473404269','1473405350')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404659' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404629','1473404570','1473404269','1473405010','1473405350')  [ RunTime:0.015625s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405342' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404629','1473404570','1473404269','1473405350')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404611' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404042','1473404629','1473404269','1473405350')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405059' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404042','1473404629','1473404570','1473404269','1473405350')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404554' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404042','1473404570','1473405017','1473405010','1473404764','1473404627')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404554' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404042','1473404629','1473404570','1473404269','1473405010','1473404764','1473404627')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405342' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404629','1473404570','1473404269','1473405350')  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_project` WHERE `prj_id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_gongyingshang` WHERE `user_id` = '1473404115' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404629' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` IN ('1473404554','1473404570','1473404269','1473405010','1473405350')  [ RunTime:0.015625s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T15:59:37+08:00 ] 116.21.94.88 /index.php/Admin/Xiangmu/neibu_user/kid/56.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_usertointernalmanagement` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_usertointernalmanagement` WHERE `intermid` = 56 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_usertointernalmanagement` WHERE `intermid` = 56 GROUP BY user_id ORDER BY id desc LIMIT 0,20   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.015625s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405603 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405603' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405836 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405836' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404100 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404100' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405550 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405550' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405512 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405512' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405510 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405510' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405487 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405487' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404485 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404485' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405010 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405010' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405350 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405350' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405342 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405342' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404764 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404764' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405139 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405139' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405059 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405059' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404269 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404269' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404570 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404570' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404629 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404629' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404659 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404659' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404042 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404554 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404554' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_internal_management` WHERE `id` = 56 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T16:00:41+08:00 ] 116.21.94.88 /index.php/Admin/Xiangmu/neibu/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_internal_management` WHERE `mtype` = 1 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_internal_management` WHERE `mtype` = 1 ORDER BY id desc LIMIT 0,25   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405836' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405836' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404052' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405836' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405852' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405836' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404052' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405388' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405647' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405647' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405625' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405625' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405484' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405484' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405546' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405457' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405535' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405530' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405511' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405440' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404604' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405469' LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T16:00:52+08:00 ] 116.21.94.88 /index.php/Admin/Xiangmu/neibu_user/kid/195.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_usertointernalmanagement` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_usertointernalmanagement` WHERE `intermid` = 195 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_usertointernalmanagement` WHERE `intermid` = 195 GROUP BY user_id ORDER BY id desc LIMIT 0,20   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405898 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.015625s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405898' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405886 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405886' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405856 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405856' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405842 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405842' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405841 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405841' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405836 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405836' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405839 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405839' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405838 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405838' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405705 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405705' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405686 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405686' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404485 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404485' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405010 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405010' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405215 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405215' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405698 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405698' LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405618 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405618' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405596 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405596' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405507 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405507' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404604 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404604' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404269 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404269' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473405345 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473405345' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_internal_management` WHERE `id` = 195 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T16:01:25+08:00 ] 116.21.94.88 /index.php/Admin/Xiangmu/neibu_user/kid/195/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_usertointernalmanagement` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_usertointernalmanagement` WHERE `intermid` = 195 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_usertointernalmanagement` WHERE `intermid` = 195 GROUP BY user_id ORDER BY id desc LIMIT 20,20   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404042 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_gongyingshang` [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404042' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_name`,`email`,`userphoto` FROM `ecm_member` WHERE `user_id` = 1473404161 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `name`,`zhiwei` FROM `ecm_gongyingshang` WHERE `user_id` = '1473404161' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_internal_management` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `ecm_internal_management` WHERE `id` = 195 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T16:01:35+08:00 ] 116.21.94.88 /index.php/Admin/Advertising/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_advertising` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdvertisingController.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_advertising` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdvertisingController.class.php 第 20 行.
+SQL: SELECT * FROM `ecm_advertising` ORDER BY id desc LIMIT 0,20   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: key D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 34 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T16:01:36+08:00 ] 116.21.94.88 /index.php/Admin/Advertising/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_advertising` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdvertisingController.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_advertising` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdvertisingController.class.php 第 20 行.
+SQL: SELECT * FROM `ecm_advertising` ORDER BY id desc LIMIT 0,20   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: key D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 34 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T16:02:04+08:00 ] 116.21.94.88 /index.php/Admin/Advertising/weixiu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:weixiu
+
+[ 2018-11-05T16:02:05+08:00 ] 116.21.94.88 /index.php/Admin/Advertising/weixiu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:weixiu
+
+[ 2018-11-05T16:02:24+08:00 ] 116.21.94.88 /index.php/Admin/Advertising/weixiu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:weixiu
+
+[ 2018-11-05T16:05:01+08:00 ] 116.21.94.88 /index.php/Admin/Advertising/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_advertising` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdvertisingController.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_advertising` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdvertisingController.class.php 第 20 行.
+SQL: SELECT * FROM `ecm_advertising` ORDER BY id desc LIMIT 0,20   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: key D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 34 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T16:05:08+08:00 ] 116.21.94.88 /index.php/Admin/Advertising/advertising
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:advertising
+
+[ 2018-11-05T16:05:12+08:00 ] 116.21.94.88 /index.php/Admin/Advertising/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_advertising` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdvertisingController.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_advertising` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdvertisingController.class.php 第 20 行.
+SQL: SELECT * FROM `ecm_advertising` ORDER BY id desc LIMIT 0,20   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: key D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 34 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-11-05T16:05:14+08:00 ] 116.21.94.88 /index.php/Admin/Advertising/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_advertising` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdvertisingController.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_advertising` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdvertisingController.class.php 第 20 行.
+SQL: SELECT * FROM `ecm_advertising` ORDER BY id desc LIMIT 0,20   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: key D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 34 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\1788b6fc50d64c06e51a576618ea05e8.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

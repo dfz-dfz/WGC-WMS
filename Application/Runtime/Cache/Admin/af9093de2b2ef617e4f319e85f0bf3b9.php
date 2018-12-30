@@ -1,0 +1,256 @@
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/Public/admin/lib/html5.js"></script>
+<script type="text/javascript" src="/Public/admin/lib/respond.min.js"></script>
+<script type="text/javascript" src="/Public/admin/lib/PIE_IE678.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/Public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/Public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/Public/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/Public/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/Public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/Public/admin/static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/Public/css/page.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>工价询价</title>
+</head>
+<body>
+
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 工价询价 <span class="c-gray en">&gt;</span> 工价询价列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+	<div class="text-c"> 
+		<input type="text" name="key" id="key" value="" placeholder="关键词:项目名称" style="width:250px" class="input-text">
+		<button name="" id="" class="btn btn-success" type="submit" onclick="searchList()"><i class="Hui-iconfont">&#xe665;</i> 查找</button>
+	</div>
+	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
+	<span class="l">
+	
+	</span>
+	<div class="mt-20">
+		<table class="table table-border table-bordered table-bg table-hover table-sort">
+			
+			<thead>
+				<tr class="text-c">
+					<th width="40">ID</th>
+					<th width="120">公司名称</th>
+					<th width="120">项目名称</th>
+					<th width="90">联系方式</th>
+					<th width="120">地址</th>
+					<th width="100">添加时间</th>
+					<th width="90">截止时间</th>
+					<th width="100">操作</th>
+				</tr>
+			</thead>
+		
+			<tbody id="gongjiaxunjia">
+				
+			</tbody>
+		</table>
+		<div class="unpages" id="unpage" style="margin:50px auto;width: 200px;text-align: center;">
+			<a id="uppage" style="background:red;color:#fff;width: 70px;height: 30px;line-height: 30px;padding:4px 5px;cursor:pointer;margin-right: 20px;" onclick="uppage()">上一页</a>
+			<a id="nextpage" style="background:red;color:#fff;width: 70px;height: 30px;line-height: 30px;padding:4px 5px;cursor:pointer;" onclick="nextpage()">下一页</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Public/admin/lib/layer/2.1/layer.js"></script>  
+<script type="text/javascript" src="/Public/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
+<script type="text/javascript">
+	var serverUrl = "http://wgcapp.59jiaju.com/",
+		page = 1,
+		kehus = '<?php echo $_SESSION['wgcadmininfo']['kehu'];?>';
+
+	$(function(){
+		jQuery.support.cors = true;
+		cai_select(page);
+	});
+
+	//分页
+	function uppage(){
+		if(page<1){
+			page=1;
+		}
+		page--;
+		cai_select(page);
+	}
+
+	function nextpage(){
+		page++;
+		cai_select(page);
+	}
+
+	function cai_select(page){
+		$.post("http://wgcapp.wgc2013.com/jingyi.php/Home/User/xunjia_lists",{
+			page : page
+		},function(ret){
+			if(ret.code == 200){
+				var data = ret.message;
+				var html = '';
+				for(var i in data){
+					var address = data[i].address,//地址
+						addtime = data[i].addtime,//添加时间
+						id = data[i].id,//列表id
+						num = data[i].num,//数量/范围
+						ps = data[i].ps,//备注
+						tel = data[i].tel,//号码
+						title = data[i].title,//项目名称
+						office_name = data[i].office_name,//公司名称
+						unit = data[i].unit,//计价单位
+						endtime = data[i].endtime,
+						userid = data[i].userid,
+						kehu = data[i].kehu;
+					
+					if(kehus = kehu){
+						html += '<tr>';
+							html += '<td>'+id+'</td>';
+							html += '<td>'+office_name+'</td>';
+							html += '<td>'+title+'</td>';
+							html += '<td>'+tel+'</td>';
+							html += '<td>'+address+'</td>';
+							html += '<td>'+addtime+'</td>';
+							html += '<td>'+endtime+'</td>';
+							html += '<td class="f-14 td-manage">';
+								html += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/User/xunjia_lists_del/id/'+id+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
+							html += '</td>';
+						html += '</tr>';
+					}else if(kehus == '微工程'){
+						html += '<tr>';
+							html += '<td>'+id+'</td>';
+							html += '<td>'+office_name+'</td>';
+							html += '<td>'+title+'</td>';
+							html += '<td>'+tel+'</td>';
+							html += '<td>'+address+'</td>';
+							html += '<td>'+addtime+'</td>';
+							html += '<td>'+endtime+'</td>';
+							html += '<td class="f-14 td-manage">';
+								html += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/User/xunjia_lists_del/id/'+id+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
+							html += '</td>';
+						html += '</tr>';
+					}
+				}
+				$('#gongjiaxunjia').html(html);
+				$('#nextpage').show();
+				
+				if($('tbody tr').length == 0){
+					$('#nextpage').hide();
+					$("#gongjiaxunjia").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');
+				}
+			}else if(ret.code == 201){
+				$('#nextpage').hide();
+				$("#gongjiaxunjia").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');
+			}else{
+				alert('网络连接失败，请检查网络');
+				return false;
+			}
+		},'json');
+
+
+	}
+	
+	function searchList(){
+		var key = $('#key').val();
+		$.post("http://wgcapp.wgc2013.com/jingyi.php/Home/User/xunjia_lists_key",{
+			key : key
+		},function(ret){
+			if(ret.code == 200){
+				var data = ret.message;
+				var html = '';
+				for(var i in data){
+					var address = data[i].address,//地址
+						addtime = data[i].addtime,//添加时间
+						id = data[i].id,//列表id
+						num = data[i].num,//数量/范围
+						ps = data[i].ps,//备注
+						tel = data[i].tel,//号码
+						title = data[i].title,//项目名称
+						office_name = data[i].office_name,//公司名称
+						unit = data[i].unit,//计价单位
+						endtime = data[i].endtime,
+						userid = data[i].userid,
+						kehu = data[i].kehu;
+					
+					if(kehus == kehu){
+						html += '<tr>';
+							html += '<td>'+id+'</td>';
+							html += '<td>'+office_name+'</td>';
+							html += '<td>'+title+'</td>';
+							html += '<td>'+tel+'</td>';
+							html += '<td>'+address+'</td>';
+							html += '<td>'+addtime+'</td>';
+							html += '<td>'+endtime+'</td>';
+							html += '<td class="f-14 td-manage">';
+								html += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/User/xunjia_lists_del/id/'+id+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
+							html += '</td>';
+						html += '</tr>';
+					}else if(kehus == '微工程'){
+						html += '<tr>';
+							html += '<td>'+id+'</td>';
+							html += '<td>'+office_name+'</td>';
+							html += '<td>'+title+'</td>';
+							html += '<td>'+tel+'</td>';
+							html += '<td>'+address+'</td>';
+							html += '<td>'+addtime+'</td>';
+							html += '<td>'+endtime+'</td>';
+							html += '<td class="f-14 td-manage">';
+								html += '<a title="删除" onclick="return confirm("确定删除?")" href="http://wgcapp.wgc2013.com/jingyi.php/Home/User/xunjia_lists_del/id/'+id+'/userid/'+userid+'" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>';
+							html += '</td>';
+						html += '</tr>';
+					}
+				}
+				$('#gongjiaxunjia').html(html);
+				$('#nextpage').show();
+				
+				if($('tbody tr').length == 0){
+					$('#nextpage').hide();
+					$("#gongjiaxunjia").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');
+				}
+			}else if(ret.code == 201){
+				$('#nextpage').hide();
+				$("#gongjiaxunjia").html('<div style="text-align:center;color:#999;font-size:20px;line-height:150px;">暂无数据</div>');
+			}else{
+				alert('网络连接失败，请检查网络');
+				return false;
+			}
+		},'json');
+
+
+	}
+	
+	function _trans_php_time_to_str(timestamp, n) {
+		update = new Date(timestamp * 1000);
+		//鏃堕棿鎴宠涔�1000
+		year = update.getFullYear();
+		month = (update.getMonth() + 1 < 10) ? ('0' + (update.getMonth() + 1)) : (update.getMonth() + 1);
+		day = (update.getDate() < 10) ? ('0' + update.getDate()) : (update.getDate());
+		hour = (update.getHours() < 10) ? ('0' + update.getHours()) : (update.getHours());
+		minute = (update.getMinutes() < 10) ? ('0' + update.getMinutes()) : (update.getMinutes());
+		second = (update.getSeconds() < 10) ? ('0' + update.getSeconds()) : (update.getSeconds());
+		if (n == 1) {
+			return (year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second);
+		} else if (n == 2) {
+			return (year + '-' + month + '-' + day);
+		} else if (n == 3) {
+			return (month + '-' + day);
+		} else if (n == 4) {
+			return (hour + ':' + minute + ':' + second);
+		} else if (n == 5) {
+			return (year + '-' + month + '-' + day + ' ' + hour + ':' + minute );
+		} else {
+			return 0;
+		}
+	}
+</script> 
+</body>
+</html>

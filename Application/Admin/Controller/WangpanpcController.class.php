@@ -12,9 +12,49 @@ class WangpanpcController extends Controller {
 		vendor('Myload.FileDownload');
     }
 	//文档文件夹首页列表
-	public function document(){
-		$this->display('document');
+	public function document(){ 
+		
+		$User = M("wangpan_folder");
+		
+		$pid = I('type',2,'intval');
+		$where['type'] = array('eq',$pid);
+		$count = $User->where($where)->count();
+		// 查询满足要求的总记录数
+		$Page = new \Think\Page($count,42);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+		$Page->setConfig('prev','<div style="display: inline-block;width: 50px;height: 25px;line-height: 23px;text-align:center;border: 1px solid #eee;background-color: red;color:#fff;">上一页</div>');
+		$Page->setConfig('next','<div style="display: inline-block;width: 50px;height: 25px;line-height: 23px;text-align:center;border: 1px solid #eee;background-color: red;color:#fff;">下一页</div>');
+		$Page->setConfig('theme',"%FIRST% %UP_PAGE% %DOWN_PAGE% %END%" );
+		$show = $Page->show();// 分页显示输出
+		// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
+		$list = $User->where($where)->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+		$this->assign('list',$list);
+		// 赋值数据集
+		$this->assign('page',$show);// 赋值分页输出
+		
+		$this->display();
 	}
+	public function fileinfo(){ 
+		
+		$User = M("wangpan");
+		
+		$pid = I('id','','intval');
+		$where['pid'] = array('eq',$pid);
+		$count = $User->where($where)->count();
+		// 查询满足要求的总记录数
+		$Page = new \Think\Page($count,42);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+		$Page->setConfig('prev','<div style="display: inline-block;width: 50px;height: 25px;line-height: 23px;text-align:center;border: 1px solid #eee;background-color: red;color:#fff;">上一页</div>');
+		$Page->setConfig('next','<div style="display: inline-block;width: 50px;height: 25px;line-height: 23px;text-align:center;border: 1px solid #eee;background-color: red;color:#fff;">下一页</div>');
+		$Page->setConfig('theme',"%FIRST% %UP_PAGE% %DOWN_PAGE% %END%" );
+		$show = $Page->show();// 分页显示输出
+		// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
+		$list = $User->where($where)->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+		$this->assign('list',$list);
+		// 赋值数据集
+		$this->assign('page',$show);// 赋值分页输出
+		
+		$this->display();
+	}	
+	
 	//图片文件夹首页列表
 	public function picture(){
 		$this->display('picture');

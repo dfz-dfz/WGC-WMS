@@ -1,0 +1,451 @@
+[ 2018-12-22T08:50:16+08:00 ] 116.21.93.230 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018568s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2018-12-22T08:51:27+08:00 ] 116.21.93.230 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.003909s ]
+SQL: SHOW COLUMNS FROM `ecm_gongsi` [ RunTime:0.002932s ]
+SQL: SELECT member.user_id AS user_id,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name FROM ecm_member member LEFT JOIN ecm_gongsi gongsi ON member.user_id=gongsi.muid WHERE member.user_name = '10001' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `user_id` FROM `ecm_member` WHERE `user_name` = '10001' AND `password` = '6b2d265a9de8503a8f54ae837935b7af' LIMIT 1   [ RunTime:0.000977s ]
+SQL: SELECT `isadmin` FROM `ecm_member` WHERE `isadmin` = 1 AND `user_id` = 10001 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 67 行.
+SQL: SELECT m.user_id,m.roleid,m.user_name,m.kehu,m.fenxiaoshang_userid,m.userphoto,g.name,g.zhiwei,r.rolename,m.storeid FROM ecm_member m LEFT JOIN ecm_gongyingshang g ON m.user_id = g.user_id LEFT JOIN ecm_role r ON m.roleid = r.id  WHERE m.user_id = '10001' LIMIT 1   [ RunTime:0.000977s ]
+SQL: SELECT `fenxiaoshang_name` FROM `ecm_member` WHERE `user_id` = 10001 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_userid` FROM `ecm_member` WHERE `user_id` = 10001 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pwd D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 72 行.
+
+[ 2018-12-22T08:51:29+08:00 ] 116.21.93.230 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 7 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\CategoryController.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ecm_category` [ RunTime:0.002932s ]
+SQL: SELECT `id`,`pid`,`catname`,`caticon`,`m`,`c`,`a`,`orderlist` FROM `ecm_category` WHERE `display` = 1 AND `storeid` = 'b65e2727ec76202a16d7fd77dfa8a2de'  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018568s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2018-12-22T08:51:29+08:00 ] 116.21.93.230 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.003909s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `user_id` > 4474 AND `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.025410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1545408000' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.025410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1545321600' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.027364s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1545321600' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.025410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1542816000' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.025410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `position_type` = 1 AND `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.007819s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-12-22T08:51:32+08:00 ] 116.21.93.230 /index.php/Admin/Headline/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.003909s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.005864s ]
+SQL: SELECT * FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '9800611541647779' ORDER BY times desc LIMIT 0,200   [ RunTime:0.016614s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 523 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028342s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2018-12-22T08:51:36+08:00 ] 116.21.93.230 /index.php/Admin/Headline/adds
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2018-12-22T09:02:22+08:00 ] 116.21.93.230 /index.php/Admin/Headline/addForms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.002932s ]
+SQL: INSERT INTO `ecm_advertisement` (`title`,`content`,`pic`,`describe`,`type`,`laiyuan`,`province`,`city`,`district`,`kehu`,`times`,`fenxiaoshang_userid`) VALUES ('长江勘测规划设计研究有限责任公司广州分公司装修项目','&lt;h1 style=&quot;text-align:center&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 32px; font-family: 宋体;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440133121100.png&quot; title=&quot;1545440133121100.png&quot; alt=&quot;图片3.png&quot;/&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/h1&gt;&lt;h1 style=&quot;text-align:center&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 32px; font-family: 宋体;&quot;&gt;长江勘测规划设计研究有限责任公司广州分公司装修项目&lt;/span&gt;&lt;/strong&gt;&lt;/h1&gt;&lt;h2 style=&quot;text-align:right&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family: 黑体;font-size: 21px&quot;&gt;——办公室局部改造&lt;/span&gt;&lt;/strong&gt;&lt;/h2&gt;&lt;p style=&quot;text-align:right&quot;&gt;&lt;span style=&quot;;font-family:宋体;font-size:16px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align:right&quot;&gt;&lt;span style=&quot;position:absolute;z-index:1;left:0px;margin-left:58.6667px;margin-top:211.7333px;width:431.0000px;height:43.0000px&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot;;font-family:宋体;font-size:14px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align:right&quot;&gt;&lt;span style=&quot;;font-family:宋体;font-size:14px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-indent: 37px&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;长江勘测规划设计研究有限责任公司是一家从事工程勘察、规划、设计、科研、咨询、建设监理及管理和总承包业务的大型科技型企业，&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;具有国家工程设计综合甲级资质、工程勘察综合甲级、对外承包工程资格等高等级资质证书。&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;它&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;是世界上规模最大、技术实力最强的水利水电勘察设计单位&lt;/span&gt;,&lt;span style=&quot;font-family: 宋体;&quot;&gt;拥有中国工程院院士&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;人，全国工程勘察设计大师&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;4&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;人，是国家核准的高新技术企业。&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;在&lt;/span&gt;2009&lt;span style=&quot;font-family: 宋体;&quot;&gt;年由我们公司设计、施工，其办公总面积为&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;1190&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;㎡。今天办公室局部改造，由于翻新隔墙到天花顶，所以要报消防，改造消防管喷淋头和烟雾感应器，这样改造参与的部门会增加，时间会延长。为了更快完成报建手续，公司安排专门人员负责此事，为甲方节约时间。&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-indent: 37px&quot;&gt;&lt;span style=&quot;font-family: 宋体; font-size: 18px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 18px; font-family: 宋体;&quot;&gt;设计平面图&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 19px; font-family: 宋体;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440271115652.png&quot; title=&quot;1545440271115652.png&quot; alt=&quot;图片4.png&quot;/&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 19px; font-family: 宋体;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440280100061.png&quot; title=&quot;1545440280100061.png&quot; alt=&quot;图片5.png&quot;/&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440432109404.png&quot; title=&quot;1545440432109404.png&quot; alt=&quot;图片7.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440441120260.png&quot; title=&quot;1545440441120260.png&quot; alt=&quot;图片8.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440451402261.png&quot; title=&quot;1545440451402261.png&quot; alt=&quot;图片9 (2).png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family: 宋体;letter-spacing: 0;font-size: 16px&quot;&gt;——图片来源：广州经艺装饰设计工程有限公司&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family: 宋体;letter-spacing: 0;font-size: 16px&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family: 宋体;letter-spacing: 0;font-size: 16px&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440018326223.png&quot; title=&quot;1545440018326223.png&quot; alt=&quot;图片1.png&quot;/&gt;&lt;span style=&quot;font-family: 宋体;letter-spacing: 0;font-size: 16px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;letter-spacing: 0px; font-size: 19px; font-family: 宋体;&quot;&gt;公司简介：&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family: 宋体;letter-spacing: 0;font-size: 19px&quot;&gt;&lt;span style=&quot;font-family:宋体&quot;&gt;经艺公司是一家专业设计施工连锁品牌&lt;/span&gt;,政府项目投标及互联网装修的公司，现有资质:建筑装修装饰工程专业承包一级,建筑装饰工程设计专项乙级,建筑机电安装工程三级，&amp;nbsp;2018年经艺新业务新人员，服务于肯德基，必胜客，麦当劳，汉堡王，太平洋咖啡，红树林五星度假酒店，万达地产等，经艺装饰经历二十几年的发展积累更多的经验，公司将在国内开展新的连锁经营模式，2018年广东省各个城市投资成立分公司和合作公司及品牌加盟公司，项目进行投标，工装家装套餐项目的推广，连锁品牌维保项目，扩大经营规模为员工创造提升机会，启动上市！&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family: 宋体;letter-spacing: 0;font-size: 19px&quot;&gt;&lt;span style=&quot;font-family:宋体&quot;&gt;联系方式：&lt;/span&gt;400-643-9788&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;letter-spacing: 0px; font-size: 19px; font-family: 宋体;&quot;&gt;欢迎来电咨询！&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;;font-family:宋体;font-size:14px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;','/Uploads/2018-12-22/5c1d8d1e6ec3e.png','长江勘测规划设计研究有限责任公司广州分公司装修项目','33','微工程','广东省','广州市','市辖区','经艺装饰',1545440542,'9800611541647779') [ RunTime:0.000000s ]
+
+[ 2018-12-22T09:02:22+08:00 ] 116.21.93.230 /index.php/Admin/Headline/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000978s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.003910s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.004886s ]
+SQL: SELECT * FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '9800611541647779' ORDER BY times desc LIMIT 0,200   [ RunTime:0.015637s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 523 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029319s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2018-12-22T09:02:54+08:00 ] 116.21.93.230 /index.php/Admin/Headline/bianji/id/1548.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.003909s ]
+SQL: SELECT `id`,`title`,`pic`,`content`,`describe` FROM `ecm_advertisement` WHERE `id` = 1548  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013683s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2018-12-22T09:03:25+08:00 ] 116.21.93.230 /index.php/Admin/Headline/bianjis.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.002932s ]
+SQL: UPDATE `ecm_advertisement` SET `title`='长江勘测规划设计研究有限责任公司广州分公司装修项目',`content`='&lt;h1 style=&quot;text-align:center&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 32px; font-family: 宋体;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440133121100.png&quot; title=&quot;1545440133121100.png&quot; alt=&quot;图片3.png&quot;/&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/h1&gt;&lt;h1 style=&quot;text-align:center&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 32px; font-family: 宋体;&quot;&gt;长江勘测规划设计研究有限责任公司广州分公司装修项目&lt;/span&gt;&lt;/strong&gt;&lt;/h1&gt;&lt;h2 style=&quot;text-align:right&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family: 黑体;font-size: 21px&quot;&gt;——办公室局部改造&lt;/span&gt;&lt;/strong&gt;&lt;/h2&gt;&lt;p style=&quot;text-align:right&quot;&gt;&lt;span style=&quot;;font-family:宋体;font-size:16px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align:right&quot;&gt;&lt;span style=&quot;position:absolute;z-index:1;left:0px;margin-left:58.6667px;margin-top:211.7333px;width:431.0000px;height:43.0000px&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot;;font-family:宋体;font-size:14px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align:right&quot;&gt;&lt;span style=&quot;;font-family:宋体;font-size:14px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-indent: 37px&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;长江勘测规划设计研究有限责任公司是一家从事工程勘察、规划、设计、科研、咨询、建设监理及管理和总承包业务的大型科技型企业，&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;具有国家工程设计综合甲级资质、工程勘察综合甲级、对外承包工程资格等高等级资质证书。&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;它&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;是世界上规模最大、技术实力最强的水利水电勘察设计单位&lt;/span&gt;,&lt;span style=&quot;font-family: 宋体;&quot;&gt;拥有中国工程院院士&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;人，全国工程勘察设计大师&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;4&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;人，是国家核准的高新技术企业。&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;在&lt;/span&gt;2009&lt;span style=&quot;font-family: 宋体;&quot;&gt;年由我们公司设计、施工，其办公总面积为&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;1190&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;㎡。今天办公室局部改造，由于翻新隔墙到天花顶，所以要报消防，改造消防管喷淋头和烟雾感应器，这样改造参与的部门会增加，时间会延长。为了更快完成报建手续，公司安排专门人员负责此事，为甲方节约时间。&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-indent: 37px&quot;&gt;&lt;span style=&quot;font-family: 宋体; font-size: 18px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 18px; font-family: 宋体;&quot;&gt;设计平面图&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 19px; font-family: 宋体;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440271115652.png&quot; title=&quot;1545440271115652.png&quot; alt=&quot;图片4.png&quot;/&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 19px; font-family: 宋体;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440280100061.png&quot; title=&quot;1545440280100061.png&quot; alt=&quot;图片5.png&quot;/&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440432109404.png&quot; title=&quot;1545440432109404.png&quot; alt=&quot;图片7.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440441120260.png&quot; title=&quot;1545440441120260.png&quot; alt=&quot;图片8.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440451402261.png&quot; title=&quot;1545440451402261.png&quot; alt=&quot;图片9 (2).png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: 宋体; letter-spacing: 0px;&quot;&gt;——图片来源：广州经艺装饰设计工程有限公司&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440018326223.png&quot; title=&quot;1545440018326223.png&quot; alt=&quot;图片1.png&quot;/&gt;&lt;span style=&quot;font-family: 宋体;letter-spacing: 0;font-size: 16px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;letter-spacing: 0px; font-size: 19px; font-family: 宋体;&quot;&gt;公司简介：&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family: 宋体;letter-spacing: 0;font-size: 19px&quot;&gt;&lt;span style=&quot;font-family:宋体&quot;&gt;经艺公司是一家专业设计施工连锁品牌&lt;/span&gt;,政府项目投标及互联网装修的公司，现有资质:建筑装修装饰工程专业承包一级,建筑装饰工程设计专项乙级,建筑机电安装工程三级，&amp;nbsp;2018年经艺新业务新人员，服务于肯德基，必胜客，麦当劳，汉堡王，太平洋咖啡，红树林五星度假酒店，万达地产等，经艺装饰经历二十几年的发展积累更多的经验，公司将在国内开展新的连锁经营模式，2018年广东省各个城市投资成立分公司和合作公司及品牌加盟公司，项目进行投标，工装家装套餐项目的推广，连锁品牌维保项目，扩大经营规模为员工创造提升机会，启动上市！&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family: 宋体;letter-spacing: 0;font-size: 19px&quot;&gt;&lt;span style=&quot;font-family:宋体&quot;&gt;联系方式：&lt;/span&gt;400-643-9788&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;letter-spacing: 0px; font-size: 19px; font-family: 宋体;&quot;&gt;欢迎来电咨询！&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;;font-family:宋体;font-size:14px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',`pic`='/Uploads/2018-12-22/5c1d8d5de8da2.png',`describe`='长江勘测规划设计研究有限责任公司广州分公司装修项目',`type`='33' WHERE `id` = 1548 [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/head.html): failed to open stream: No such file or directory D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 692 行.
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/wei.html): failed to open stream: No such file or directory D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 692 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2018-12-22T09:03:27+08:00 ] 116.21.93.230 /index.php/Admin/Headline/bianji/id/1548.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.003909s ]
+SQL: SELECT `id`,`title`,`pic`,`content`,`describe` FROM `ecm_advertisement` WHERE `id` = 1548  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2018-12-22T09:12:23+08:00 ] 116.21.93.230 /index.php/Admin/Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 64 行.
+NOTIC: [8] Undefined variable: think D:\wwwroot\wgcadmin_22fqiz\web\Application\Runtime\Cache\Admin\2275611bb46a2a49189a5a4b00fcf970.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017591s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017591s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-12-22T09:12:36+08:00 ] 116.21.93.230 /index.php/Admin/Admin/checkuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.004887s ]
+SQL: SHOW COLUMNS FROM `ecm_gongsi` [ RunTime:0.003909s ]
+SQL: SELECT member.user_id AS user_id,member.fenxiaoshang AS fenxiaoshang,member.fenxiaoshang_name AS fenxiaoshang_name FROM ecm_member member LEFT JOIN ecm_gongsi gongsi ON member.user_id=gongsi.muid WHERE member.user_name = '10001' LIMIT 1   [ RunTime:0.000977s ]
+SQL: SELECT `user_id` FROM `ecm_member` WHERE `user_name` = '10001' AND `password` = '6b2d265a9de8503a8f54ae837935b7af' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `isadmin` FROM `ecm_member` WHERE `isadmin` = 1 AND `user_id` = 10001 LIMIT 1   [ RunTime:0.000978s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 67 行.
+SQL: SELECT m.user_id,m.roleid,m.user_name,m.kehu,m.fenxiaoshang_userid,m.userphoto,g.name,g.zhiwei,r.rolename,m.storeid FROM ecm_member m LEFT JOIN ecm_gongyingshang g ON m.user_id = g.user_id LEFT JOIN ecm_role r ON m.roleid = r.id  WHERE m.user_id = '10001' LIMIT 1   [ RunTime:0.000977s ]
+SQL: SELECT `fenxiaoshang_name` FROM `ecm_member` WHERE `user_id` = 10001 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fenxiaoshang_userid` FROM `ecm_member` WHERE `user_id` = 10001 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pwd D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\AdminController.class.php 第 72 行.
+
+[ 2018-12-22T09:12:38+08:00 ] 116.21.93.230 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\IndexController.class.php 第 7 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Controller\CategoryController.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `ecm_category` [ RunTime:0.003909s ]
+SQL: SELECT `id`,`pid`,`catname`,`caticon`,`m`,`c`,`a`,`orderlist` FROM `ecm_category` WHERE `display` = 1 AND `storeid` = 'b65e2727ec76202a16d7fd77dfa8a2de'  [ RunTime:0.000978s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000977s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000977s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2018-12-22T09:12:38+08:00 ] 116.21.93.230 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_member` [ RunTime:0.003909s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `user_id` > 4474 AND `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.026387s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1545408000' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.025410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1545321600' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.025410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1545321600' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.025410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE ( regtime >= '1542816000' and user_id >4474 and fenxiaoshang_userid = 9800611541647779 ) LIMIT 1   [ RunTime:0.026387s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_member` WHERE `position_type` = 1 AND `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.007819s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-12-22T09:12:41+08:00 ] 116.21.93.230 /index.php/Admin/Headline/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.002932s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '9800611541647779' LIMIT 1   [ RunTime:0.004886s ]
+SQL: SELECT * FROM `ecm_advertisement` WHERE `fenxiaoshang_userid` = '9800611541647779' ORDER BY times desc LIMIT 0,200   [ RunTime:0.016614s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 523 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027365s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028342s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2018-12-22T09:12:44+08:00 ] 116.21.93.230 /index.php/Admin/Headline/bianji/id/1548.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.002932s ]
+SQL: SELECT `id`,`title`,`pic`,`content`,`describe` FROM `ecm_advertisement` WHERE `id` = 1548  [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012705s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2018-12-22T09:15:29+08:00 ] 116.21.93.230 /index.php/Admin/Headline/bianjis.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.002932s ]
+SQL: UPDATE `ecm_advertisement` SET `title`='长江勘测规划设计研究有限责任公司广州分公司装修项目',`content`='&lt;h1 style=&quot;text-align:center&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 32px; font-family: 宋体;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440133121100.png&quot; title=&quot;1545440133121100.png&quot; alt=&quot;图片3.png&quot;/&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/h1&gt;&lt;h1 style=&quot;text-align:center&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 32px; font-family: 宋体;&quot;&gt;长江勘测规划设计研究有限责任公司广州分公司装修项目&lt;/span&gt;&lt;/strong&gt;&lt;/h1&gt;&lt;h2 style=&quot;text-align:right&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family: 黑体;font-size: 21px&quot;&gt;——办公室局部改造&lt;/span&gt;&lt;/strong&gt;&lt;/h2&gt;&lt;p style=&quot;text-align:right&quot;&gt;&lt;span style=&quot;;font-family:宋体;font-size:16px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align:right&quot;&gt;&lt;span style=&quot;position:absolute;z-index:1;left:0px;margin-left:58.6667px;margin-top:211.7333px;width:431.0000px;height:43.0000px&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot;;font-family:宋体;font-size:14px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align:right&quot;&gt;&lt;span style=&quot;;font-family:宋体;font-size:14px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-indent: 37px&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;长江勘测规划设计研究有限责任公司是一家从事工程勘察、规划、设计、科研、咨询、建设监理及管理和总承包业务的大型科技型企业，&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;具有国家工程设计综合甲级资质、工程勘察综合甲级、对外承包工程资格等高等级资质证书。&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;它&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;是世界上规模最大、技术实力最强的水利水电勘察设计单位&lt;/span&gt;,&lt;span style=&quot;font-family: 宋体;&quot;&gt;拥有中国工程院院士&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;人，全国工程勘察设计大师&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;4&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;人，是国家核准的高新技术企业。&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;在&lt;/span&gt;2009&lt;span style=&quot;font-family: 宋体;&quot;&gt;年由我们公司设计、施工，其办公总面积为&lt;/span&gt;&lt;span style=&quot;font-family: Calibri;&quot;&gt;1190&lt;/span&gt;&lt;span style=&quot;font-family: 宋体;&quot;&gt;㎡。今天办公室局部改造，由于翻新隔墙到天花顶，所以要报消防，改造消防管喷淋头和烟雾感应器，这样改造参与的部门会增加，时间会延长。为了更快完成报建手续，公司安排专门人员负责此事，为甲方节约时间。&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-indent: 37px&quot;&gt;&lt;span style=&quot;font-family: 宋体; font-size: 18px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 18px; font-family: 宋体;&quot;&gt;设计平面图&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 19px; font-family: 宋体;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440271115652.png&quot; title=&quot;1545440271115652.png&quot; alt=&quot;图片4.png&quot;/&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 19px; font-family: 宋体;&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440280100061.png&quot; title=&quot;1545440280100061.png&quot; alt=&quot;图片5.png&quot;/&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545441192757660.png&quot; title=&quot;1545441192757660.png&quot; alt=&quot;图片6.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545441203476060.png&quot; title=&quot;1545441203476060.png&quot; alt=&quot;图片7.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545441266993517.png&quot; title=&quot;1545441266993517.png&quot; alt=&quot;图片8.png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545441236137288.png&quot; title=&quot;1545441236137288.png&quot; alt=&quot;图片9 (2).png&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: 宋体; letter-spacing: 0px;&quot;&gt;——图片来源：广州经艺装饰设计工程有限公司&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;img src=&quot;http://wgcmanage.59jiaju.com/ueditor/php/upload/image/20181222/1545440018326223.png&quot; title=&quot;1545440018326223.png&quot; alt=&quot;图片1.png&quot;/&gt;&lt;span style=&quot;font-family: 宋体;letter-spacing: 0;font-size: 16px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;letter-spacing: 0px; font-size: 19px; font-family: 宋体;&quot;&gt;公司简介：&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family: 宋体;letter-spacing: 0;font-size: 19px&quot;&gt;&lt;span style=&quot;font-family:宋体&quot;&gt;经艺公司是一家专业设计施工连锁品牌&lt;/span&gt;,政府项目投标及互联网装修的公司，现有资质:建筑装修装饰工程专业承包一级,建筑装饰工程设计专项乙级,建筑机电安装工程三级，&amp;nbsp;2018年经艺新业务新人员，服务于肯德基，必胜客，麦当劳，汉堡王，太平洋咖啡，红树林五星度假酒店，万达地产等，经艺装饰经历二十几年的发展积累更多的经验，公司将在国内开展新的连锁经营模式，2018年广东省各个城市投资成立分公司和合作公司及品牌加盟公司，项目进行投标，工装家装套餐项目的推广，连锁品牌维保项目，扩大经营规模为员工创造提升机会，启动上市！&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;font-family: 宋体;letter-spacing: 0;font-size: 19px&quot;&gt;&lt;span style=&quot;font-family:宋体&quot;&gt;联系方式：&lt;/span&gt;400-643-9788&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:0;padding:0 0 0 0 ;background:rgb(255,255,255)&quot;&gt;&lt;span style=&quot;letter-spacing: 0px; font-size: 19px; font-family: 宋体;&quot;&gt;欢迎来电咨询！&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;;font-family:宋体;font-size:14px&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;',`pic`='/Uploads/2018-12-22/5c1d903107f6e.png',`describe`='长江勘测规划设计研究有限责任公司广州分公司装修项目',`type`='33' WHERE `id` = 1548 [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/head.html): failed to open stream: No such file or directory D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 692 行.
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/wei.html): failed to open stream: No such file or directory D:\wwwroot\wgcadmin_22fqiz\web\ThinkPHP\Library\Think\Template.class.php 第 692 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000978s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000978s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008796s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-12-22T09:15:30+08:00 ] 116.21.93.230 /index.php/Admin/Headline/bianji/id/1548.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+SQL: SHOW COLUMNS FROM `ecm_advertisement` [ RunTime:0.004886s ]
+SQL: SELECT `id`,`title`,`pic`,`content`,`describe` FROM `ecm_advertisement` WHERE `id` = 1548  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-12-22T09:33:47+08:00 ] 47.88.156.8 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant URL_MODEL - assumed 'URL_MODEL' D:\wwwroot\wgcadmin_22fqiz\web\Application\Admin\Conf\config.php 第 4 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+

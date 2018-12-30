@@ -96,9 +96,9 @@ class HeadlineController extends CommonController {
 		if(empty($title)){
 			$this->error('请输入标题');exit;
 		}
-		if(empty($describe)){
+		/* if(empty($describe)){
 			$this->error('请输入描述');exit;
-		}
+		} */
 		if(empty($content)){
 			$this->error('请输入内容');exit;
 		}
