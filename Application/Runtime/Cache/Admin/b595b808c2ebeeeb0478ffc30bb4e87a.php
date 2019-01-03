@@ -78,12 +78,6 @@
 					<li><a _href="<?php echo U('maillist/index');?>" data-title="通讯录列表" href="javascript:void(0)">通讯录列表</a></li>
 				</ul>
 			</dd>
-			<dt><i class="Hui-iconfont">&#xe613;</i>功能管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-			<dd>
-				<ul>
-					<li><a _href="<?php echo U('Status/index');?>" data-title="功能列表" href="javascript:void(0)">功能列表</a></li>
-				</ul>
-			</dd>
 			<dt class="">
 				<dt><i class="Hui-iconfont">&#xe613;</i> 家装管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			</dt>
@@ -345,7 +339,7 @@
 				</ul>
 			</dd>
 		</dl>
-		<?php if($_SESSION['wgcadmininfo']['fenxiaoshang_name'] == '微工程' ): ?><dl id="menu-picture">
+		<?php if(($_SESSION['wgcadmininfo']['kehu'] == '微工程')): ?><dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>主材定价管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
@@ -371,7 +365,7 @@
 				</ul>
 			</dd>
 		</dl>
-		<?php if($_SESSION['wgcadmininfo']['fenxiaoshang_name'] == '微工程' ): ?><dl id="menu-picture">
+		<?php if(($_SESSION['wgcadmininfo']['kehu'] == '微工程')): ?><dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>业务信息管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
@@ -396,7 +390,7 @@
 				</ul>
 			</dd>
 		</dl>
-		<?php if($_SESSION['wgcadmininfo']['fenxiaoshang_name'] == '微工程' ): ?><dl id="menu-picture">
+		<?php if(($_SESSION['wgcadmininfo']['kehu'] == '微工程')): ?><dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>广告管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
@@ -440,7 +434,7 @@
 				</ul>
 			</dd>
 		</dl>
-		<?php if($_SESSION['wgcadmininfo']['fenxiaoshang_name'] == '微工程' ): ?><dl id="menu-picture">
+		<?php if(($_SESSION['wgcadmininfo']['kehu'] == '微工程')): ?><dl id="menu-picture">
 			<dt><i class="Hui-iconfont">&#xe613;</i>工价询价管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
