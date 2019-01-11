@@ -8,15 +8,22 @@ class KaoqingController extends CommonController {
     public function index(){
 		header("Content-type: text/html; charset=utf-8");
 		$forinter = M('qiandaoforinter');
+		
 		//echo date('Y-m-01', time());
 		//获取上一月开始日期
 		$l = strtotime(date('Y-m-01', strtotime('-1 month')).' 00:00:00');
-		
 		//获取上一月结束日期
 		$r = strtotime(date('Y-m-01', time()).' 00:00:00');
-		
-		$where['addtime'] = array('EGT',$l);
-	    $where['addtime'] = array('LT',$r);
+		if(!empty($_POST['time'])){
+			$wtime=I("time");
+			$wtimes=explode("~",$wtime);
+			$l=strtotime($wtimes[0].' 00:00:00');
+			$r=strtotime($wtimes[1].' 00:00:00');
+			$this->assign('time',$wtime);// 赋值数据集
+		}
+		//$where['addtime'] = array('EGT',$l);
+	   // $where['addtime'] = array('LT',$r);
+	   $where['addtime'] = array(array('egt',$l), array('elt',$r));
 		//$where['id'] = array('LT',1696);
 		if(!empty($_SESSION['wgcadmininfo']['fenxiaoshang_name'])){
 			if($_SESSION['wgcadmininfo']['fenxiaoshang_userid'] > 0){

@@ -38,6 +38,7 @@
 			</tr>
 			<tr class="text-c">
 				<th width="40">ID</th>
+				<th width="100">Userid</th>
 				<th width="150">登录名</th>
 				<th width="90">手机</th>
 				<th width="150">邮箱</th>
@@ -49,6 +50,7 @@
 		<tbody>
 			<?php if(is_array($list)): foreach($list as $key=>$v): ?><tr class="text-c">
 					<td><?php echo ($v['id']); ?></td>
+					<td><?php echo ($v['user_id']); ?></td>
 					<td><?php if($v['user_id'] == $new_id['user_id']): ?><span style="margin-right:10px;color:red;font-size:22px;">(群主)-</span><?php endif; echo ($v['name']); ?></td>
 					<td><?php echo ($v['user_name']); ?></td>
 					<td><?php echo ($v['email']); ?></td>

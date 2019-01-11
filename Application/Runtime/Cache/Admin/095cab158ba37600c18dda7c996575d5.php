@@ -19,15 +19,15 @@
 <link rel="stylesheet" type="text/css" href="/Public/HUI/static/lib/icheck/icheck.css" />
 <link rel="stylesheet" type="text/css" href="/Public/HUI/static/h-ui.admin/skin/default/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="/Public/HUI/static/h-ui.admin/css/style.css" />
-<script type="text/javascript" src="/Public/laydate/laydate.js"></script> <!-- 改成你的路径 -->
+<link rel="stylesheet" type="text/css" href="/Public/css/page.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="/Public/HUI/static/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<title>考勤列表</title>
+<title>请假列表</title>
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 考勤管理 <span class="c-gray en">&gt;</span> 考勤列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 内部管理 <span class="c-gray en">&gt;</span> 请假列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
 	<!--<div class="text-c"> 日期范围：
 		
@@ -35,69 +35,71 @@
 		
 		<button type="submit" class="btn btn-success" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜用户</button>
 	</div>-->
-	<div class="text-c">
-	<form action="<?php echo U('Kaoqing/index');?>" method="post">
-	<input type="text" id="test1" style="width:180px" placeholder="请选择日期范围" class="input-text" name="time" value="<?php echo ($time); ?>">
-	<button type="submit" class="btn btn-success" id="" name="">搜索</button>
-	</form>
-	</div>
+	
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
 		<span class="l">
-			<a href="/index.php/Admin/Kaoqing/export" class="btn btn-danger radius">
-				 下载内部考勤
+			<!--<a href="/index.php/Admin/Xiangmu/exportqj" class="btn btn-danger radius">
+				 下载请假考勤
 			</a> 
-			<a href="/index.php/Admin/Kaoqing/exports" class="btn btn-danger radius">
+			<!--<a href="/index.php/Admin/Xiangmu/exports" class="btn btn-danger radius">
 				 下载项目考勤
-			</a> 
+			</a> -->
 		</span> 
 		<span class="r" style="margin:0 20px;">
-			内部考勤共有数据：<strong><?php echo count($list); ?></strong> 条
+			共有请假数据：<strong><?php echo ($count); ?></strong> 条
 		</span> 
 		
-		<span class="r">
-			项目考勤共有数据：<strong><?php echo count($qd); ?></strong> 条
-		</span> 
+		
 	</div>
 	<table class="table table-border table-bordered table-bg">
 		<thead>
 			<tr>
-				<th scope="col" colspan="9">考勤列表</th>
+				<th scope="col" colspan="13">请假列表</th>
 			</tr>
 			<tr class="text-c">
-				<th width="25"><input type="checkbox" name="" value=""></th>
+				
 				<th width="40">编号</th>
-				<th width="80">姓名</th>
+				<th width="50">姓名</th>
 				<th width="30">性别</th>
-				<th width="100">职位</th>
-				<th>手机</th>
-				<th width="130">签到时间</th>
-				<th width="100">签到地址</th>
-				<th width="80">签退时间</th>
-				<th width="100">签退地址</th>
+				<th width="80">职位</th>
+				<th width="100">手机</th>
+				<th width="180">开始时间</th>
+				<th width="160">结束时间</th>
+				<th width="100">描述</th>
+				<th width="100">照片</th>
+				<th width="100">接受人</th>
+				<th width="100">审批结果</th>
+				<th width="30">总天数</th>
+				
+				<!--<th width="80">审批意见</th>-->
+				<th width="180">申请时间</th>
 			</tr>
 		</thead>
 		<tbody>
 			<?php if(is_array($list)): foreach($list as $key=>$v): ?><tr class="text-c">
-					<td><input type="checkbox" value="1" name=""></td>
 					<td><?php echo ($v['id']); ?></td>
 					<td><?php echo ($v['name']); ?></td>
 					<td><?php echo ($v['sex']); ?></td>
 					<td><?php echo ($v['zhiwei']); ?></td>
 					<td><?php echo ($v['mobile']); ?></td>
-					<td><?php echo ($v['to_date']); ?> <?php echo ($v['in_time']); ?></td>
-					<td><?php echo ($v['out_adress']); ?></td>
-					<td><?php echo ($v['out_time']); ?></td>
-					<td><?php echo ($v['out_adress']); ?></td>
+					<td><?php echo ($v['gotime']); ?></td>
+					<td><?php echo ($v['baktime']); ?></td>
+					<td><?php echo ($v['content']); ?></td>
+					<td><?php echo ($v['pic']); ?></td>
+					<td><?php echo ($v['username']); ?></td>
+					<td><?php echo ($v['deal']); ?></td>
+					<td><?php echo ($v['days']); ?></td>
+					<!--<td><?php echo ($v['deal']); ?></td>-->
+					<td><?php echo (date('Y-m-d H:i:s',$v['addtime'])); ?></td>
 				</tr><?php endforeach; endif; ?>
 			
 			
 		</tbody>
 	</table>
+	<div class="page b-page"><?php echo ($page); ?></div>
 </div>
 <script type="text/javascript" src="/Public/HUI/static/lib/jquery/1.9.1/jquery.min.js"></script>  
 <script type="text/javascript" src="/Public/HUI/static/lib/layer/2.1/layer.js"></script> 
-<script type="text/javascript" src="/Public/HUI/static/lib/laypage/1.2/laypage.js"></script> 
-<script type="text/javascript" src="/Public/HUI/static/lib/My97DatePicker/WdatePicker.js"></script> 
 <script type="text/javascript" src="/Public/HUI/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="/Public/HUI/static/h-ui.admin/js/H-ui.admin.js"></script> 
 <script type="text/javascript">
@@ -150,16 +152,6 @@ function admin_start(obj,id){
 		layer.msg('已启用!', {icon: 6,time:1000});
 	});
 }
-//执行一个laydate实例 日期插件
-laydate.render({
-  elem: '#test1' //指定元素
-  ,range: '~'
-  ,done: function(value, date, endDate){
-    console.log(value); //得到日期生成的值，如：2017-08-18
-    console.log(date); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
-    console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
-  }
-});
 </script>
 </body>
 </html>

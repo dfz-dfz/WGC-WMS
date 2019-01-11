@@ -22,23 +22,15 @@
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<title>管理工具</title>
+<title>项目管理-招聘列表</title>
 </head>
 <body>
 
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 管理工具 <span class="c-gray en">&gt;</span> 维修管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 管理工具 <span class="c-gray en">&gt;</span> 项目管理<span class="c-gray en">&gt;</span>招聘列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
-	<div class="text-c"> 
-		<form action="/index.php/Admin/Xiangmu/weixiu" method="post">
-		
-			<input type="text" name="key" value="<?php echo ($key); ?>" placeholder="关键词名称" style="width:250px" class="input-text">
-			<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 查找</button>
-		</form>
-	</div>
-	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
-	<span class="l">
 	
-	</span> 
+	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
+	<span class="l"></span> 
 	<span class="r">共有数据：<strong><?php echo ($count); ?></strong> 条</span> </div>
 	<div class="mt-20">
 		<table class="table table-border table-bordered table-bg table-hover table-sort">
@@ -46,41 +38,38 @@
 			<thead>
 				<tr class="text-c">
 					<th width="40">ID</th>
-					<th width="40">群组ID</th>
-					<th width="40">群主ID</th>
 					<th width="150">项目名称</th>
-					<th width="60">创建人</th>
-					<th width="120">地址</th>
-					<th width="60">开始时间</th>
-					<th width="60">完工时间</th>
-					<th width="40">状态</th>
-					<th width="120">操作</th>
+					<th width="60">发布人</th>
+					
+					<th width="80">招聘职位</th>
+					<th width="80">招聘人数</th>
+					<th width="60">公司名称</th>
+					<th width="60">薪资待遇</th>
+					<th width="50">浏览量</th>
+					<th width="100">城市</th>
+					
+				
+					<th width="100">发布日期</th>
+					<th width="30">操作</th>
 				</tr>
 			</thead>
 		
 			<tbody>
 			
 				<?php if(is_array($list)): foreach($list as $key=>$v): ?><tr class="text-c">
-						<td><?php echo ($v['prj_id']); ?></td>
-						<td><?php echo ($v['group_id']); ?></td>
-						<td><?php echo ($v['user_id']); ?></td>
+						<td><?php echo ($v['id']); ?></td>
 						<td><?php echo ($v['prj_name']); ?></td>
 						<td class="text-l"><u style="cursor:pointer" class="text-primary" title="查看"><?php echo ($v['uname']); ?></u></td>
-						<td><?php echo ($v['address']); ?></td>
-						<td><?php echo ($v['start_time']); ?></td>
-						<td><?php echo ($v['expire_time']); ?></td>
-						<td class="td-status"><?php echo ($v['status']); ?></td>
-						<td class="f-14 td-manage">
-							<a title="删除维修项目" href="javascript:;" onclick="admin_del('<?php echo ($v['prj_id']); ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" style="font-size:18px;">&#xe609;</i></a>
-							<a style="text-decoration:none" href="<?php echo U('Xiangmu/bianji',array('id'=>$v['prj_id'],'kzq'=>weixiu));?>" title="编辑"><i style="margin:0 5px;font-size:18px" class=" Hui-iconfont">&#xe6df;</i></a>
-							<a style="text-decoration:none" href="<?php echo U('Xiangmu/xiangmu_qiandao',array('kid'=>$v['prj_id']));?>" title="签到列表"><i style="margin:0 5px;font-size:18px" class="Hui-iconfont">&#xe637;</i></a>
-							<!--
-							<a style="text-decoration:none" href="<?php echo U('Xiangmu/weixiu_weixiuneirong',array('kid'=>$v['prj_id']));?>" title="维修内容"><i style="margin:0 5px;font-size:18px" class="Hui-iconfont">&#xe637;</i></a>
-							-->
-							<a style="text-decoration:none" href="<?php echo U('Xiangmu/xiangmu_cailiaoshengou',array('kid'=>$v['prj_id']));?>" title="材料申购"><i style="margin:0 5px;font-size:18px" class="Hui-iconfont">&#xe6cf;</i></a>
-							<a style="text-decoration:none" href="<?php echo U('Xiangmu/xiangmu_qingkuan',array('kid'=>$v['prj_id'],'type'=>1));?>" title="请款列表"><i style="margin:0 5px;font-size:18px" class="Hui-iconfont">&#xe63a;</i></a>
-							<a style="text-decoration:none" href="<?php echo U('Xiangmu/xiangmu_zhaogong',array('kid'=>$v['prj_id'],'gtype'=>2,'type'=>2));?>" title="招工"><i style="margin:0 5px;font-size:18px" class="Hui-iconfont">&#xe6c1;</i></a>
-							<a style="text-decoration:none" href="<?php echo U('Xiangmu/xiangmu_user',array('kid'=>$v['prj_id']));?>" title="成员列表"><i style="margin:0 5px;font-size:18px" class="Hui-iconfont">&#xe62b;</i></a>
+						<td><?php echo ($v['zhiwei']); ?></td>
+						<td><?php echo ($v['renshu']); ?></td>
+						<td><?php echo ($v['company_name']); ?></td>
+						<td><b style="font-size:16px;color:red"><?php echo ($v['xinzi']); ?></b></td>
+						<td><?php echo ($v['click']); ?>次</td>
+						<td><?php echo ($v['s_province']); ?>-<?php echo ($v['s_city']); ?>-<?php echo ($v['s_county']); ?></td>
+						
+						<td><?php echo ($v['addtime']); ?></td>
+						<td>
+							<a style="text-decoration:none" href="<?php echo U('Xiangmu/xiangmu_zhaopin_content',array('id'=>$v['id']));?>" title="查看详情"><i class="Hui-iconfont" style="font-size:18px;">&#xe67a;</i></a>
 						</td>
 					</tr><?php endforeach; endif; ?>
 				
@@ -91,7 +80,9 @@
 </div>
 
 <script type="text/javascript" src="/Public/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="/Public/admin/lib/layer/2.1/layer.js"></script>  
+<script type="text/javascript" src="/Public/admin/lib/layer/2.1/layer.js"></script> 
+<script type="text/javascript" src="/Public/admin/lib/My97DatePicker/WdatePicker.js"></script> 
+
 <script type="text/javascript" src="/Public/admin/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="/Public/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript">
@@ -103,15 +94,7 @@ $('.table-sort').dataTable({
 	  {"orderable":false,"aTargets":[0,8]}// 不参与排序的列
 	]
 });
-/*管理员-删除*/
-function admin_del(prj_id){
-	layer.confirm('确认要删除整个项目吗？',function(index){
-		//此处请求后台程序，下方是成功后的前台处理……
-		
-		window.location.href = '/index.php/Admin/Xiangmu/xiangmu_del/prj_id/'+prj_id;
-		
-	});
-}
+
 /*资讯-添加*/
 function article_add(title,url,w,h){
 	var index = layer.open({

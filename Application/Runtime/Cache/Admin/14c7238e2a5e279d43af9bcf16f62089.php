@@ -46,6 +46,8 @@
 			<thead>
 				<tr class="text-c">
 					<th width="40">ID</th>
+					<th width="40">群组ID</th>
+					<th width="40">群主ID</th>
 					<th width="150">部门名称</th>
 					<th width="60">创建人</th>
 					<th width="40">描述</th>
@@ -57,7 +59,9 @@
 			
 				<?php if(is_array($list)): foreach($list as $key=>$v): ?><tr class="text-c">
 						<td><?php echo ($v['id']); ?></td>
-						<td><?php echo ($v['name']); ?></td>
+						<td><?php echo ($v['group_id']); ?></td>
+						<td><?php echo ($v['user_id']); ?></td>
+						<td><?php echo ($v['name']); ?></th>
 						<td class="text-l"><u style="cursor:pointer" class="text-primary" title="查看"><?php echo ($v['uname']); ?></u></td>
 						
 						<td class="td-status"><?php echo ($v['content']); ?></td>

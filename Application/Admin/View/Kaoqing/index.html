@@ -19,6 +19,7 @@
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/HUI/static/lib/icheck/icheck.css" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/HUI/static/h-ui.admin/skin/default/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/HUI/static/h-ui.admin/css/style.css" />
+<script type="text/javascript" src="__PUBLIC__/laydate/laydate.js"></script> <!-- 改成你的路径 -->
 <!--[if IE 6]>
 <script type="text/javascript" src="__PUBLIC__/HUI/static/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -34,7 +35,12 @@
 		
 		<button type="submit" class="btn btn-success" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜用户</button>
 	</div>-->
-	
+	<div class="text-c">
+	<form action="{:U('Kaoqing/index')}" method="post">
+	<input type="text" id="test1" style="width:180px" placeholder="请选择日期范围" class="input-text" name="time" value="{$time}">
+	<button type="submit" class="btn btn-success" id="" name="">搜索</button>
+	</form>
+	</div>
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
 		<span class="l">
 			<a href="__URL__/export" class="btn btn-danger radius">
@@ -146,6 +152,16 @@ function admin_start(obj,id){
 		layer.msg('已启用!', {icon: 6,time:1000});
 	});
 }
+//执行一个laydate实例 日期插件
+laydate.render({
+  elem: '#test1' //指定元素
+  ,range: '~'
+  ,done: function(value, date, endDate){
+    console.log(value); //得到日期生成的值，如：2017-08-18
+    console.log(date); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+    console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+  }
+});
 </script>
 </body>
 </html>

@@ -46,6 +46,8 @@
 			<thead>
 				<tr class="text-c">
 					<th width="40">ID</th>
+					<th width="40">群组ID</th>
+					<th width="40">群主ID</th>
 					<th width="150">部门名称</th>
 					<th width="60">创建人</th>
 					<th width="40">描述</th>
@@ -58,7 +60,9 @@
 				<foreach name="list" item="v">
 					<tr class="text-c">
 						<td>{$v['id']}</td>
-						<td>{$v['name']}</td>
+						<td>{$v['group_id']}</td>
+						<td>{$v['user_id']}</td>
+						<td>{$v['name']}</th>
 						<td class="text-l"><u style="cursor:pointer" class="text-primary" title="查看">{$v['uname']}</u></td>
 						
 						<td class="td-status">{$v['content']}</td>

@@ -66,11 +66,11 @@ class StatusController extends Controller {
 		$status=M("status");
 		$id=I("get.id");
 		$date['status']=I("get.status");
-		$a=$status->where("id=$id")->save($date);
-		if($aa){
+		$a=$status->where(array('id'=>$id))->data($date)->save();
+		if($a){
 				$this->success('修改成功！');
 			}else{
-				$this->success('修改成功！');
+				$this->error('修改失败！');
 			}
 	}
 }
