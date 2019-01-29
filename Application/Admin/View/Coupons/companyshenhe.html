@@ -62,61 +62,70 @@
             } 
 
 </style>
-<title>优惠券管理</title>
+<title>公司资质审核</title>
 </head>
 <body>
-
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 优惠券管理 <span class="c-gray en">&gt;</span> 优惠券列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+	
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 优惠券管理 <span class="c-gray en">&gt;</span> 公司资质审核 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
 	<div class="text-c">
 		
-		 <form action="{:U('Coupons/index')}" method="post" style="margin-top:20px;">
-			  <input type="text" style="width:60%;" id="keyword" name="company" class="input-text" value="{$company}" placeholder="请输入公司名称"/>
+		 <form action="{:U('Coupons/usershenhe')}" method="post" style="margin-top:20px;">
+			  <input type="text" style="width:60%;" id="keyword" name="name" class="input-text" value="{$name}" placeholder="请输入名字"/>
 			  <input class="btn btn-secondary radius" type="submit" value="搜索">
 		 </form>
 	 
 	</div>
 	
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
-	
+
 	<span class="r">共有数据：<strong>{$count}</strong> 条</span> </div>
 	<div class="mt-20">
 		<table class="table table-border table-bordered table-bg table-hover table-sort">
 			<thead>
 				<tr class="text-c">
 					<th width="50">ID</th>
-					<th width="80">发布优惠券公司名称</th>
-					<th width="80">发布者名称</th>
-					<th width="80">优惠券价格</th>
-					<th width="50">优惠券数量</th>
-					<th width="80">优惠券有效期</th>
-					<th width="80">有效联系电话</th>
-					<th width="80">优惠券被领取数量</th>
-					<th width="80">优惠券类型</th>
-					<th width="80">优惠券最低额度</th>
-					<th width="80">优惠券描述</th>
-					<th width="100">操作</th>
+					<th width="80">用户ID</th>
+					<th width="80">公司名</th>
+					<th width="80">公司地址</th>
+					<th width="50">认证照片</th>
+					<th width="80">审核状态</th>
+					<th width="80">发布时间</th>
+					<th width="30">审核操作</th>
 				</tr>
 			</thead>
+			
 			<tbody>
 				<foreach name="list" item="v">
 					<tr class="text-c">
 						<td>{$v['id']}</td>
-						<td>{$v['company']}</td>
-						<td>{$v['user_name']}</td>
-						<td>{$v['price']}</td>
-						<td>{$v['number']}</td>
-						<td>{$v['indate']}</td>
-						<td>{$v['phone']}</td>
-						<td>{$v['counts']}</td>
-						<td>{$v['type']}</td>
-						<td>{$v['minimum']}</td>
-						<td>{$v['content']}</td>
-						
+						<td>{$v['userid']}</td>
+						<td>{$v['name']}</td>
+						<td>{$v['address']}</td>
+						<td>
+							<foreach name="v['photo']" item="i">
+								<a href="http://wgcapp.wgc2013.com{$i}" target="_blank">
+									<img onerror="src='http://wgcapp.wgc2013.com/Public/Uploads/nopic.png'" src="http://wgcapp.wgc2013.com{$i}" width="120" height="80" style="margin-right:10px;margin-bottom:10px;">	
+									</a>
+							</foreach>
+						</td>
+						<td>
+						<switch name="v.status">
+						<case value="0">未审核</case> 
+						<case value="1"><font style="color:green">已通过</font></case> 
+						<case value="2"><font style="color:red">未通过</font></case> 
+						</switch>
+						</td>
+						<td>{$v['addtime']|date="Y-m-d H:i:s",###}</td>
 						<td class="f-14 td-manage">
-						<a style="text-decoration:none" href="{:U('Coupons/update',array('id'=>$v['id']))}" title="修改">修改</a>
-							|&nbsp;<a style="text-decoration:none" href="{:U('Coupons/del',array('id'=>$v['id']))}" title="删 除">删 除</a>
-							
+						<if condition="$v['status'] eq 0">
+									<a href="{:U('Coupons/companyrzup',array('id'=>$v['id'],'status'=>1))}"><input class="btn btn-success-outline radius" type="button" value="通过" style="width:70px"></a>
+									<a href="{:U('Coupons/companyrzup',array('id'=>$v['id'],'status'=>2))}"><input class="btn btn-danger-outline radius mt-20" type="button" value="未通过"></a>
+							<elseif condition="$v['status'] eq 1" />
+							<input class="btn disabled radius" type="button" value="已通过"></a>
+							<else />
+								<a href="{:U('Coupons/companyrzup',array('id'=>$v['id'],'status'=>1))}"><input class="btn btn-success-outline radius" type="button" value="通过" style="width:70px"></a>
+						</if>
 						</td>
 					</tr>
 				</foreach>
@@ -125,11 +134,13 @@
 	</div>
 	 <div class="pages">{$page}</div> 
 </div>
+
 <script type="text/javascript" src="__PUBLIC__/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/admin/lib/layer/2.1/layer.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/admin/lib/My97DatePicker/WdatePicker.js"></script> 
 
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
+
 </body>
 </html>

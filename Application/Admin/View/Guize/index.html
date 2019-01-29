@@ -62,39 +62,34 @@
             } 
 
 </style>
-<title>优惠券管理</title>
+<title>规则管理</title>
 </head>
 <body>
 
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 优惠券管理 <span class="c-gray en">&gt;</span> 优惠券列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 规则管理 <span class="c-gray en">&gt;</span> 规则列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
 	<div class="text-c">
-		
-		 <form action="{:U('Coupons/index')}" method="post" style="margin-top:20px;">
-			  <input type="text" style="width:60%;" id="keyword" name="company" class="input-text" value="{$company}" placeholder="请输入公司名称"/>
+		 <form action="{:U('Guize/index')}" method="post" style="margin-top:20px;">
+			  <input type="text" style="width:60%;" id="keyword" name="title" class="input-text" value="{$title}" placeholder="请输入规则名称"/>
 			  <input class="btn btn-secondary radius" type="submit" value="搜索">
 		 </form>
 	 
 	</div>
 	
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
-	
+	<span class="l">
+		<a class="btn btn-primary radius" data-title="添加规则" _href="{:U('Guize/add')}" onclick="Hui_admin_tab(this)" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加规则</a>
+	</span> 
 	<span class="r">共有数据：<strong>{$count}</strong> 条</span> </div>
 	<div class="mt-20">
 		<table class="table table-border table-bordered table-bg table-hover table-sort">
 			<thead>
 				<tr class="text-c">
 					<th width="50">ID</th>
-					<th width="80">发布优惠券公司名称</th>
-					<th width="80">发布者名称</th>
-					<th width="80">优惠券价格</th>
-					<th width="50">优惠券数量</th>
-					<th width="80">优惠券有效期</th>
-					<th width="80">有效联系电话</th>
-					<th width="80">优惠券被领取数量</th>
-					<th width="80">优惠券类型</th>
-					<th width="80">优惠券最低额度</th>
-					<th width="80">优惠券描述</th>
+					<th width="80">规则名称</th>
+					<th width="100">规则内容</th>
+					<th width="80">规则类型</th>
+					<th width="120">发布时间</th>
 					<th width="100">操作</th>
 				</tr>
 			</thead>
@@ -102,22 +97,21 @@
 				<foreach name="list" item="v">
 					<tr class="text-c">
 						<td>{$v['id']}</td>
-						<td>{$v['company']}</td>
-						<td>{$v['user_name']}</td>
-						<td>{$v['price']}</td>
-						<td>{$v['number']}</td>
-						<td>{$v['indate']}</td>
-						<td>{$v['phone']}</td>
-						<td>{$v['counts']}</td>
-						<td>{$v['type']}</td>
-						<td>{$v['minimum']}</td>
-						<td>{$v['content']}</td>
-						
-						<td class="f-14 td-manage">
-						<a style="text-decoration:none" href="{:U('Coupons/update',array('id'=>$v['id']))}" title="修改">修改</a>
-							|&nbsp;<a style="text-decoration:none" href="{:U('Coupons/del',array('id'=>$v['id']))}" title="删 除">删 除</a>
-							
+						<td>{$v['title']}</td>
+						<td>{$v['content']|htmlspecialchars_decode}</td>
+						<td>
+						<switch name="v.type">
+						<case value="1">领取代金券</case> 
+						<case value="2">发布代金券</case> 
+						<case value="3">发布资源</case> 
+						<case value="4">领取资源</case> 
+						</switch>
 						</td>
+						<td>{$v['addtime']|date="Y-m-d H:i:s",###}</td>
+						<td class="f-14 td-manage">
+						<a style="text-decoration:none" href="{:U('Guize/update',array('id'=>$v['id']))}" title="修改">修改</a>
+					{//注释：删除复制修改的，|&nbsp;将Guize/update改成Guize/del 就行了}	</td>
+						
 					</tr>
 				</foreach>
 			</tbody>

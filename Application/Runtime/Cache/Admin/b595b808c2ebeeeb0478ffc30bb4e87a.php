@@ -72,6 +72,18 @@
 	<input runat="server" id="divScrollValue" type="hidden" value="" />
 	<div class="menu_dropdown bk_2">
 		<dl id="menu-picture">
+			<dt><i class="Hui-iconfont">&#xe613;</i>规则管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a _href="<?php echo U('Guize/index');?>" data-title="职位列表" href="javascript:void(0)">规则列表</a></li>
+				</ul>
+			</dd>
+			<dt><i class="Hui-iconfont">&#xe613;</i>职位管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a _href="<?php echo U('Position/index');?>" data-title="职位列表" href="javascript:void(0)">职位列表</a></li>
+				</ul>
+			</dd>
 			<dt><i class="Hui-iconfont">&#xe613;</i> 提现管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
@@ -81,10 +93,19 @@
 			<dt><i class="Hui-iconfont">&#xe613;</i> 优惠券管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
+					<li><a _href="<?php echo U('coupons/usershenhe');?>" data-title="用户资质审核" href="javascript:void(0)">用户资质审核</a></li>
+				</ul>
+				<ul>
+					<li><a _href="<?php echo U('coupons/companyshenhe');?>" data-title="公司资质审核" href="javascript:void(0)">公司资质审核</a></li>
+				</ul>
+				<ul>
 					<li><a _href="<?php echo U('coupons/index');?>" data-title="优惠券列表" href="javascript:void(0)">优惠券列表</a></li>
 				</ul>
 				<ul>
 					<li><a _href="<?php echo U('coupons/options');?>" data-title="优惠券设置" href="javascript:void(0)">优惠券设置</a></li>
+				</ul>
+				<ul>
+					<li><a _href="<?php echo U('coupons/ziyuan');?>" data-title="资源扣费设置" href="javascript:void(0)">资源扣费设置</a></li>
 				</ul>
 			</dd>
 			<dt><i class="Hui-iconfont">&#xe613;</i> 功能管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>

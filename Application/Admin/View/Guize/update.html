@@ -26,136 +26,28 @@
 <![endif]-->
 <!--/meta 作为公共模版分离出去-->
 
-<title>新增</title>
+<title>规则修改</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 </head>
 <body>
 
 <article class="page-container">
-       <foreach name="bianji" item="v">
-	  <form class="form form-horizontal" enctype="multipart/form-data" action="{:U('Headline/bianjis')}" method="post" id="form-article-add">
+       
+	  <form class="form form-horizontal" enctype="multipart/form-data" action="{:U('Guize/upinfo',array('id'=>$info['id']))}" method="post" id="form-article-add">
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>标题：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>名称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" value="{$v['title']}" class="input-text" name="title">
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">简略标题：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="{$v['describe']}" id="describe" name="describe">
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>类型：</label>
-			<div class="formControls col-xs-8 col-sm-9"> 
-				<span class="select-box">
-					<select name="type" id="type" class="select" >
-							
-						<if condition="($_SESSION['wgcadmininfo']['kehu'] eq '微工程')">
-							<option value="10">机电安装</option>
-							<option value="11">建筑装修</option>
-							<option value="12">消防</option>
-							<option value="13">环保</option>
-							<option value="14">材料</option>
-							<option value="15">家具</option>
-							<option value="52">资讯</option>
-						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '经艺装饰')"/>
-							<option value="33">公司资质</option>
-							<option value="34">设计师团队</option>
-							<option value="35">项目管理团队</option>
-							<option value="36">餐饮</option>
-							<option value="37">写字楼</option>
-							<option value="38">酒店</option>
-							<option value="39">超市</option>
-							<option value="40">汽车</option>
-							<option value="41">房地产</option>
-							<option value="42">家居</option>
-							<option value="43">专卖店</option>
-							<option value="44">政府</option>
-							<option value="45">外资</option>
-							<option value="52">公司案例</option>
-							<option value="53">公司简介</option>
-						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '鸿森工程')"/>
-							<option value="10">机电安装</option>
-							<option value="11">建筑装修</option>
-							<option value="12">消防</option>
-							<option value="13">环保</option>
-							<option value="14">材料</option>
-							<option value="15">家具</option>
-						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '汉堡王') or ($_SESSION['wgcadmininfo']['kehu'] eq '九毛九')"/>
-							<option value="27">设计规范</option>
-							<option value="28">施工规范</option>
-							<option value="29">2.0R1版</option>
-							<option value="30">2020版</option>
-							<option value="31">装饰定额</option>
-							<option value="32">常见问题</option>
-						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '公装网') or ($_SESSION['wgcadmininfo']['kehu'] eq '九毛九')"/>
-							<option value="33">公司资质</option>
-							<option value="34">设计师团队</option>
-							<option value="35">项目管理团队</option>
-							<option value="36">餐饮</option>
-							<option value="37">写字楼</option>
-							<option value="38">酒店</option>
-							<option value="39">超市</option>
-							<option value="40">汽车</option>
-							<option value="41">房地产</option>
-							<option value="42">家居</option>
-							<option value="43">专卖店</option>
-							<option value="44">政府</option>
-							<option value="45">外资</option>
-						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '家装网')"/>
-							<option value="46">公司资质</option>
-							<option value="47">设计师团队</option>
-							<option value="48">项目管理团队</option>
-							<option value="49">家居</option>
-							<option value="50">别墅</option>
-							<option value="51">其它</option>
-						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '材料商')"/>
-							<option value="55">行业资讯</option>
-							<option value="56">公司简介</option>
-						<elseif condition="($_SESSION['wgcadmininfo']['kehu'] eq '馨品装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '鲁班名匠') or ($_SESSION['wgcadmininfo']['kehu'] eq '诚拓装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '南耀装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '邦邑购') or ($_SESSION['wgcadmininfo']['kehu'] eq '梵象装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '艺信装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '心一装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '小猪装饰')or ($_SESSION['wgcadmininfo']['kehu'] eq '发财熊') or ($_SESSION['wgcadmininfo']['kehu'] eq '轩怡富') or ($_SESSION['wgcadmininfo']['kehu'] eq '万泽装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '联合共设') or ($_SESSION['wgcadmininfo']['kehu'] eq '创跃装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '真正装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '立诚装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '壹木装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '海鹏文图') or ($_SESSION['wgcadmininfo']['kehu'] eq '雅茗装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '展博装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '品逸广告') or ($_SESSION['wgcadmininfo']['kehu'] eq '美轩装饰') or ($_SESSION['wgcadmininfo']['kehu'] eq '天然居')"/>
-							<option value="57">行业资讯</option>
-							<option value="58">公司简介</option>
-							<option value="59">公司案例</option>
-						</if>
-						<option value="54">猜你喜欢</option>
-					 </select>
-				</span> 
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">广告作者：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="admin" placeholder="" id="" name="">
-			</div>
-		</div>
-		
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">广告来源：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="微工程" placeholder="" id="" name="">
-			</div>
-		</div>
-		
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">缩略图：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<div class="uploader-thum-container">
-					<input type="file" value="{$v['pic']}" name="pic">
-				</div>
+				<input type="text" value="{$info['title']}" class="input-text" name="title">
 			</div>
 		</div>
 			
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">文章内容：</label>
+			<label class="form-label col-xs-4 col-sm-2">规则内容：</label>
 			<div class="formControls col-xs-8 col-sm-9"> 
-				<textarea id="editor" name="content" type="text/plain" style="width:100%; height:0 auto;">{$v['content']|htmlspecialchars_decode}</textarea> 
+				<textarea id="editor" name="content" type="text/plain" style="width:100%; height:0 auto;">{$info['content']|htmlspecialchars_decode}</textarea> 
 			</div>
 		</div>
-		<input type="hidden"  name="id" value="{$v['id']}"/>
-		<input type="hidden" name="kehu" value="{$_SESSION['wgcadmininfo']['kehu']}"/>
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
 				<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 提交发布</button>
@@ -163,7 +55,6 @@
 				<button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
 			</div>
 		</div>
-	 </foreach>
 		<!-- 底部跳转 -->
 		
 	</form>
@@ -297,6 +188,7 @@ $(function(){
 	var ue = UE.getEditor('editor');
 	
 });
+
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
 </body>

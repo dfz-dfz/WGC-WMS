@@ -93,6 +93,8 @@
 					<th width="80">有效联系电话</th>
 					<th width="80">优惠券被领取数量</th>
 					<th width="80">优惠券类型</th>
+					<th width="80">优惠券最低额度</th>
+					<th width="80">优惠券描述</th>
 					<th width="100">操作</th>
 				</tr>
 			</thead>
@@ -107,10 +109,12 @@
 						<td><?php echo ($v['phone']); ?></td>
 						<td><?php echo ($v['counts']); ?></td>
 						<td><?php echo ($v['type']); ?></td>
+						<td><?php echo ($v['minimum']); ?></td>
+						<td><?php echo ($v['content']); ?></td>
 						
 						<td class="f-14 td-manage">
 						<a style="text-decoration:none" href="<?php echo U('Coupons/update',array('id'=>$v['id']));?>" title="修改">修改</a>
-							|<a style="text-decoration:none" href="<?php echo U('Coupons/del',array('id'=>$v['id']));?>" title="删 除">删 除</a>
+							|&nbsp;<a style="text-decoration:none" href="<?php echo U('Coupons/del',array('id'=>$v['id']));?>" title="删 除">删 除</a>
 							
 						</td>
 					</tr><?php endforeach; endif; ?>

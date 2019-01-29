@@ -83,6 +83,24 @@
 				<input type="text" class="input-text" id="type" name="type" value="<?php echo ($info['type']); ?>">
 			</div>
 		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>优惠券最低额度：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" id="minimum" name="minimum" value="<?php echo ($info['minimum']); ?>">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>优惠券描述：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<textarea type="text" class="textarea radius" id="content" name="content"><?php echo ($info['content']); ?></textarea>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red"></span>优惠券发布时间：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" id="addtime" value="<?php echo ($info['addtime']); ?>">
+			</div>
+		</div>
 		<div class="row cl" style="margin-top:10px">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
 				<button onClick="tuijian()" class="btn btn-primary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存</button>

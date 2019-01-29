@@ -68,22 +68,22 @@
 
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 优惠券管理 <span class="c-gray en">&gt;</span> 优惠券设置 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
-	<form>
+	<form action="{:U('Coupons/optionset',array('id'=>$info['id']))}" method="post" id="form">
 		<div class="row cl mt-10">
 			<label class="form-label col-xs-4 col-sm-2 f-18">优惠券最低价格：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text radius size-L" name="minprice" placeholder="请输入优惠券最低价格">
+				<input type="text" class="input-text radius size-L" id="min" name="minprice" placeholder="请输入优惠券最低价格" value="{$info['minprice']}">
 			</div>
 		</div>
 		<div class="row cl mt-20">
 			<label class="form-label col-xs-4 col-sm-2 f-18">优惠券最高价格：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text radius size-L" name="maxprice" placeholder="请输入优惠券最高价格">
+				<input type="text" class="input-text radius size-L" id="max" name="maxprice" placeholder="请输入优惠券最高价格" value="{$info['maxprice']}">
 			</div>
 		</div>
 		<div class="row cl mt-20">
 			<div class="formControls col-xs-8 col-sm-9">
-				<input class="btn btn-primary size-L radius" type="button" value="保存设置">
+				<input class="btn btn-primary size-L radius" type="button" value="保存设置" onclick="shezhi()">
 			</div>
 		</div>
 	</form>
@@ -94,5 +94,22 @@
 
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="__PUBLIC__/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
+<script type="text/javascript">
+<!--/请在上方写此页面业务相关的脚本-->
+	function shezhi(){
+	var minprice = $("#min").val();
+	var maxprice = $("#max").val();
+	if(minprice =='' || maxprice==''){
+		alert('必填项不能为空！');
+		return false;
+	}else if(minprice > maxprice){
+		alert('最低价格不能高于最高价格！');
+		return false;
+	}else{
+		$("#form").submit();
+	}
+	
+}
+</script>
 </body>
 </html>
