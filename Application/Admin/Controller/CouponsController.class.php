@@ -9,6 +9,9 @@ class CouponsController extends CommonController {
 		
 		$Coupons = M('coupons'); // coupons
 		$company = I('company');
+		if($_SESSION['wgcadmininfo']['kehu']!='微工程'){
+			$where['ecm_coupons.kehu']=$_SESSION['wgcadmininfo']['kehu'];
+		}
 		if(!empty($company)){
 			$where['company'] = array('like',"%$company%");
 		}
@@ -101,6 +104,11 @@ class CouponsController extends CommonController {
 	public function usershenhe(){
 		$userrz = M('userrz'); // coupons
 		$name = I('name');
+		$kehu=$_SESSION['wgcadmininfo']['kehu'];
+		
+		if($kehu!='微工程'){
+			$where['ecm_member.kehu']=$_SESSION['wgcadmininfo']['kehu'];
+		}
 		if(!empty($name)){
 			$where['name'] = array('like',"%$name%");
 		}
@@ -109,7 +117,7 @@ class CouponsController extends CommonController {
 		$Page       = new \Think\Page($count,20);// 实例化分页类 传入总记录数和每页显示的记录数(25)
 		$show       = $Page->show();// 分页显示输出
 		// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
-		$list = $userrz->where($where)->order('id asc')->limit($Page->firstRow.','.$Page->listRows)->select();
+		$list = $userrz->join('ecm_member ON ecm_userrz.userid = ecm_member.user_id','left')->where($where)->order('id asc')->limit($Page->firstRow.','.$Page->listRows)->select();
 		foreach($list as $k=>$v){
 			$list[$k]['photo']  = explode(',',$v['photo']);
 		}
@@ -136,6 +144,11 @@ class CouponsController extends CommonController {
 	public function companyshenhe(){
 		$companyrz = M('companyrz'); // coupons
 		$name = I('name');
+		$kehu=$_SESSION['wgcadmininfo']['kehu'];
+		
+		if($kehu!='微工程'){
+			$where['ecm_member.kehu']=$_SESSION['wgcadmininfo']['kehu'];
+		}
 		if(!empty($name)){
 			$where['name'] = array('like',"%$name%");
 		}
@@ -144,7 +157,7 @@ class CouponsController extends CommonController {
 		$Page       = new \Think\Page($count,20);// 实例化分页类 传入总记录数和每页显示的记录数(25)
 		$show       = $Page->show();// 分页显示输出
 		// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
-		$list = $companyrz->where($where)->order('id asc')->limit($Page->firstRow.','.$Page->listRows)->select();
+		$list = $companyrz->join('ecm_member ON ecm_companyrz.userid = ecm_member.user_id','left')->where($where)->order('id asc')->limit($Page->firstRow.','.$Page->listRows)->select();
 		foreach($list as $k=>$v){
 			$list[$k]['photo']  = explode(',',$v['photo']);
 		}

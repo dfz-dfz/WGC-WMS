@@ -176,4 +176,4 @@ function article_shenqing(obj,id){
 
 </script> 
 </body>
-</html><!--?1??
+</html>
